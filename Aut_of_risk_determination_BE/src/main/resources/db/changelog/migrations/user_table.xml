@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="ntodorovic" id="1">
+        <sql
+                endDelimiter=";"
+                splitStatements="true"
+                stripComments="true">
+            create table if not exists user
+            (
+            id bigint auto_increment primary key,
+            email varchar(255) not null,
+            password varchar(255) not null,
+            user_role_id bigint not null,
+            constraint user_fk_on_user_role foreign key (user_role_id) references user_role (id),
+            constraint user_uk_on_email unique (email)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

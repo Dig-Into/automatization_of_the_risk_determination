@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="ntodorovic" id="1">
+        <sql
+                endDelimiter=";"
+                splitStatements="true"
+                stripComments="true">
+            create table if not exists jwt
+            (
+            id bigint auto_increment primary key,
+            expiration_time timestamp,
+            value varchar(2048),
+            user_id bigint,
+            constraint jwt_uk_on_value unique (value),
+            constraint jwt_fk_on_user foreign key (user_id) references user (id)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
