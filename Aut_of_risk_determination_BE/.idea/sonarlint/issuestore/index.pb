@@ -1,12 +1,8 @@
 
 Q
 !src/main/java/aord/model/JWT.java,1\3\137d3ec055bcb8574fd0cd3cb92921a6293760da
-Y
-)src/main/java/aord/model/Probability.java,4\e\4e51e6ac542ef75443408f95ddd2b0509ba33ae2
 W
 'src/main/java/aord/model/Frequency.java,a\8\a86925e95ddea2f42d38ef0698cac45cf0d62778
-Y
-)src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
 ^
 .src/main/java/aord/model/MechanicalDanger.java,5\4\54ea7e4cabd6171a55943c9582254cbcac414fc3
 e
@@ -45,8 +41,6 @@ f
 6src/main/java/aord/dto/MechanicalDangerDetailsDTO.java,2\1\217b0cc3079d472dbcc717258cfd3213e98fdad9
 _
 /src/main/java/aord/dto/MechanicalDangerDTO.java,2\1\21740b1b57e1faa160d859c6f00a25852c6d7c40
-Z
-*src/main/java/aord/dto/ProbabilityDTO.java,9\5\954c30e196bc13e26d93cd014615e3fa51417696
 e
 5src/main/java/aord/dto/RiskRemovalMeasurementDTO.java,0\c\0c55155ec884e4d858c50cbf22cceab5e27de9e9
 c
@@ -103,14 +97,10 @@ m
 =src/main/java/aord/controller/MechanicalDangerController.java,b\2\b2781e30e32de85a1586c6e3756e594ea9c283b9
 t
 Dsrc/main/java/aord/controller/MechanicalDangerDetailsController.java,c\b\cb2d369f916f832160ce63555d8cac4d905a147d
-h
-8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
 s
 Csrc/main/java/aord/controller/RiskRemovalMeasurementController.java,d\f\df32ef6721f971e72da17ba3ec17f742df2f2f55
 h
 8src/main/java/aord/controller/KinneyIndexController.java,2\7\274b3a008de2c3819c1a99dd167f8d4f428020f5
-c
-3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
 ]
 -src/main/java/aord/service/EffectService.java,d\4\d4a6e0ddecf191c6671afcb9bfc1b295e70084e9
 f
@@ -119,3 +109,13 @@ i
 9src/main/java/aord/service/impl/FrequencyServiceImpl.java,e\5\e57e3af8dd6674a82958e42ca24e0ec58f9f13e3
 w
 Gsrc/main/java/aord/service/impl/MechanicalDangerDetailsServiceImpl.java,b\b\bb020277fab1040377cd9add2a6596dda5af98c3
+c
+3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
+Y
+)src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
+h
+8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
+Z
+*src/main/java/aord/dto/ProbabilityDTO.java,9\5\954c30e196bc13e26d93cd014615e3fa51417696
+Y
+)src/main/java/aord/model/Probability.java,4\e\4e51e6ac542ef75443408f95ddd2b0509ba33ae2
