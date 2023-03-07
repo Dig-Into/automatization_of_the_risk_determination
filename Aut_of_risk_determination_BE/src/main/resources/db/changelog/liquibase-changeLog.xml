@@ -3,6 +3,12 @@
 
     <include file="migrations/user_role_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/user_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/probability_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/effect_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/frequency_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/kinney_index_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/mechanical_danger_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/mechanical_danger_details_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/risk_removal_measurement_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/data_init.xml" relativeToChangelogFile="true"/>
-    
 </databaseChangeLog>

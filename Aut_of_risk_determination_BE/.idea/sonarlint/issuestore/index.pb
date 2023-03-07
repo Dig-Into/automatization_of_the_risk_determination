@@ -1,14 +1,4 @@
 
-Q
-!src/main/java/aord/model/JWT.java,1\3\137d3ec055bcb8574fd0cd3cb92921a6293760da
-W
-'src/main/java/aord/model/Frequency.java,a\8\a86925e95ddea2f42d38ef0698cac45cf0d62778
-^
-.src/main/java/aord/model/MechanicalDanger.java,5\4\54ea7e4cabd6171a55943c9582254cbcac414fc3
-e
-5src/main/java/aord/model/MechanicalDangerDetails.java,7\c\7c12fd18cdb05fd69d738b34b2324e8391374826
-d
-4src/main/java/aord/model/RiskRemovalMeasurement.java,6\7\670195af3bf7007b517a62c8ec94d871db801e86
 c
 3src/main/java/aord/repository/EffectRepository.java,6\3\63c4a94a75883ad513aa40f427d22bfc207f24d3
 f
@@ -19,8 +9,6 @@ h
 8src/main/java/aord/repository/KinneyIndexRepository.java,8\2\82adc1a972eaae091a7968d2bd1cf5084e7a73ed
 t
 Dsrc/main/java/aord/repository/MechanicalDangerDetailsRepository.java,a\1\a194f64fbca5e07a4ce557100f0d6dc2e95b951b
-m
-=src/main/java/aord/repository/MechanicalDangerRepository.java,d\5\d5a736dcf384224fbd30262c4f27f951db150163
 h
 8src/main/java/aord/repository/ProbabilityRepository.java,4\0\40d823b4518e2e45dda88889a43f530d00493d0d
 s
@@ -29,8 +17,6 @@ a
 1src/main/java/aord/repository/UserRepository.java,c\4\c4ebac2792ac6fc3b2287edaa530c8d2107d5ff3
 e
 5src/main/java/aord/repository/UserRoleRepository.java,6\4\64e505f6ba7f16ca2fd926d92a0ea55d3191828d
-T
-$src/main/java/aord/model/Effect.java,e\2\e239f30f76b732f79b06173885b99500c1bc7e88
 U
 %src/main/java/aord/dto/EffectDTO.java,f\5\f544f82c9d8b41085226893b0aea659422e32b24
 X
@@ -111,11 +97,7 @@ w
 Gsrc/main/java/aord/service/impl/MechanicalDangerDetailsServiceImpl.java,b\b\bb020277fab1040377cd9add2a6596dda5af98c3
 c
 3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
-Y
-)src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
 h
 8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
 Z
 *src/main/java/aord/dto/ProbabilityDTO.java,9\5\954c30e196bc13e26d93cd014615e3fa51417696
-Y
-)src/main/java/aord/model/Probability.java,4\e\4e51e6ac542ef75443408f95ddd2b0509ba33ae2

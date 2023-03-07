@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="NikolaM" id="1">
+        <createTable tableName="probability">
+            <column name="value" type="DOUBLE"/>
+            <column name="description" type="VARCHAR(255)"></column>
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="NikolaM" id="2">
+        <addPrimaryKey columnNames="id" constraintName="probabilityPK" tableName="probability"/>
+    </changeSet>
+
+</databaseChangeLog>
