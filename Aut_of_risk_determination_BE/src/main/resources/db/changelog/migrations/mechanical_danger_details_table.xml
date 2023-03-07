@@ -7,8 +7,8 @@
         <createTable tableName="mechanical_danger_details">
             <column name="value" type="DOUBLE"/>
             <column name="description" type="LONGTEXT"></column>
-            <column name="id" type="BIGINT">
-                <constraints nullable="false"/>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="mechanical_danger_detailsPK" />
             </column>
             <column name="probability_id" type="BIGINT"></column>
             <column name="effect_id" type="BIGINT"></column>
@@ -17,9 +17,6 @@
         </createTable>
     </changeSet>
     <changeSet author="NikolaM" id="2">
-        <addPrimaryKey columnNames="id" constraintName="mechanical_danger_detailsPK" tableName="mechanical_danger_details" />
-    </changeSet>
-    <changeSet author="NikolaM" id="3">
         <addForeignKeyConstraint baseTableName="mechanical_danger_details" baseColumnNames="probability_id" constraintName="mechanical_danger_details_probabilityFK" referencedTableName="probability" referencedColumnNames="id" />
         <addForeignKeyConstraint baseTableName="mechanical_danger_details" baseColumnNames="effect_id" constraintName="mechanical_danger_details_effectFK" referencedTableName="effect" referencedColumnNames="id" />
         <addForeignKeyConstraint baseTableName="mechanical_danger_details" baseColumnNames="frequency_id" constraintName="mechanical_danger_details_frequencyFK" referencedTableName="frequency" referencedColumnNames="id" />

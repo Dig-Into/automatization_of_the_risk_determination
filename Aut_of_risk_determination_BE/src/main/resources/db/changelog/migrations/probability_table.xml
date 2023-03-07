@@ -7,13 +7,9 @@
         <createTable tableName="probability">
             <column name="value" type="DOUBLE"/>
             <column name="description" type="VARCHAR(255)"></column>
-            <column name="id" type="BIGINT">
-                <constraints nullable="false"/>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="probabilityPK" />
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="NikolaM" id="2">
-        <addPrimaryKey columnNames="id" constraintName="probabilityPK" tableName="probability"/>
-    </changeSet>
-
 </databaseChangeLog>
