@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="NikolaM" id="1">
+        <createTable tableName="kinney_index">
+            <column name="value" type="DOUBLE"/>
+            <column name="description" type="VARCHAR(255)"></column>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="kinney_indexPK" />
+            </column>
+            <column name="probability_id" type="BIGINT"></column>
+            <column name="effect_id" type="BIGINT"></column>
+            <column name="frequency_id" type="BIGINT"></column>
+        </createTable>
+    </changeSet>
+    <changeSet author="NikolaM" id="2">
+        <addForeignKeyConstraint baseTableName="kinney_index" baseColumnNames="probability_id" constraintName="kinney_index_probabilityFK" referencedTableName="probability" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="kinney_index" baseColumnNames="effect_id" constraintName="kinney_index_effectFK" referencedTableName="effect" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="kinney_index" baseColumnNames="frequency_id" constraintName="kinney_index_frequencyFK" referencedTableName="frequency" referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

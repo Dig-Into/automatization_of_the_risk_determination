@@ -1,14 +1,8 @@
 package aord.converter;
 
 import aord.dto.MechanicalDangerDetailsDTO;
-import aord.model.Effect;
-import aord.model.Frequency;
-import aord.model.MechanicalDangerDetails;
-import aord.model.Probability;
-import aord.repository.EffectRepository;
-import aord.repository.FrequencyRepository;
-import aord.repository.MechanicalDangerDetailsRepository;
-import aord.repository.ProbabilityRepository;
+import aord.model.*;
+import aord.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -17,7 +11,7 @@ import org.springframework.util.ObjectUtils;
 @Component
 public class ToMechanicalDangerDetailsConverter implements Converter<MechanicalDangerDetailsDTO, MechanicalDangerDetails> {
     @Autowired
-    MechanicalDangerDetailsRepository repo;
+    MechanicalDangerRepository mechanicalDangerRepository;
 
     @Autowired
     ProbabilityRepository probabilityRepository;
@@ -52,6 +46,12 @@ public class ToMechanicalDangerDetailsConverter implements Converter<MechanicalD
 
         if (!ObjectUtils.isEmpty(frequency)) {
             mechanicalDangerDetails.setFrequency(frequency);
+        }
+
+        MechanicalDanger mechanicalDanger = mechanicalDangerRepository.findById(source.getMechanicalDanger().getId()).get();
+
+        if (!ObjectUtils.isEmpty(mechanicalDanger)) {
+            mechanicalDangerDetails.setMechanicalDanger(mechanicalDanger);
         }
 
         return mechanicalDangerDetails;

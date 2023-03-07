@@ -1,9 +1,6 @@
 package aord.dto;
 
-import aord.model.Effect;
-import aord.model.Frequency;
-import aord.model.MechanicalDangerDetails;
-import aord.model.Probability;
+import aord.model.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,6 +24,9 @@ public class MechanicalDangerDetailsDTO {
     @ManyToOne
     @JoinColumn(name = "frequency_id")
     private Frequency frequency;
+    @ManyToOne
+    @JoinColumn(name = "mechanical_danger_id")
+    private MechanicalDanger mechanicalDanger;
 
     public MechanicalDangerDetailsDTO(MechanicalDangerDetails mechanicalDangerDetails) {
         this.id = mechanicalDangerDetails.getId();
@@ -46,6 +46,11 @@ public class MechanicalDangerDetailsDTO {
         Frequency freq = mechanicalDangerDetails.getFrequency();
         if (freq != null) {
             this.frequency = freq;
+        }
+
+        MechanicalDanger mechDang = mechanicalDangerDetails.getMechanicalDanger();
+        if (mechDang != null) {
+            this.mechanicalDanger = mechDang;
         }
     }
 

@@ -45,7 +45,7 @@ INSERT INTO aord.kinney_index(value, description, probability_id, effect_id, fre
 
 COMMIT;
 
--- mechanical_danger
+--mechanical_danger
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (1, "Mehaničke opasnosti (koje se pojavljuju korišćenjem opreme za rad)", "Nedovoljna bezbednost zbog rotirajućih ili pokretnih delova");
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (2, "Mehaničke opasnosti (koje se pojavljuju korišćenjem opreme za rad)", "Slobodno kretanje delova ili materijala koji mogu naneti povredu zaposlenom");
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (3, "Mehaničke opasnosti (koje se pojavljuju korišćenjem opreme za rad)", "Unutrašnji transport i kretanje radnih mašina ili vozila, kao i pomeranja određene opreme za rad");
@@ -79,3 +79,22 @@ INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALU
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (32, "Štetnosti koje proističu iz psihičkih i psihofizičkih napora", "Napori pri obavljanju određenih poslova koji prouzrokuju psihološka opterećenja (stres, monotonija)");
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (33, "Štetnosti koje proističu iz psihičkih i psihofizičkih napora", "Odgovornost u primanju i prenošenju informacija, korišćenje odgovarajućeg znanja i sposobnosti, odgovornost u pravilima ponašanja, odgovornost za brze izmene radnih procedura, intenzitet u radu, prostorna uslovljenost radnog mesta, konfliktne situacije, rad sa strankama i novcem, nedovoljna motivacija za rad, odgovornost u rukovođenju, i sl.");
 INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (34, "Štetnosti koje proističu iz psihičkih i psihofizičkih napora", "Štetnosti vezane za organizaciju rada (rad duži od punog radnog vremena-prekovremeni rad, rad u smenama, skraćeno radno vreme, rad noću, pripravnost za slučaj intervencija, i sl.)");
+INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (35, "Ostale štetnosti", "Štetnosti koje prouzrokuju druga lica (nasilje prema licima koja rade na šalterima, lica na obezbeđenju, i sl.)");
+INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (36, "Ostale štetnosti", "Rad sa životinjama");
+INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (37, "Ostale štetnosti", "Rad u atmosferi sa visokim ili niskim pritiskom");
+INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (38, "Ostale štetnosti", "Rad u blizini vode ili ispod površine vode");
+INSERT INTO aord.mechanical_danger(danger_number, danger_type, description) VALUES (39, "Ostale štetnosti", "Ostale opasnosti odnosno štetnosti");
+
+COMMIT;
+
+--mechanical_danger_details
+INSERT INTO aord.mechanical_danger_details (description, probability_id, effect_id, frequency_id, mechanical_danger_id, value) VALUES ("Rad sa trimerom, kosilicom, motorna testera", 5, 3, 4, 1, 54);
+INSERT INTO aord.mechanical_danger_details (description, probability_id, effect_id, frequency_id, mechanical_danger_id, value) VALUES ("Pad tereta i predmeta  sa visine; pad predmeta opreme za rad iz ruku zbog nepažnje zaposlenog; povrede donjih ekstremiteta; odletanje čestica, slobodno kretanje delova ili materijala koje mogu naneti povredu", 4, 3, 4, 2, 18);
+
+COMMIT;
+
+--risk_removal_measurement
+INSERT INTO aord.risk_removal_measurement (risk_factor_value, description, measurement_impl_freq, mechanical_danger_details_id) VALUES (54, "Strogo je zabranjeno da se uklanja fabrička zaštita sa opreme za rad, štitnika i zaštite prenosnika snage. Zabranjena je u upotreba bilo kakvih alata i opreme na kojima je vršena modifikacija, odnosno bilo kakva odstupanja u odnosu na fabričko stanje. Obavezno izvršiti vizuelni pregled pre upotrebe opreme za rad, a takođe u pauzama radova proveriti ispravnost i funkcionalnost sigurnosnih sklopova i spojeva. Mašine, alate i opremu koristiti isključivo prema nameni, odnosno u skladu sa uputstvom za upotrebu proizvođača. Tokom korišćenja opreme i alata na mehanizovani pogon neophodna je upotreba ličnih zaštitnih sredstava prema upustvu proizvođača opreme za rad i u skladu sa aktom o proceni rizika.", "Stalno", 1);
+INSERT INTO aord.risk_removal_measurement (risk_factor_value, description, measurement_impl_freq, mechanical_danger_details_id) VALUES (54, "Opreznost u radu je neophodna puno radno vreme. Prekontrolisati ispravnost opreme i alata pre početka rada. Sigurno i pravilno pričvršćivanje reznog alata; Prilikom prenošenja materijala i opreme ne kretati se ispod tereta. Pridržavanje usvojenih uputstva za bezbedan rad. Ne žuriti sa pripremom i izvršavanjem radnih aktivnosti. Raditi ujednačeno i postupno (po redosledu radnji bez preskakanja).", "Stalno", 2);
+
+COMMIT;
