@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ToMechanicalDangerDTOConverter implements Converter<DangerName, DangerNameDTO> {
+public class ToDangerNameDTOConverter implements Converter<DangerName, DangerNameDTO> {
 
     @Override
     public DangerNameDTO convert(DangerName source) {

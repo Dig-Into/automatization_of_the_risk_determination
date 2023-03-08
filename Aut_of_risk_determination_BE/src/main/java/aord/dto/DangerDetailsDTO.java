@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -17,7 +18,7 @@ public class DangerDetailsDTO {
     private Double value;
     @ManyToOne
     @JoinColumn(name = "danger_details_description_id")
-    private DangerDetailsDescription[] descriptions;
+    private List<DangerDetailsDescription> descriptions;
     @ManyToOne
     @JoinColumn(name = "probability_id")
     private Probability probability;
@@ -36,8 +37,8 @@ public class DangerDetailsDTO {
         this.code = dangerDetails.getCode();
         this.value = dangerDetails.getValue();
 
-        DangerDetailsDescription[] dangerDetailsDescriptions = dangerDetails.getDescriptions();
-        if (dangerDetailsDescriptions.length != 0) {
+        List<DangerDetailsDescription> dangerDetailsDescriptions = dangerDetails.getDescriptions();
+        if (dangerDetailsDescriptions.size() > 0) {
             this.descriptions = dangerDetailsDescriptions;
         }
 

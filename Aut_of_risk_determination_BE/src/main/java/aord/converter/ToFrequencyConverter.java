@@ -9,15 +9,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ToFrequencyConverter implements Converter<FrequencyDTO, Frequency> {
-    @Autowired
-    FrequencyRepository repo;
-
     @Override
     public Frequency convert(FrequencyDTO source) {
         Frequency frequency = new Frequency();
 
         frequency.setId(source.getId());
-        frequency.setValue(source.getValue());
+        frequency.setCode(source.getCode());
         frequency.setDescription(source.getDescription());
 
         return frequency;

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ToMechanicalDangerDetailsDTOConverter implements Converter<DangerDetails, DangerDetailsDTO> {
+public class ToDangerDetailsDTOConverter implements Converter<DangerDetails, DangerDetailsDTO> {
 
     @Override
     public DangerDetailsDTO convert(DangerDetails source) {

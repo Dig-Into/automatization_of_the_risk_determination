@@ -10,7 +10,6 @@ import java.util.List;
 
 @Component
 public class ToKinneyIndexDTOConverter implements Converter<KinneyIndex, KinneyIndexDTO> {
-
     @Override
     public KinneyIndexDTO convert(KinneyIndex source) {
         return new KinneyIndexDTO(source);

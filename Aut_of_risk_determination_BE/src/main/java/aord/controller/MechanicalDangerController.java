@@ -1,7 +1,7 @@
 package aord.controller;
 
-import aord.converter.ToMechanicalDangerConverter;
-import aord.converter.ToMechanicalDangerDTOConverter;
+import aord.converter.ToDangerNameConverter;
+import aord.converter.ToDangerNameDTOConverter;
 import aord.dto.DangerNameDTO;
 import aord.service.MechanicalDangerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +20,10 @@ public class MechanicalDangerController {
     MechanicalDangerService service;
 
     @Autowired
-    ToMechanicalDangerDTOConverter toDTO;
+    ToDangerNameDTOConverter toDTO;
 
     @Autowired
-    ToMechanicalDangerConverter toEntity;
+    ToDangerNameConverter toEntity;
 
     @GetMapping("/getAll")
     public ResponseEntity<List<DangerNameDTO>> getAll() {

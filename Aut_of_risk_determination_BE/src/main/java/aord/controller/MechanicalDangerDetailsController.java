@@ -1,6 +1,6 @@
 package aord.controller;
 
-import aord.converter.ToMechanicalDangerDetailsConverter;
+import aord.converter.ToDangerDetailsConverter;
 import aord.converter.ToMechanicalDangerDetailsDTOConverter;
 import aord.dto.DangerDetailsDTO;
 import aord.service.MechanicalDangerDetailsService;
@@ -23,7 +23,7 @@ public class MechanicalDangerDetailsController {
     ToMechanicalDangerDetailsDTOConverter toDTO;
 
     @Autowired
-    ToMechanicalDangerDetailsConverter toEntity;
+    ToDangerDetailsConverter toEntity;
 
     @GetMapping("/getAll")
     public ResponseEntity<List<DangerDetailsDTO>> getAll() {

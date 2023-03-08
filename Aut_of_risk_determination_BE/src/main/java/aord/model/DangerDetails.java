@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -41,6 +43,6 @@ public class DangerDetails {
 
     @ManyToOne
     @JoinColumn(name = "danger_details_description_id")
-    private DangerDetailsDescription[] descriptions;
+    private List<DangerDetailsDescription> descriptions;
 
 }

@@ -1,9 +1,9 @@
 package aord.repository;
 
-import aord.model.DangerName;
+import aord.model.DangerDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MechanicalDangerRepository extends JpaRepository<DangerName, Long> {
+public interface DangerDetailsRepository extends JpaRepository<DangerDetails, Long> {
 }

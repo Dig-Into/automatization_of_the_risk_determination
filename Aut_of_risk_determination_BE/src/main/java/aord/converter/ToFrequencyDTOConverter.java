@@ -10,7 +10,6 @@ import java.util.List;
 
 @Component
 public class ToFrequencyDTOConverter implements Converter<Frequency, FrequencyDTO> {
-
     @Override
     public FrequencyDTO convert(Frequency source) {
         return new FrequencyDTO(source);

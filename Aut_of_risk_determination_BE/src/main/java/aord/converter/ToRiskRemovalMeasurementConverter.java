@@ -3,7 +3,7 @@ package aord.converter;
 import aord.dto.RiskRemovalMeasurementDTO;
 import aord.model.DangerDetails;
 import aord.model.RiskRemovalMeasurement;
-import aord.repository.MechanicalDangerDetailsRepository;
+import aord.repository.DangerDetailsRepository;
 import aord.repository.RiskRemovalMeasurementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -12,11 +12,9 @@ import org.springframework.util.ObjectUtils;
 
 @Component
 public class ToRiskRemovalMeasurementConverter implements Converter<RiskRemovalMeasurementDTO, RiskRemovalMeasurement> {
-    @Autowired
-    RiskRemovalMeasurementRepository repo;
 
     @Autowired
-    MechanicalDangerDetailsRepository mechanicalDangerDetailsRepository;
+    DangerDetailsRepository dangerDetailsRepository;
 
     @Override
     public RiskRemovalMeasurement convert(RiskRemovalMeasurementDTO source) {
@@ -27,10 +25,10 @@ public class ToRiskRemovalMeasurementConverter implements Converter<RiskRemovalM
         riskRemovalMeasurement.setDescription(source.getDescription());
         riskRemovalMeasurement.setMeasurementImplFreq(source.getMeasurementImplFreq());
 
-        DangerDetails mechanicalDangerDetails = mechanicalDangerDetailsRepository.findById(source.getMechanicalDangerDetails().getId()).get();
+        DangerDetails dangerDetails = dangerDetailsRepository.findById(source.getDangerDetails().getId()).get();
 
-        if (!ObjectUtils.isEmpty(mechanicalDangerDetails)) {
-            riskRemovalMeasurement.setMechanicalDangerDetails(mechanicalDangerDetails);
+        if (!ObjectUtils.isEmpty(dangerDetails)) {
+            riskRemovalMeasurement.setDangerDetails(dangerDetails);
         }
 
         return riskRemovalMeasurement;

@@ -2,7 +2,7 @@ package aord.service.impl;
 
 import aord.dto.DangerNameDTO;
 import aord.model.DangerName;
-import aord.repository.MechanicalDangerRepository;
+import aord.repository.DangerNameRepository;
 import aord.service.MechanicalDangerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class MechanicalDangerServiceImpl implements MechanicalDangerService {
     @Autowired
-    MechanicalDangerRepository repo;
+    DangerNameRepository repo;
     @Override
     public List<DangerName> getAll() {
         return repo.findAll();
