@@ -1,6 +1,6 @@
 package aord.converter;
 
-import aord.dto.MechanicalDangerDetailsDTO;
+import aord.dto.DangerDetailsDTO;
 import aord.model.*;
 import aord.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
 @Component
-public class ToMechanicalDangerDetailsConverter implements Converter<MechanicalDangerDetailsDTO, MechanicalDangerDetails> {
+public class ToMechanicalDangerDetailsConverter implements Converter<DangerDetailsDTO, DangerDetails> {
     @Autowired
     MechanicalDangerRepository mechanicalDangerRepository;
 
@@ -23,8 +23,8 @@ public class ToMechanicalDangerDetailsConverter implements Converter<MechanicalD
     FrequencyRepository frequencyRepository;
 
     @Override
-    public MechanicalDangerDetails convert(MechanicalDangerDetailsDTO source) {
-        MechanicalDangerDetails mechanicalDangerDetails = new MechanicalDangerDetails();
+    public DangerDetails convert(DangerDetailsDTO source) {
+        DangerDetails mechanicalDangerDetails = new DangerDetails();
 
         mechanicalDangerDetails.setId(source.getId());
         mechanicalDangerDetails.setDescription(source.getDescription());
@@ -48,7 +48,7 @@ public class ToMechanicalDangerDetailsConverter implements Converter<MechanicalD
             mechanicalDangerDetails.setFrequency(frequency);
         }
 
-        MechanicalDanger mechanicalDanger = mechanicalDangerRepository.findById(source.getMechanicalDanger().getId()).get();
+        DangerName mechanicalDanger = mechanicalDangerRepository.findById(source.getMechanicalDanger().getId()).get();
 
         if (!ObjectUtils.isEmpty(mechanicalDanger)) {
             mechanicalDangerDetails.setMechanicalDanger(mechanicalDanger);

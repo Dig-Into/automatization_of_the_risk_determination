@@ -11,13 +11,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "Effect")
-public class Effect {
+@Table(name = "DangerName")
+public class DangerName {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column
-    private Double code;
+    private Integer dangerNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "danger_type_id")
+    private DangerType dangerType;
+
     @Column
     private String description;
 

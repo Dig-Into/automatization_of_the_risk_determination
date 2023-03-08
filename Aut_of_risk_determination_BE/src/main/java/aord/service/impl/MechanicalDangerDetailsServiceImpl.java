@@ -1,12 +1,9 @@
 package aord.service.impl;
 
-import aord.dto.MechanicalDangerDTO;
-import aord.dto.MechanicalDangerDetailsDTO;
-import aord.model.MechanicalDanger;
-import aord.model.MechanicalDangerDetails;
+import aord.dto.DangerDetailsDTO;
+import aord.model.DangerDetails;
 import aord.repository.MechanicalDangerDetailsRepository;
 import aord.service.MechanicalDangerDetailsService;
-import aord.service.MechanicalDangerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,24 +16,24 @@ public class MechanicalDangerDetailsServiceImpl implements MechanicalDangerDetai
     MechanicalDangerDetailsRepository repo;
 
     @Override
-    public List<MechanicalDangerDetails> getAll() {
+    public List<DangerDetails> getAll() {
         return repo.findAll();
     }
 
     @Override
-    public MechanicalDangerDetails getById(Long id) {
+    public DangerDetails getById(Long id) {
         return repo.findById(id).get();
     }
 
     @Override
-    public void save(MechanicalDangerDetails convert) {
+    public void save(DangerDetails convert) {
         repo.save(convert);
     }
 
     @Override
-    public void update(MechanicalDangerDetailsDTO mechanicalDangerDetails) {
-        Optional<MechanicalDangerDetails> target = repo.findById(mechanicalDangerDetails.getId());
-        MechanicalDangerDetails mechDangDetails = null;
+    public void update(DangerDetailsDTO mechanicalDangerDetails) {
+        Optional<DangerDetails> target = repo.findById(mechanicalDangerDetails.getId());
+        DangerDetails mechDangDetails = null;
         if (target.isPresent()) {
             mechDangDetails = target.get();
             if (mechDangDetails != null) {

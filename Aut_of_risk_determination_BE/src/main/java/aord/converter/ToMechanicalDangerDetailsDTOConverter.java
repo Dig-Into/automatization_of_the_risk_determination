@@ -1,7 +1,7 @@
 package aord.converter;
 
-import aord.dto.MechanicalDangerDetailsDTO;
-import aord.model.MechanicalDangerDetails;
+import aord.dto.DangerDetailsDTO;
+import aord.model.DangerDetails;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
@@ -9,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ToMechanicalDangerDetailsDTOConverter implements Converter<MechanicalDangerDetails, MechanicalDangerDetailsDTO> {
+public class ToMechanicalDangerDetailsDTOConverter implements Converter<DangerDetails, DangerDetailsDTO> {
 
     @Override
-    public MechanicalDangerDetailsDTO convert(MechanicalDangerDetails source) {
-        return new MechanicalDangerDetailsDTO(source);
+    public DangerDetailsDTO convert(DangerDetails source) {
+        return new DangerDetailsDTO(source);
     }
 
-    public List<MechanicalDangerDetailsDTO> convert(List<MechanicalDangerDetails> source) {
-        List<MechanicalDangerDetailsDTO> list = new ArrayList<>();
+    public List<DangerDetailsDTO> convert(List<DangerDetails> source) {
+        List<DangerDetailsDTO> list = new ArrayList<>();
 
-        for (MechanicalDangerDetails data: source) {
-            list.add(new MechanicalDangerDetailsDTO(data));
+        for (DangerDetails data: source) {
+            list.add(new DangerDetailsDTO(data));
         }
 
         return list;

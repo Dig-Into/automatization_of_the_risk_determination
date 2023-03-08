@@ -2,7 +2,7 @@ package aord.controller;
 
 import aord.converter.ToMechanicalDangerDetailsConverter;
 import aord.converter.ToMechanicalDangerDetailsDTOConverter;
-import aord.dto.MechanicalDangerDetailsDTO;
+import aord.dto.DangerDetailsDTO;
 import aord.service.MechanicalDangerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,25 +26,25 @@ public class MechanicalDangerDetailsController {
     ToMechanicalDangerDetailsConverter toEntity;
 
     @GetMapping("/getAll")
-    public ResponseEntity<List<MechanicalDangerDetailsDTO>> getAll() {
-        List<MechanicalDangerDetailsDTO> mechanicalDangerDetails = toDTO.convert(service.getAll());
+    public ResponseEntity<List<DangerDetailsDTO>> getAll() {
+        List<DangerDetailsDTO> mechanicalDangerDetails = toDTO.convert(service.getAll());
         return new ResponseEntity<>(mechanicalDangerDetails, HttpStatus.OK);
     }
 
     @GetMapping("/findById")
-    public ResponseEntity<MechanicalDangerDetailsDTO> getById(@RequestParam Long id) {
-        MechanicalDangerDetailsDTO mechanicalDangerDetails = toDTO.convert(service.getById(id));
+    public ResponseEntity<DangerDetailsDTO> getById(@RequestParam Long id) {
+        DangerDetailsDTO mechanicalDangerDetails = toDTO.convert(service.getById(id));
         return new ResponseEntity<>(mechanicalDangerDetails, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Object> create(@RequestBody MechanicalDangerDetailsDTO mechanicalDangerDetails) {
+    public ResponseEntity<Object> create(@RequestBody DangerDetailsDTO mechanicalDangerDetails) {
         service.save(toEntity.convert(mechanicalDangerDetails));
         return new ResponseEntity<>(mechanicalDangerDetails, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Object> update(@RequestBody MechanicalDangerDetailsDTO mechanicalDangerDetails) {
+    public ResponseEntity<Object> update(@RequestBody DangerDetailsDTO mechanicalDangerDetails) {
         service.update(mechanicalDangerDetails);
         return new ResponseEntity<>(mechanicalDangerDetails, HttpStatus.CREATED);
     }

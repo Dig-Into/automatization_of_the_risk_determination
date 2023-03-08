@@ -1,16 +1,16 @@
 package aord.service;
 
-import aord.dto.MechanicalDangerDTO;
-import aord.model.MechanicalDanger;
+import aord.dto.DangerNameDTO;
+import aord.model.DangerName;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public interface MechanicalDangerService {
-    List<MechanicalDanger> getAll();
-    MechanicalDanger getById(Long id);
-    void save(MechanicalDanger convert);
-    void update(MechanicalDangerDTO mechanicalDanger);
+    List<DangerName> getAll();
+    DangerName getById(Long id);
+    void save(DangerName convert);
+    void update(DangerNameDTO mechanicalDanger);
     void delete(Long id);
 }

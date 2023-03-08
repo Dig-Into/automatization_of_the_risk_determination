@@ -10,12 +10,12 @@ import lombok.Setter;
 @Setter
 public class FrequencyDTO {
     private Long id;
-    private Double value;
+    private Double code;
     private String description;
 
     public FrequencyDTO(Frequency frequency) {
         this.id = frequency.getId();
-        this.value = frequency.getValue();
+        this.code = frequency.getCode();
         this.description = frequency.getDescription();
     }
 

@@ -10,12 +10,12 @@ import lombok.Setter;
 @Setter
 public class EffectDTO {
     private Long id;
-    private Double value;
+    private Double code;
     private String description;
 
     public EffectDTO(Effect effect) {
         this.id = effect.getId();
-        this.value = effect.getValue();
+        this.code = effect.getCode();
         this.description = effect.getDescription();
     }
 

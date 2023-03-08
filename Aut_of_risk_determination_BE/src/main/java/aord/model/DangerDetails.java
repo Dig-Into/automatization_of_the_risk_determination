@@ -11,9 +11,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "MechanicalDangerDetails")
-public class MechanicalDangerDetails {
-
+@Table(name = "DangerDetails")
+public class DangerDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,13 +30,17 @@ public class MechanicalDangerDetails {
     private Frequency frequency;
 
     @ManyToOne
-    @JoinColumn(name = "mechanical_danger_id")
-    private MechanicalDanger mechanicalDanger;
+    @JoinColumn(name = "danger_name_id")
+    private DangerName dangerName;
+
+    @Column
+    private Integer code;
 
     @Column
     private Double value;
 
-    @Column
-    private String description;
+    @ManyToOne
+    @JoinColumn(name = "danger_details_description_id")
+    private DangerDetailsDescription[] descriptions;
 
 }

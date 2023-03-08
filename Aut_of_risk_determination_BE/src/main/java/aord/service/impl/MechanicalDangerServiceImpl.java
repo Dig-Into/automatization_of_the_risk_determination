@@ -1,7 +1,7 @@
 package aord.service.impl;
 
-import aord.dto.MechanicalDangerDTO;
-import aord.model.MechanicalDanger;
+import aord.dto.DangerNameDTO;
+import aord.model.DangerName;
 import aord.repository.MechanicalDangerRepository;
 import aord.service.MechanicalDangerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,24 +15,24 @@ public class MechanicalDangerServiceImpl implements MechanicalDangerService {
     @Autowired
     MechanicalDangerRepository repo;
     @Override
-    public List<MechanicalDanger> getAll() {
+    public List<DangerName> getAll() {
         return repo.findAll();
     }
 
     @Override
-    public MechanicalDanger getById(Long id) {
+    public DangerName getById(Long id) {
         return repo.findById(id).get();
     }
 
     @Override
-    public void save(MechanicalDanger convert) {
+    public void save(DangerName convert) {
         repo.save(convert);
     }
 
     @Override
-    public void update(MechanicalDangerDTO mechanicalDanger) {
-        Optional<MechanicalDanger> target = repo.findById(mechanicalDanger.getId());
-        MechanicalDanger mechDang = null;
+    public void update(DangerNameDTO mechanicalDanger) {
+        Optional<DangerName> target = repo.findById(mechanicalDanger.getId());
+        DangerName mechDang = null;
         if (target.isPresent()) {
             mechDang = target.get();
             if (mechDang != null) {

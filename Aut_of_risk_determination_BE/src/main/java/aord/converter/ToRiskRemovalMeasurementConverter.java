@@ -1,7 +1,7 @@
 package aord.converter;
 
 import aord.dto.RiskRemovalMeasurementDTO;
-import aord.model.MechanicalDangerDetails;
+import aord.model.DangerDetails;
 import aord.model.RiskRemovalMeasurement;
 import aord.repository.MechanicalDangerDetailsRepository;
 import aord.repository.RiskRemovalMeasurementRepository;
@@ -27,7 +27,7 @@ public class ToRiskRemovalMeasurementConverter implements Converter<RiskRemovalM
         riskRemovalMeasurement.setDescription(source.getDescription());
         riskRemovalMeasurement.setMeasurementImplFreq(source.getMeasurementImplFreq());
 
-        MechanicalDangerDetails mechanicalDangerDetails = mechanicalDangerDetailsRepository.findById(source.getMechanicalDangerDetails().getId()).get();
+        DangerDetails mechanicalDangerDetails = mechanicalDangerDetailsRepository.findById(source.getMechanicalDangerDetails().getId()).get();
 
         if (!ObjectUtils.isEmpty(mechanicalDangerDetails)) {
             riskRemovalMeasurement.setMechanicalDangerDetails(mechanicalDangerDetails);

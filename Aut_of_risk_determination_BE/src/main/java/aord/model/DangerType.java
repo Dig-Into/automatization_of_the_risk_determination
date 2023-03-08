@@ -1,29 +1,23 @@
 package aord.model;
 
-import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "MechanicalDanger")
-public class MechanicalDanger {
+@Table(name = "DangerType")
+public class DangerType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private Integer dangerNumber;
-
-    @Column
-    private String dangerType;
-
-    @Column
-    private String description;
-
+    private String name;
 }
