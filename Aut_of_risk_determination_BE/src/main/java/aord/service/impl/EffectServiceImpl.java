@@ -24,30 +24,4 @@ public class EffectServiceImpl implements EffectService {
         return repo.findById(id).get();
     }
 
-    @Override
-    public void save(Effect convert) {
-        repo.save(convert);
-    }
-
-    @Override
-    public void update(EffectDTO effect) {
-        Optional<Effect> target = repo.findById(effect.getId());
-        Effect eff = null;
-        if (target.isPresent()) {
-            eff = target.get();
-            if (eff != null) {
-                eff.setId(effect.getId());
-                eff.setValue(effect.getValue());
-                eff.setDescription(effect.getDescription());
-
-                repo.save(eff);
-            }
-        }
-    }
-
-    @Override
-    public void delete(Long id) {
-        repo.deleteById(id);
-
-    }
 }

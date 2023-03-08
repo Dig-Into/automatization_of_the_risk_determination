@@ -25,29 +25,4 @@ public class ProbabilityServiceImpl implements ProbabilityService {
         return repo.findById(id).get();
     }
 
-    @Override
-    public void save(Probability convert) {
-        repo.save(convert);
-    }
-
-    @Override
-    public void update(ProbabilityDTO probability) {
-        Optional<Probability> target = repo.findById(probability.getId());
-        Probability prob = null;
-        if (target.isPresent()) {
-            prob = target.get();
-            if (prob != null) {
-                prob.setId(probability.getId());
-                prob.setValue(probability.getValue());
-                prob.setDescription(probability.getDescription());
-
-                repo.save(prob);
-            }
-        }
-    }
-
-    @Override
-    public void delete(Long id) {
-        repo.deleteById(id);
-    }
 }

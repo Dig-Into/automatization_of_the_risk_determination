@@ -3,7 +3,7 @@ package aord.controller;
 import aord.converter.ToDangerDetailsConverter;
 import aord.converter.ToMechanicalDangerDetailsDTOConverter;
 import aord.dto.DangerDetailsDTO;
-import aord.service.MechanicalDangerDetailsService;
+import aord.service.DangerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import java.util.List;
 public class MechanicalDangerDetailsController {
 
     @Autowired
-    MechanicalDangerDetailsService service;
+    DangerDetailsService service;
 
     @Autowired
     ToMechanicalDangerDetailsDTOConverter toDTO;

@@ -3,7 +3,7 @@ package aord.controller;
 import aord.converter.ToDangerNameConverter;
 import aord.converter.ToDangerNameDTOConverter;
 import aord.dto.DangerNameDTO;
-import aord.service.MechanicalDangerService;
+import aord.service.DangerNameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import java.util.List;
 public class MechanicalDangerController {
 
     @Autowired
-    MechanicalDangerService service;
+    DangerNameService service;
 
     @Autowired
     ToDangerNameDTOConverter toDTO;

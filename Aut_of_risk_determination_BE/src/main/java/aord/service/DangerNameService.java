@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface MechanicalDangerService {
+public interface DangerNameService {
     List<DangerName> getAll();
     DangerName getById(Long id);
     void save(DangerName convert);
