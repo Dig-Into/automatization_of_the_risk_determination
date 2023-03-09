@@ -25,6 +25,12 @@ public class DangerNameServiceImpl implements DangerNameService {
     }
 
     @Override
+    public List<Integer> getAllDangerNameCodes() {
+        return repo.getAllDangerNameCodes();
+    }
+
+
+    @Override
     public void save(DangerName convert) {
         repo.save(convert);
     }

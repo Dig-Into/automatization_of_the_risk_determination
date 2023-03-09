@@ -31,8 +31,6 @@ j
 :src/main/java/aord/repository/DangerDetailsRepository.java,0\1\01fd753b9df79fa597ba910861376e9a5ca0d91c
 s
 Csrc/main/java/aord/repository/RiskRemovalMeasurementRepository.java,0\3\03781ff2b6464b35c27d050d8ab447f0537018b2
-g
-7src/main/java/aord/repository/DangerNameRepository.java,e\5\e56150cfabfabbee1c5ed12719b318415d8ab94c
 c
 3src/main/java/aord/converter/ToEffectConverter.java,7\4\743b064881cf8c66f87fa6817dfefd70afe12f6d
 f
@@ -93,13 +91,9 @@ m
 =src/main/java/aord/converter/ToDangerDetailsDTOConverter.java,4\4\442fd19b3a8d2051b034f5b814655f42d8c4c339
 a
 1src/main/java/aord/service/DangerTypeService.java,b\1\b128d26f5892244c49132ef26f33e1070a9ebf44
-a
-1src/main/java/aord/service/DangerNameService.java,f\9\f933c40064c70dc348a8cf57a766ada702db4fed
 d
 4src/main/java/aord/service/DangerDetailsService.java,1\f\1fa5e8c249d142f5231ae9d7bb0435badcb92b38
 j
 :src/main/java/aord/service/impl/DangerTypeServiceImpl.java,a\2\a23b10213ac79f10887341068916c5b8d7da6d2c
-j
-:src/main/java/aord/service/impl/DangerNameServiceImpl.java,3\1\313d320f2f64b2c458887c2fe19bd617c1ef4b14
 m
 =src/main/java/aord/service/impl/DangerDetailsServiceImpl.java,8\a\8af8139e54f33283f214aa1285dde952d56482b2
