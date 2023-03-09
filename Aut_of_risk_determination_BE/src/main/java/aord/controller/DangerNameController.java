@@ -37,6 +37,12 @@ public class DangerNameController {
         return new ResponseEntity<>(dangerName, HttpStatus.OK);
     }
 
+    @GetMapping("/getAllCodes")
+    public ResponseEntity<List<Integer>> getAllDangerNameCodes() {
+        List<Integer> codes = service.getAllDangerNameCodes();
+        return new ResponseEntity<>(codes, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Object> create(@RequestBody DangerNameDTO dangerName) {
         service.save(toEntity.convert(dangerName));
