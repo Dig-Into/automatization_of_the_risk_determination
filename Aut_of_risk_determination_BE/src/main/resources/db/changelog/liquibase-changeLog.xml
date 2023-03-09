@@ -7,8 +7,9 @@
     <include file="migrations/effect_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/frequency_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/kinney_index_table.xml" relativeToChangelogFile="true"/>
-    <include file="migrations/mechanical_danger_table.xml" relativeToChangelogFile="true"/>
-    <include file="migrations/mechanical_danger_details_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/danger_type_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/danger_name_table.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/danger_details_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/risk_removal_measurement_table.xml" relativeToChangelogFile="true"/>
     <include file="migrations/data_init.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

@@ -11,11 +11,11 @@
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="risk_removal_measurementPK" />
             </column>
-            <column name="mechanical_danger_details_id" type="BIGINT"></column>
+            <column name="danger_details_id" type="BIGINT"></column>
         </createTable>
     </changeSet>
     <changeSet author="NikolaM" id="2">
-        <addForeignKeyConstraint baseTableName="risk_removal_measurement" baseColumnNames="mechanical_danger_details_id" constraintName="risk_removal_measurement_mechanical_danger_detailsFK" referencedTableName="mechanical_danger_details" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="risk_removal_measurement" baseColumnNames="danger_details_id" constraintName="risk_removal_measurement_danger_detailsFK" referencedTableName="danger_details" referencedColumnNames="id" />
     </changeSet>
 
 </databaseChangeLog>

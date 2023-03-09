@@ -37,21 +37,4 @@ public class FrequencyController {
         return new ResponseEntity<>(frequency, HttpStatus.OK);
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<Object> create(@RequestBody FrequencyDTO frequency) {
-        service.save(toEntity.convert(frequency));
-        return new ResponseEntity<>(frequency, HttpStatus.CREATED);
-    }
-
-    @PutMapping("/update")
-    public ResponseEntity<Object> update(@RequestBody FrequencyDTO frequency) {
-        service.update(frequency);
-        return new ResponseEntity<>(frequency, HttpStatus.CREATED);
-    }
-
-    @DeleteMapping("/delete")
-    public ResponseEntity<Object> delete(@RequestParam Long id) {
-        service.delete(id);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
-    }
 }

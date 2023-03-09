@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Component
 public class ToDangerDetailsConverter implements Converter<DangerDetailsDTO, DangerDetails> {
@@ -25,9 +26,6 @@ public class ToDangerDetailsConverter implements Converter<DangerDetailsDTO, Dan
     @Autowired
     FrequencyRepository frequencyRepository;
 
-    @Autowired
-    DangerDetailsDescriptionRepository dangerDetailsDescriptionRepository;
-
     @Override
     public DangerDetails convert(DangerDetailsDTO source) {
         DangerDetails dangerDetails = new DangerDetails();
@@ -35,6 +33,7 @@ public class ToDangerDetailsConverter implements Converter<DangerDetailsDTO, Dan
         dangerDetails.setId(source.getId());
         dangerDetails.setCode(source.getCode());
         dangerDetails.setValue(source.getValue());
+        dangerDetails.setDescriptions(source.getDescriptions());
 
         Probability probability = probabilityRepository.findById(source.getProbability().getId()).get();
 
@@ -59,16 +58,6 @@ public class ToDangerDetailsConverter implements Converter<DangerDetailsDTO, Dan
         if (!ObjectUtils.isEmpty(dangerName)) {
             dangerDetails.setDangerName(dangerName);
         }
-
-        List<DangerDetailsDescription> dangerDetailsDescriptions = dangerDetailsDescriptionRepository.findAll();
-        List<DangerDetailsDescription> listToReturn = new ArrayList<>();
-
-        for (DangerDetailsDescription data: dangerDetailsDescriptions) {
-            if (source.getDescriptions().contains(data.getId())) {
-                listToReturn.add(data);
-            }
-        }
-        dangerDetails.setDescriptions(listToReturn);
 
         return dangerDetails;
 

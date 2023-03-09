@@ -37,21 +37,4 @@ public class EffectController {
         return new ResponseEntity<>(effect, HttpStatus.OK);
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<Object> create(@RequestBody EffectDTO effect) {
-        service.save(toEntity.convert(effect));
-        return new ResponseEntity<>(effect, HttpStatus.CREATED);
-    }
-
-    @PutMapping("/update")
-    public ResponseEntity<Object> update(@RequestBody EffectDTO effect) {
-        service.update(effect);
-        return new ResponseEntity<>(effect, HttpStatus.CREATED);
-    }
-
-    @DeleteMapping("/delete")
-    public ResponseEntity<Object> delete(@RequestParam Long id) {
-        service.delete(id);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
-    }
 }

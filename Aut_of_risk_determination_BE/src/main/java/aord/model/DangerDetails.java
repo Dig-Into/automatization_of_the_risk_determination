@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -41,8 +42,8 @@ public class DangerDetails {
     @Column
     private Double value;
 
-    @ManyToOne
-    @JoinColumn(name = "danger_details_description_id")
-    private List<DangerDetailsDescription> descriptions;
+    @Column
+    @ElementCollection(targetClass = String.class)
+    private List<String> descriptions;
 
 }
