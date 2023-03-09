@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="NikolaM" id="1">
+        <createTable tableName="risk_removal_measurement">
+            <column name="risk_factor_value" type="DOUBLE"/>
+            <column name="description" type="LONGTEXT"></column>
+            <column name="measurement_impl_freq" type="VARCHAR(255)"></column>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="risk_removal_measurementPK" />
+            </column>
+            <column name="danger_details_id" type="BIGINT"></column>
+        </createTable>
+    </changeSet>
+    <changeSet author="NikolaM" id="2">
+        <addForeignKeyConstraint baseTableName="risk_removal_measurement" baseColumnNames="danger_details_id" constraintName="risk_removal_measurement_danger_detailsFK" referencedTableName="danger_details" referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

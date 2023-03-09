@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lazar (generated)" id="1634905059009-1">
+        <addUniqueConstraint columnNames="value" constraintName="jwt_uk_on_value" tableName="jwt"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1634905059009-2">
+        <dropTable tableName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1634905059009-5">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="email" tableName="user"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1634905059009-6">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="name" tableName="user_role"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1634905059009-7">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="password" tableName="user"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1634905059009-8">
+        <dropNotNullConstraint columnDataType="bigint" columnName="user_role_id" tableName="user"/>
+    </changeSet>
+
+    <changeSet author="lazar (generated)" id="1635512254314-10">
+        <addUniqueConstraint columnNames="value" constraintName="jwt_uk_on_value" tableName="jwt"/>
+    </changeSet>
+   
+    <changeSet author="lazar (generated)" id="1635512254314-19">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="email" tableName="user"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1635512254314-21">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="name" tableName="user_role"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1635512254314-22">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="password" tableName="user"/>
+    </changeSet>
+    <changeSet author="lazar (generated)" id="1635512254314-23">
+        <dropNotNullConstraint columnDataType="bigint" columnName="user_role_id" tableName="user"/>
+    </changeSet>
+</databaseChangeLog>

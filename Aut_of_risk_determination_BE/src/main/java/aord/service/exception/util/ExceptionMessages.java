@@ -1,0 +1,11 @@
+package aord.service.exception.util;
+
+public interface ExceptionMessages {
+	String INVALID_TOKEN_PROVIDED = "INVALID_TOKEN_PROVIDED";
+
+	String EMAIL_DOES_NOT_EXIST = "EMAIL_DOES_NOT_EXIST";
+
+	String EMAIL_ALREADY_EXISTS = "EMAIL_ALREADY_EXISTS";
+	
+	String INVALID_CREDENTIALS_MESSAGE = "INVALID_CREDENTIALS";
+}
