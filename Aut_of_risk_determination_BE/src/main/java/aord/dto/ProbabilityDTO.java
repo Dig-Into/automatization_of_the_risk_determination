@@ -9,12 +9,12 @@ import lombok.Setter;
 @Getter @Setter
 public class ProbabilityDTO {
     private Long id;
-    private Double value;
+    private Double code;
     private String description;
 
     public ProbabilityDTO(Probability probability) {
         this.id = probability.getId();
-        this.value = probability.getValue();
+        this.code = probability.getCode();
         this.description = probability.getDescription();
     }
 

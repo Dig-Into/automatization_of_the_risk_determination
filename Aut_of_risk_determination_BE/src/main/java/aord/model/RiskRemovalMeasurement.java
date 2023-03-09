@@ -19,12 +19,11 @@ public class RiskRemovalMeasurement {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "mechanical_danger_details_id")
-    private MechanicalDangerDetails mechanicalDangerDetails;
+    @JoinColumn(name = "danger_details_id")
+    private DangerDetails dangerDetails;
 
     @Column
     private Double riskFactorValue;
-
     @Column
     private String description;
 

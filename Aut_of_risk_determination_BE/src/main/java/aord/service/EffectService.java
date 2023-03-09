@@ -11,7 +11,5 @@ public interface EffectService {
 
     List<Effect> getAll();
     Effect getById(Long id);
-    void save(Effect convert);
-    void update(EffectDTO effect);
-    void delete(Long id);
+
 }

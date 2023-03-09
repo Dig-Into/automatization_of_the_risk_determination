@@ -40,6 +40,7 @@ public class RiskRemovalMeasurementServiceImpl implements RiskRemovalMeasurement
                 riskRem.setRiskFactorValue(riskRemovalMeasurement.getRiskFactorValue());
                 riskRem.setDescription(riskRemovalMeasurement.getDescription());
                 riskRem.setMeasurementImplFreq(riskRemovalMeasurement.getMeasurementImplFreq());
+                riskRem.setDangerDetails(riskRemovalMeasurement.getDangerDetails());
 
                 repo.save(riskRem);
             }

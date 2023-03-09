@@ -18,9 +18,6 @@ import org.springframework.util.ObjectUtils;
 @Component
 public class ToKinneyIndexConverter implements Converter<KinneyIndexDTO, KinneyIndex> {
     @Autowired
-    KinneyIndexRepository repo;
-
-    @Autowired
     ProbabilityRepository probabilityRepository;
 
     @Autowired

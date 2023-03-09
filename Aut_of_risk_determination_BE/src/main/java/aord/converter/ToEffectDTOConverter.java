@@ -10,7 +10,6 @@ import java.util.List;
 
 @Component
 public class ToEffectDTOConverter implements Converter<Effect, EffectDTO> {
-
     @Override
     public EffectDTO convert(Effect source) {
         return new EffectDTO(source);

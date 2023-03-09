@@ -37,22 +37,4 @@ public class ProbabilityController {
         return new ResponseEntity<>(probability, HttpStatus.OK);
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<Object> create(@RequestBody ProbabilityDTO probability) {
-        service.save(toEntity.convert(probability));
-        return new ResponseEntity<>(probability, HttpStatus.CREATED);
-    }
-
-    @PutMapping("/update")
-    public ResponseEntity<Object> update(@RequestBody ProbabilityDTO probability) {
-        service.update(probability);
-        return new ResponseEntity<>(probability, HttpStatus.CREATED);
-    }
-
-    @DeleteMapping("/delete")
-    public ResponseEntity<Object> delete(@RequestParam Long id) {
-        service.delete(id);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
-    }
-
 }

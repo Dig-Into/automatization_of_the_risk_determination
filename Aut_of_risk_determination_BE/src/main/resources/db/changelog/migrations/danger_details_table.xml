@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="NikolaM" id="1">
+        <createTable tableName="danger_details">
+            <column name="code" type="INTEGER"></column>
+            <column name="value" type="DOUBLE"/>
+            <column name="descriptions" type="LONGTEXT"></column>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="mechanical_danger_detailsPK" />
+            </column>
+            <column name="probability_id" type="BIGINT"></column>
+            <column name="effect_id" type="BIGINT"></column>
+            <column name="frequency_id" type="BIGINT"></column>
+            <column name="danger_name_id" type="BIGINT"></column>
+        </createTable>
+    </changeSet>
+    <changeSet author="NikolaM" id="2">
+        <addForeignKeyConstraint baseTableName="danger_details" baseColumnNames="probability_id" constraintName="danger_details_probabilityFK" referencedTableName="probability" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="danger_details" baseColumnNames="effect_id" constraintName="danger_details_effectFK" referencedTableName="effect" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="danger_details" baseColumnNames="frequency_id" constraintName="danger_details_frequencyFK" referencedTableName="frequency" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="danger_details" baseColumnNames="danger_name_id" constraintName="danger_details_danger_nameFK" referencedTableName="danger_name" referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

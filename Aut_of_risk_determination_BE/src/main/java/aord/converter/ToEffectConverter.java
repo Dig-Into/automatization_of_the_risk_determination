@@ -9,15 +9,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ToEffectConverter implements Converter<EffectDTO, Effect> {
-    @Autowired
-    EffectRepository repo;
-
     @Override
     public Effect convert(EffectDTO source) {
         Effect effect = new Effect();
 
         effect.setId(source.getId());
-        effect.setValue(source.getValue());
+        effect.setCode(source.getCode());
         effect.setDescription(source.getDescription());
 
         return effect;

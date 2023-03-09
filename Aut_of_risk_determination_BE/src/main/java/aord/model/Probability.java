@@ -14,7 +14,7 @@ public class Probability {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private Double value;
+    private Double code;
     @Column
     private String description;
 

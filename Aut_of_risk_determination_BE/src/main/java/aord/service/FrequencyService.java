@@ -10,7 +10,5 @@ import java.util.List;
 public interface FrequencyService {
     List<Frequency> getAll();
     Frequency getById(Long id);
-    void save(Frequency convert);
-    void update(FrequencyDTO frequency);
-    void delete(Long id);
+
 }

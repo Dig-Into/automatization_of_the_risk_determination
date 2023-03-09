@@ -46,7 +46,7 @@ public class RiskRemovalMeasurementController {
     @PutMapping("/update")
     public ResponseEntity<Object> update(@RequestBody RiskRemovalMeasurementDTO riskRemovalMeasurement) {
         service.update(riskRemovalMeasurement);
-        return new ResponseEntity<>(riskRemovalMeasurement, HttpStatus.CREATED);
+        return new ResponseEntity<>(riskRemovalMeasurement, HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/delete")

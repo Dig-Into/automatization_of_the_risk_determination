@@ -5,7 +5,7 @@
 
     <changeSet author="NikolaM" id="1">
         <createTable tableName="frequency">
-            <column name="value" type="DOUBLE"/>
+            <column name="code" type="DOUBLE"/>
             <column name="description" type="VARCHAR(255)"></column>
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="frequencyPK" />

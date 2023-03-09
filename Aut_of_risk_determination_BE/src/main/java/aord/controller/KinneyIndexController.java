@@ -46,7 +46,7 @@ public class KinneyIndexController {
     @PutMapping("/update")
     public ResponseEntity<Object> update(@RequestBody KinneyIndexDTO kinneyIndex) {
         service.update(kinneyIndex);
-        return new ResponseEntity<>(kinneyIndex, HttpStatus.CREATED);
+        return new ResponseEntity<>(kinneyIndex, HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/delete")

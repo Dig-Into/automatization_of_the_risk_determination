@@ -1,6 +1,6 @@
 package aord.dto;
 
-import aord.model.MechanicalDangerDetails;
+import aord.model.DangerDetails;
 import aord.model.RiskRemovalMeasurement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +18,8 @@ public class RiskRemovalMeasurementDTO {
     private String description;
     private String measurementImplFreq;
     @ManyToOne
-    @JoinColumn(name = "mechanical_danger_details_id")
-    private MechanicalDangerDetails mechanicalDangerDetails;
+    @JoinColumn(name = "danger_details_id")
+    private DangerDetails dangerDetails;
 
     public RiskRemovalMeasurementDTO(RiskRemovalMeasurement riskRemovalMeasurement) {
         this.id = riskRemovalMeasurement.getId();
@@ -27,9 +27,9 @@ public class RiskRemovalMeasurementDTO {
         this.description = riskRemovalMeasurement.getDescription();
         this.measurementImplFreq = riskRemovalMeasurement.getMeasurementImplFreq();
 
-        MechanicalDangerDetails mechDetails = riskRemovalMeasurement.getMechanicalDangerDetails();
-        if (mechDetails != null) {
-            this.mechanicalDangerDetails = mechDetails;
+        DangerDetails dangDetails = riskRemovalMeasurement.getDangerDetails();
+        if (dangDetails != null) {
+            this.dangerDetails = dangDetails;
         }
     }
 

@@ -10,7 +10,5 @@ import java.util.List;
 public interface ProbabilityService {
     List<Probability> getAll();
     Probability getById(Long id);
-    void save(Probability convert);
-    void update(ProbabilityDTO probability);
-    void delete(Long id);
+
 }

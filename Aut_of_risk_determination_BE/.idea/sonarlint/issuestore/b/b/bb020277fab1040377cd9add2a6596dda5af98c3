@@ -1,9 +1,0 @@
-
-r
-java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ñ«šÓýÿÿÿÿ8£‰Í£é0
-V
-java:S1128"9Remove this unused import 'aord.dto.MechanicalDangerDTO'.(Ù˜ÓË8Ê³â£é0
-Z
-java:S1128"8Remove this unused import 'aord.model.MechanicalDanger'.(ã¨›ùúÿÿÿÿ8Í³â£é0
-^
-java:S1128	"ARemove this unused import 'aord.service.MechanicalDangerService'.(ŽòÈ»8Î³â£é0

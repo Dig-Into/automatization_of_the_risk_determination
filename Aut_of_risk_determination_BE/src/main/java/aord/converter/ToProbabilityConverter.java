@@ -9,15 +9,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ToProbabilityConverter implements Converter<ProbabilityDTO, Probability> {
-    @Autowired
-    ProbabilityRepository repo;
-
     @Override
     public Probability convert(ProbabilityDTO source) {
         Probability probability = new Probability();
 
         probability.setId(source.getId());
-        probability.setValue(source.getValue());
+        probability.setCode(source.getCode());
         probability.setDescription(source.getDescription());
 
         return probability;

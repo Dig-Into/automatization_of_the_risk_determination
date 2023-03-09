@@ -24,29 +24,4 @@ public class FrequencyServiceImpl implements FrequencyService {
         return repo.findById(id).get();
     }
 
-    @Override
-    public void save(Frequency convert) {
-        repo.save(convert);
-    }
-
-    @Override
-    public void update(FrequencyDTO frequency) {
-        Optional<Frequency> target = repo.findById(frequency.getId());
-        Frequency freq = null;
-        if (target.isPresent()) {
-            freq = target.get();
-            if (freq != null) {
-                freq.setId(frequency.getId());
-                freq.setValue(frequency.getValue());
-                freq.setDescription(frequency.getDescription());
-
-                repo.save(freq);
-            }
-        }
-    }
-
-    @Override
-    public void delete(Long id) {
-        repo.deleteById(id);
-    }
 }
