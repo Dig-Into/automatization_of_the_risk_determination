@@ -1,0 +1,73 @@
+<div class="page">
+    <app-container-big>
+        <h1 class="naslov">Metode za vršenje procene rizika</h1>
+        <p class="tekst">
+            Nakon donošenja odluke o pokretanju postupka o proceni i izrade plana sprovođenja
+            procene rizika pristupa se sprovođenju sistematskog evidentiranja i procenjivanja rizika
+            izabranom metodom <span class="kinney">Kinney</span>.
+        </p>
+        <p class="tekst">
+            Rizik se kvantitativno određuje kao proizvod verovatnoće (P), učestalosi (F) i učinka posledice (E). <br>
+            <br>
+            <span class="kinney">(R = P x F x E)</span> 
+        </p>
+
+        <br>
+        <br>
+
+        <mat-table [dataSource]="dataSource1">
+            <ng-container matColumnDef="column1">
+              <mat-header-cell *matHeaderCellDef>Verovatnoća (P)</mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.vrednost}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="column2">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.opis}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="['column1', 'column2']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['column1', 'column2']"></mat-row>
+        </mat-table>
+
+        <br>
+        <br>
+        <br>
+
+        <mat-table [dataSource]="dataSource2">
+            <ng-container matColumnDef="column1">
+              <mat-header-cell *matHeaderCellDef>Učinak posledice (E)</mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.vrednost}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="column2">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.opis}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="['column1', 'column2']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['column1', 'column2']"></mat-row>
+        </mat-table>
+
+        <br>
+        <br>
+        <br>
+
+
+        <mat-table [dataSource]="dataSource3">
+            <ng-container matColumnDef="column1">
+              <mat-header-cell *matHeaderCellDef>Učestalost (F)</mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.vrednost}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="column2">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.opis}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="['column1', 'column2']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['column1', 'column2']"></mat-row>
+        </mat-table>
+
+    </app-container-big>
+</div>
