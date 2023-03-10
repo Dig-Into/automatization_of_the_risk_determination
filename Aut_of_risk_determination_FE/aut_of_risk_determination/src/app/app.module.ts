@@ -12,14 +12,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
 import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContainerComponent,
-    
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +32,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
     MatExpansionModule,
     MegaMenuModule,
     MenubarModule,
-    IonicModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

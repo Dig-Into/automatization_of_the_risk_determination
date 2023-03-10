@@ -14,6 +14,7 @@
 
         <br>
         <br>
+        <br>
 
         <mat-table [dataSource]="dataSource1">
             <ng-container matColumnDef="column1">
@@ -67,6 +68,36 @@
           
             <mat-header-row *matHeaderRowDef="['column1', 'column2']"></mat-header-row>
             <mat-row *matRowDef="let row; columns: ['column1', 'column2']"></mat-row>
+        </mat-table>
+
+        <br>
+        <br>
+        <br>
+
+
+        <mat-table [dataSource]="dataSource4">
+            <ng-container matColumnDef="column1">
+              <mat-header-cell *matHeaderCellDef>Kinney Index</mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.id}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="column2">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{item.vrednost}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="column3">
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.opis}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="column4">
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let item" [ngStyle]="{'background': item.kinney == 'Radno mesto nije sa povećanim rizikom' ? '#37AC00' : (item.kinney == 'Umeren rizik' ? 'rgb(186 202 16)' : '#b23b3b')}" > {{item.kinney}} </mat-cell>
+              </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="['column1', 'column2', 'column3', 'column4']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['column1', 'column2', 'column3', 'column4']"></mat-row>
         </mat-table>
 
     </app-container-big>

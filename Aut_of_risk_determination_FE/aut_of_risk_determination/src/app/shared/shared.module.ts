@@ -16,7 +16,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
-
 const modules = [
   CommonModule,
   MatButtonModule,
@@ -37,7 +36,7 @@ const modules = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [  ],
   imports: [...modules],
   exports: [
   ...modules,

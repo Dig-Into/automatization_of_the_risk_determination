@@ -33,3 +33,8 @@ mat-table {
 mat-header-cell, mat-cell {
     color: #fff;
 }
+
+mat-header-row {
+    /* padding-left: 40%; */
+    text-align: center;
+}
