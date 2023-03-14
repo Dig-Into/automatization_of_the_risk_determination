@@ -26,9 +26,13 @@ export class LoginComponent {
     }
   }
 
+  addToLocalStorage(item: Object) {
+    localStorage.setItem('token', item.toString());
+  }
+
   onSubmit(): void {
-    this.loginService.login(this.email, this.password)
-      .subscribe(response => console.log(response),
+    this.loginService.login(this.email, this.password).subscribe(response =>
+      this.addToLocalStorage(response),
       error => console.error(error)
     );
   }
