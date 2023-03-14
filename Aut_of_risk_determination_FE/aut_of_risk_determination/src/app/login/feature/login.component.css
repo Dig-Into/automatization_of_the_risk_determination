@@ -37,6 +37,35 @@ body {
     font-weight: 400;
   }
 
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+  }
+
+
+  label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #999;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  input:focus + label {
+    transform: translateY(-1.7rem) scale(0.8);
+    color: #999;
+  }
+
   input:focus {
     outline: 1px ridge #37AC00;
   }

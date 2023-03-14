@@ -13,6 +13,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
 import { RouteReuseStrategy } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,12 +33,11 @@ import { FooterComponent } from './shared/footer/footer.component';
     MatExpansionModule,
     MegaMenuModule,
     MenubarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  loggedIn: boolean = false;
-
 }

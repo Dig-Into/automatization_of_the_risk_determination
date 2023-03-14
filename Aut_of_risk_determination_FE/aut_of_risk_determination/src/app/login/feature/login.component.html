@@ -1,9 +1,16 @@
 <div class="background"></div>
     <div class="login-container">
       <h1>Prijava</h1>
-      <form>
-        <input type="text" placeholder="Korisničko ime" />
-        <input type="password" placeholder="Lozinka" />
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" [(ngModel)]="email" name="username" id="username" (focus)="onFocus()" (blur)="onBlur()" required/>
+          <label for="username">E-mail/Korisničko ime</label>
+        </div>
+        <div class="form-group">
+          <input type="password" [(ngModel)]="password"  />
+          <label for="username">Lozinka</label>
+
+        </div>
         <input type="submit" value="Prijavi me" />
       </form>
 </div>
