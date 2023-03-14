@@ -37,4 +37,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  loggedIn: boolean = false;
+
+}
