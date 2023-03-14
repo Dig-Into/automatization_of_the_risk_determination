@@ -41,6 +41,7 @@ body {
     position: relative;
     margin-bottom: 1.5rem;
   }
+
   input {
     width: 100%;
     padding: 0.5rem;
@@ -52,7 +53,6 @@ body {
     transition: border-color 0.3s ease;
   }
 
-
   label {
     position: absolute;
     top: 0.5rem;
@@ -61,14 +61,15 @@ body {
     font-size: 1rem;
     transition: transform 0.3s ease, color 0.3s ease;
   }
-  input:focus + label {
+
+  /* input:focus + label {
     transform: translateY(-1.7rem) scale(0.8);
     color: #999;
-  }
+  } */
 
-  input:focus {
+  /* input:focus {
     outline: 1px ridge #37AC00;
-  }
+  } */
   
   input[type="text"],
   input[type="password"] {

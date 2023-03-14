@@ -15,14 +15,14 @@ export class LoginComponent {
   onFocus() {
     const input = event.target as HTMLInputElement;
     const label = input.nextElementSibling as HTMLLabelElement;
-    label.classList.add('focused');
+    label.style.transform = 'translateY(-100%)';
   }
-
+  
   onBlur() {
     const input = event.target as HTMLInputElement;
     const label = input.nextElementSibling as HTMLLabelElement;
     if (!input.value) {
-      label.classList.remove('focused');
+      label.style.transform = '';
     }
   }
 
