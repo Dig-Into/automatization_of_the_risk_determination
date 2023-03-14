@@ -1,4 +1,6 @@
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../data-access/login.service';
 
 @Component({
@@ -10,7 +12,7 @@ export class LoginComponent {
   email: string;
   password: string;
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   onFocus() {
     const input = event.target as HTMLInputElement;
@@ -31,9 +33,16 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    this.loginService.login(this.email, this.password).subscribe(response =>
-      this.addToLocalStorage(response),
-      error => console.error(error)
+    this.loginService.login(this.email, this.password).subscribe(
+      (response) => {
+        this.addToLocalStorage(response);  
+        this.router.navigate(['/home']);
+      },
+      (error: HttpErrorResponse) => {
+        error => console.error(error)
+      }
     );
   }
+
+  
 }
