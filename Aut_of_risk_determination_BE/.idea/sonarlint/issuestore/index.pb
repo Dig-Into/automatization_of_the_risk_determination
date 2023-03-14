@@ -111,18 +111,12 @@ h
 8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
 c
 3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
-h
-8src/main/java/aord/controller/KinneyIndexController.java,2\7\274b3a008de2c3819c1a99dd167f8d4f428020f5
 Y
 )src/main/java/aord/dto/DangerTypeDTO.java,d\6\d61945171678e08babe8a8bb340478bbcabfe98c
-g
-7src/main/java/aord/controller/DangerTypeController.java,8\7\87a0edbe9c4dc17a15a088a870e14be36b083bd5
 Y
 )src/main/java/aord/dto/DangerNameDTO.java,5\f\5fef9b33f74be01d16a16dac0e47c9683de32db6
 \
 ,src/main/java/aord/dto/DangerDetailsDTO.java,7\b\7bdba327de061c16134be70f116158919901a38b
-j
-:src/main/java/aord/controller/DangerDetailsController.java,e\b\eb8e55e373a8c84fc80ebbfe88300b472dbbc695
 j
 :src/main/java/aord/converter/ToDangerDetailsConverter.java,0\4\0435647900efd16c47805323aebb3f8fe8c79b0f
 [
@@ -133,7 +127,5 @@ j
 :src/main/java/aord/service/impl/DangerNameServiceImpl.java,3\1\313d320f2f64b2c458887c2fe19bd617c1ef4b14
 a
 1src/main/java/aord/service/DangerNameService.java,f\9\f933c40064c70dc348a8cf57a766ada702db4fed
-g
-7src/main/java/aord/controller/DangerNameController.java,a\4\a460ba7a72a6da52a6b58679b42c2badf75da7fe
 g
 7src/main/java/aord/repository/DangerNameRepository.java,e\5\e56150cfabfabbee1c5ed12719b318415d8ab94c
