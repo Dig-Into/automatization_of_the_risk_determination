@@ -81,12 +81,6 @@ v
 Fsrc/main/java/aord/service/impl/RiskRemovalMeasurementServiceImpl.java,a\0\a00331f3b71c9028262deeb54ddd360879ecb495
 k
 ;src/main/java/aord/service/impl/KinneyIndexServiceImpl.java,3\0\30054917321f4c37fceaeac2c5460d4c844d84ac
-f
-6src/main/java/aord/controller/FrequencyController.java,2\1\21cf09f12332ea43458307e9579ce1774725bf3a
-s
-Csrc/main/java/aord/controller/RiskRemovalMeasurementController.java,d\f\df32ef6721f971e72da17ba3ec17f742df2f2f55
-a
-1src/main/java/aord/controller/UserController.java,e\4\e4a1187f855e0068580cebea48005d34bba8c4e7
 m
 =src/main/java/aord/converter/ToDangerDetailsDTOConverter.java,4\4\442fd19b3a8d2051b034f5b814655f42d8c4c339
 a
@@ -107,8 +101,6 @@ Y
 )src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
 X
 (src/main/java/aord/model/DangerType.java,0\b\0bfff6dfec73f00d14f41703298806f195ba33eb
-h
-8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
 c
 3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
 Y
