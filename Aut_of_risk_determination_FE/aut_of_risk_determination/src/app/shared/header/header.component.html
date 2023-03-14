@@ -1,6 +1,6 @@
 <div class="navbar">
     <app-container>
-        <span><img class="logo" src="../../../../assets/logo/logov2.png" alt="logo"></span>
+        <span><img class="logo" src="../../../../assets/logo/logov2.png" alt="logo" (click)="goHome()"></span>
         
         <span class="example-spacer"></span>
         <div class="dropdown">
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="logoutDiv">
-            <button class="dropbtn">ODJAVA</button>
+            <button class="dropbtn" (click)="logOut()">ODJAVA</button>
         </div>
     </app-container>
 

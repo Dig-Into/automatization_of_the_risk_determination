@@ -65,6 +65,7 @@
 
   .dropbtn:hover {
     color: #b23b3b;
+    cursor: pointer;
     
   }
   
