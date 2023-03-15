@@ -15,6 +15,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./login/feature/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: 'procena-rizika',
+    loadChildren: () =>
+      import('./procena/feature/procena.module').then((m) => m.ProcenaModule),
+  },
 ];
 
 @NgModule({

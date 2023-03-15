@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 import { MatTableModule } from '@angular/material/table'  
-import { HomePageRoutingModule } from './home-routing.module';
+import { ProcenaRizikaComponent } from './procena-rizika.component';
+import { ProcenaRoutingModule } from './procena-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module'; 
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HomePageRoutingModule,
+    ProcenaRoutingModule,
     MatTableModule,
     SharedModule
     
   ],
-  declarations: [HomePage]
+  declarations: [ProcenaRizikaComponent]
 })
-export class HomePageModule {}
+export class ProcenaModule {}

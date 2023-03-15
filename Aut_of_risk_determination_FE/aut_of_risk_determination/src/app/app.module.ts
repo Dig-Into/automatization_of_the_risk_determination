@@ -11,7 +11,6 @@ import { ContainerComponent } from './shared/wrapper/wrapper.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
-import { RouteReuseStrategy } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.component';
@@ -22,7 +21,8 @@ import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.c
     HeaderComponent,
     ContainerComponent,
     FooterComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+
   ],
   imports: [
     BrowserModule,

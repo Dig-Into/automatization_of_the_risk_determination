@@ -1,0 +1,47 @@
+<div class="page">
+  <app-container-big>
+    <div style="width: 70%; padding: 20px;">
+      <div style="margin-bottom: 10px;">
+        <label for="opasnost-dropdown" class="labelText">Izaberi opasnost:</label>
+        <div style="display: flex; align-items: center;">
+          <select id="opasnost-dropdown">
+            <option value="opasnost-1">Opasnost 1</option>
+            <option value="opasnost-2">Opasnost 2</option>
+            <option value="opasnost-3">Opasnost 3</option>
+          </select>
+          <button class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
+        <div *ngFor="let input of inputs">
+          <input id="detalji-opasnosti" style="margin-right: 10px;">
+        </div>
+        <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
+          <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+      <div class="pefDiv">
+        <label for="small-input-1" class="labelText">P</label>
+        <input id="small-input-1" class="smallInputField">
+      </div>
+      <div>
+        <label for="small-input-2" class="labelText">E</label>
+        <input id="small-input-2" class="smallInputField">
+      </div>
+      <div>
+        <label for="small-input-3" class="labelText">F</label>
+        <input id="small-input-3" class="smallInputField">
+      </div>
+    </div>
+    <div style="width: 30%; padding: 20px;">
+      <!-- Render another component here -->
+    </div>
+    <div class="buttonsDiv">
+      <div class="helper">
+        <button class="izracunajButton">Izračunaj</button>
+        <button class="kreirajButton">Kreiraj</button>
+      </div>
+    </div>
+  </app-container-big>
+</div>
