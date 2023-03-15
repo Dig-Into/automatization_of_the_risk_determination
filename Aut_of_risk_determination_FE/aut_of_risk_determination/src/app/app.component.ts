@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from './login/data-access/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,11 @@ import { AuthService } from './login/data-access/auth.service';
 })
 export class AppComponent {
   title = 'auth_of_risk_determination';
+  isLoading: boolean;
 
+  constructor() {}
 
-  constructor(private authService: AuthService) {}
-
-  loggedIn = this.authService.isLoggedIn();
+  
 
 
 }

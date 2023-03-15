@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 
 
@@ -36,7 +37,8 @@ const modules = [
 
 
 @NgModule({
-  declarations: [  ],
+  declarations: [  
+  ],
   imports: [...modules],
   exports: [
   ...modules,

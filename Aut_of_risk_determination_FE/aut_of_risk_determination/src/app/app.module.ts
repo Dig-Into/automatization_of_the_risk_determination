@@ -14,13 +14,15 @@ import { MenubarModule } from 'primeng/menubar';
 import { RouteReuseStrategy } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContainerComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule,
