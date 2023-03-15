@@ -17,6 +17,8 @@ import { Component } from '@angular/core';
 })
 export class ProcenaRizikaComponent {
   inputs: string[] = [''];
+  showAnotherComponent = false;
+  fadeState = '';
 
   addInput() {
     this.inputs.push('');

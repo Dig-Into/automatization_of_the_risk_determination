@@ -45,6 +45,7 @@ const modules = [
   exports: [
   ...modules,
   ContainerBigComponent,
+  KinneyIndexComponent
 ]
 })
 export class SharedModule { }

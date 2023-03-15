@@ -35,11 +35,13 @@
       </div>
     </div>
     <div style="width: 30%; padding: 20px;">
-      <!-- Render another component here -->
+      <div [@fadeInFromRight]="fadeState" style="width: 70%; padding: 20px;">
+        <app-kinney-index *ngIf="showAnotherComponent"></app-kinney-index>
+      </div>
     </div>
     <div class="buttonsDiv">
       <div class="helper">
-        <button class="izracunajButton">Izračunaj</button>
+        <button (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
         <button class="kreirajButton">Kreiraj</button>
       </div>
     </div>

@@ -22,7 +22,7 @@ import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.c
     ContainerComponent,
     FooterComponent,
     LoadingScreenComponent,
-
+    
   ],
   imports: [
     BrowserModule,
