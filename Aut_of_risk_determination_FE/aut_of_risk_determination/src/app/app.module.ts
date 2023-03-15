@@ -12,8 +12,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.component';
+import { AuthInterceptor } from './utils/guards/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,11 @@ import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.c
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

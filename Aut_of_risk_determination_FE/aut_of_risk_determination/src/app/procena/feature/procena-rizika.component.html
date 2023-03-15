@@ -21,21 +21,37 @@
           <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
         </div>
       </div>
+
       <div class="pefDiv">
-        <label for="small-input-1" class="labelText">P</label>
-        <input id="small-input-1" class="smallInputField">
+        <label for="p-dropdown" class="labelText">P</label>
+        <select id="p-dropdown" (change)="onSelect1($event.target)">
+          <option value="p-item" *ngFor="let item of probabilities" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem1">
+          <p class="descriptionText">{{ selectedItem1.description }}</p>
+        </div>
       </div>
-      <div>
-        <label for="small-input-2" class="labelText">E</label>
-        <input id="small-input-2" class="smallInputField">
+      <div style="display: flex;">
+        <label for="e-dropdown" class="labelText">E</label>
+        <select id="e-dropdown" (change)="onSelect2($event.target)">
+          <option value="e-item" *ngFor="let item of effects" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem2">
+          <p class="descriptionText">{{ selectedItem2.description }}</p>
+        </div>
       </div>
-      <div>
-        <label for="small-input-3" class="labelText">F</label>
-        <input id="small-input-3" class="smallInputField">
+      <div style="display: flex;">
+        <label for="f-dropdown" class="labelText">F</label>
+        <select id="f-dropdown" (change)="onSelect3($event.target)">
+          <option value="f-item" *ngFor="let item of frequencies" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem3">
+          <p class="descriptionText">{{ selectedItem3.description }}</p>
+        </div>
       </div>
     </div>
     <div style="width: 30%; padding: 20px;">
-      <div [@fadeInFromRight]="fadeState" style="width: 70%; padding: 20px;">
+      <div [@fadeInFromRight]="fadeState" style="width: 30%; padding: 20px;">
         <app-kinney-index *ngIf="showAnotherComponent"></app-kinney-index>
       </div>
     </div>

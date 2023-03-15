@@ -35,7 +35,7 @@ export class LoginComponent {
   onSubmit(): void {
     this.loginService.login(this.email, this.password).subscribe(
       (response) => {
-        this.addToLocalStorage(response);  
+        this.addToLocalStorage(response.jwt);  
         this.router.navigate(['/home']);
       },
       (error: HttpErrorResponse) => {
