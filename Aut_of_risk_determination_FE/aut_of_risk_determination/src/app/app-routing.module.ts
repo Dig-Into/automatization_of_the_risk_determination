@@ -16,10 +16,15 @@ const routes: Routes = [
       import('./login/feature/login.module').then((m) => m.LoginModule),
   },
   {
-    path: 'procena-rizika',
+    path: 'procena-rizika-kreiranje',
     loadChildren: () =>
-      import('./procena/feature/procena.module').then((m) => m.ProcenaModule),
+      import('./procena/feature/procena-rizika-kreiranje/procena.module').then((m) => m.ProcenaModule),
   },
+  {
+    path: 'procena-rizika-pregled',
+    loadChildren: () =>
+      import('./procena/feature/procena-rizika-pregled/procena-rizika-pregled.module').then((m) => m.ProcenaRizikaPregledModule),
+  }
 ];
 
 @NgModule({

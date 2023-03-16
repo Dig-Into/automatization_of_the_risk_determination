@@ -1,13 +1,13 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { EffectService } from '../data-access/effect/effect.service';
-import { FrequencyService } from '../data-access/frequency/frequency.service';
-import { ProbabilityService } from '../data-access/probability/probability.service';
-import { DangerNameService } from '../data-access/danger-name/danger-name.service';
-import { DangerDetailsService } from '../data-access/danger-details/danger-details.service';
+import { EffectService } from '../../data-access/effect/effect.service';
+import { FrequencyService } from '../../data-access/frequency/frequency.service';
+import { ProbabilityService } from '../../data-access/probability/probability.service';
+import { DangerNameService } from '../../data-access/danger-name/danger-name.service';
+import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 
 @Component({
-  selector: 'app-procena-rizika',
+  selector: 'app-procena-rizika-kreiranje',
   templateUrl: './procena-rizika.component.html',
   styleUrls: ['./procena-rizika.component.css'],
   animations: [
