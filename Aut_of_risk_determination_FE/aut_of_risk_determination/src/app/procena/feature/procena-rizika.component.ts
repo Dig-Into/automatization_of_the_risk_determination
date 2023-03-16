@@ -4,12 +4,7 @@ import { EffectService } from '../data-access/effect/effect.service';
 import { FrequencyService } from '../data-access/frequency/frequency.service';
 import { ProbabilityService } from '../data-access/probability/probability.service';
 import { DangerNameService } from '../data-access/danger-name/danger-name.service';
-
-export interface Probability {
-  id: number,
-  code: number,
-  description: string
-}
+import { DangerDetailsService } from '../data-access/danger-details/danger-details.service';
 
 @Component({
   selector: 'app-procena-rizika',
@@ -24,6 +19,7 @@ export interface Probability {
     ])
   ]
 })
+
 export class ProcenaRizikaComponent implements OnInit {
   inputs: string[] = [''];
   showAnotherComponent = false;
@@ -35,12 +31,14 @@ export class ProcenaRizikaComponent implements OnInit {
   selectedItem1: any;
   selectedItem2: any;
   selectedItem3: any;
+  descriptionArray = [];
 
   constructor(
     private probabilityService: ProbabilityService,
     private frequencyService: FrequencyService,
     private effectService: EffectService,
-    private dangerNameService: DangerNameService
+    private dangerNameService: DangerNameService,
+    private dangerDetailsService: DangerDetailsService
     ) {}
 
   ngOnInit(): void {
@@ -95,7 +93,42 @@ export class ProcenaRizikaComponent implements OnInit {
   }
 
   create() {
-    console.log("Kreiran");
+    var selectedDangerName = document.getElementById("opasnost-dropdown")["value"];
+    var selectedProbability = document.getElementById("p-dropdown")["value"];
+    var selectedEffect = document.getElementById("e-dropdown")["value"];
+    var selectedFrequency = document.getElementById("f-dropdown")["value"];
+    var descriptions = Array.from(document.querySelectorAll(".details"));
+
+    descriptions.forEach(desc => {
+      this.descriptionArray.push(desc["value"]);
+      
+    });
+    
+    var value = 54; // calculate Kinney Index instead of this hard-coded value
+
+    var dangerDetails = {
+        id: 0,
+        code: selectedDangerName,
+        value: value,
+        descriptions: this.descriptionArray,
+        probability: {
+          id: selectedProbability,
+        },
+        effect: {
+          id: selectedEffect,
+        },
+        frequency: {
+          id: selectedFrequency,
+        },
+        dangerName: {
+          id: selectedDangerName,
+        }
+    };
+
+    this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
+      console.log("Created successfully");
+    
+    })
     
   }
 }
