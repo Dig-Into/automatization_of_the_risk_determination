@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { EffectService } from '../data-access/effect.service';
 import { FrequencyService } from '../data-access/frequency.service';
 import { ProbabilityService } from '../data-access/probability.service';
+import { DangerNameService } from '../../opasnost/data-access/danger-name.service';
 
 export interface Probability {
   id: number,
@@ -30,6 +31,7 @@ export class ProcenaRizikaComponent implements OnInit {
   probabilities: any;
   effects: any;
   frequencies: any;
+  dangerNames: any;
   selectedItem1: any;
   selectedItem2: any;
   selectedItem3: any;
@@ -37,13 +39,15 @@ export class ProcenaRizikaComponent implements OnInit {
   constructor(
     private probabilityService: ProbabilityService,
     private frequencyService: FrequencyService,
-    private effectService: EffectService
+    private effectService: EffectService,
+    private dangerNameService: DangerNameService
     ) {}
 
   ngOnInit(): void {
       this.loadProbabilities();
       this.loadFrequencies();
       this.loadEffects();
+      this.loadDangerNames();
   }
 
   onSelect1(target: EventTarget) {
@@ -77,6 +81,12 @@ export class ProcenaRizikaComponent implements OnInit {
   loadEffects() {
     this.effectService.getAllEffects().subscribe(response => {
       this.effects = response;
+    })
+  }
+
+  loadDangerNames() {
+    this.dangerNameService.getAllDangerNames().subscribe(response => {
+      this.dangerNames = response;
     })
   }
 

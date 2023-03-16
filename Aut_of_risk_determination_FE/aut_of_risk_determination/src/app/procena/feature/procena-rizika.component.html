@@ -5,9 +5,7 @@
         <label for="opasnost-dropdown" class="labelText">Izaberi opasnost:</label>
         <div style="display: flex; align-items: center;">
           <select id="opasnost-dropdown">
-            <option value="opasnost-1">Opasnost 1</option>
-            <option value="opasnost-2">Opasnost 2</option>
-            <option value="opasnost-3">Opasnost 3</option>
+            <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.description}}</option>
           </select>
           <button class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
         </div>

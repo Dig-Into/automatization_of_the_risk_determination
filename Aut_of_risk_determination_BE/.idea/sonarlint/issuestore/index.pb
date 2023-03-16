@@ -99,8 +99,6 @@ W
 'src/main/java/aord/model/Frequency.java,a\8\a86925e95ddea2f42d38ef0698cac45cf0d62778
 Y
 )src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
-X
-(src/main/java/aord/model/DangerType.java,0\b\0bfff6dfec73f00d14f41703298806f195ba33eb
 c
 3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
 Y
