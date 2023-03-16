@@ -26,7 +26,7 @@ export class ProcenaRizikaPregledComponent implements OnInit {
 
 
   test() {
-    console.log("Test, it works!");
+    alert("You clicked it, didn't you...");
     
   }
 
