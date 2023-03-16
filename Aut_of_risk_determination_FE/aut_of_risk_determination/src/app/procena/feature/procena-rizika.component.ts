@@ -1,9 +1,9 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { EffectService } from '../data-access/effect.service';
-import { FrequencyService } from '../data-access/frequency.service';
-import { ProbabilityService } from '../data-access/probability.service';
-import { DangerNameService } from '../../opasnost/data-access/danger-name.service';
+import { EffectService } from '../data-access/effect/effect.service';
+import { FrequencyService } from '../data-access/frequency/frequency.service';
+import { ProbabilityService } from '../data-access/probability/probability.service';
+import { DangerNameService } from '../data-access/danger-name/danger-name.service';
 
 export interface Probability {
   id: number,
@@ -92,5 +92,10 @@ export class ProcenaRizikaComponent implements OnInit {
 
   addInput() {
     this.inputs.push('');
+  }
+
+  create() {
+    console.log("Kreiran");
+    
   }
 }

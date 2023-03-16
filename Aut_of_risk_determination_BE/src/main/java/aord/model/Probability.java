@@ -16,6 +16,6 @@ public class Probability {
     @Column
     private Double code;
     @Column
-    private String description;
+        private String description;
 
 }

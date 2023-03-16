@@ -6,21 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class ProbabilityService {
 
-  private getAllProbabilitiesUrl = 'http://localhost:8080/api/probability/getAll';
-  private getProbabilityByIdUrl = 'http://localhost:8080/api/probability/findById';
+  private probabilityUrl = 'http://localhost:8080/api/probability';
 
   constructor(private http: HttpClient) { }
 
   getAllProbabilities() {
-    return this.http.get(this.getAllProbabilitiesUrl);
+    return this.http.get(`${this.probabilityUrl}/getAll`);
   }
 
   getProbabilityById(id:number) {
-    
     let params = new HttpParams().set("id", id);
-    return this.http.get(this.getProbabilityByIdUrl, {params});
+    return this.http.get(`${this.probabilityUrl}/findById`, {params});
   }
+
 }
-
-
-

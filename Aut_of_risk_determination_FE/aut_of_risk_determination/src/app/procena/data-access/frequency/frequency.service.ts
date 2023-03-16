@@ -6,21 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class FrequencyService {
 
-  private getAllFrequenciesUrl = 'http://localhost:8080/api/frequency/getAll';
-  private getFrequencyByIdUrl = 'http://localhost:8080/api/frequency/findById';
+  private frequencyUrl = 'http://localhost:8080/api/frequency';
 
   constructor(private http: HttpClient) { }
 
   getAllFrequencies() {
-    return this.http.get(this.getAllFrequenciesUrl);
+    return this.http.get(`${this.frequencyUrl}/getAll`);
   }
 
   getFrequencyById(id:number) {
-    
     let params = new HttpParams().set("id", id);
-    return this.http.get(this.getFrequencyByIdUrl, {params});
+    return this.http.get(`${this.frequencyUrl}/findById`, {params});
   }
+  
 }
-
-
-

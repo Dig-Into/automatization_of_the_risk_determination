@@ -6,21 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class EffectService {
 
-  private getAllEffectsUrl = 'http://localhost:8080/api/effect/getAll';
-  private getEffectByIdUrl = 'http://localhost:8080/api/effect/findById';
+  private effectUrl = 'http://localhost:8080/api/effect';
 
   constructor(private http: HttpClient) { }
 
   getAllEffects() {
-    return this.http.get(this.getAllEffectsUrl);
+    return this.http.get(`${this.effectUrl}/getAll`);
   }
 
   getEffectById(id:number) {
-    
     let params = new HttpParams().set("id", id);
-    return this.http.get(this.getEffectByIdUrl, {params});
+    return this.http.get(`${this.effectUrl}/findById`, {params});
   }
+
 }
-
-
-
