@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-kinney-index',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./kinney-index.component.css']
 })
 export class KinneyIndexComponent {
-
+  @Input() result: number;
 }

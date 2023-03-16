@@ -19,4 +19,13 @@ export class HeaderComponent  {
   goHome() {
     this.router.navigate(['/home']);
   }
+
+  goToKreirajProcenu() {
+    this.router.navigate(['/procena-rizika']);
+  }
+
+  goToPregledajProcenu() {
+    this.router.navigate(['/procena-rizika']);
+  }
+  
 }

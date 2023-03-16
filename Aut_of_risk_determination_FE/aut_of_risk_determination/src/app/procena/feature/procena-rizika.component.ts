@@ -35,6 +35,9 @@ export class ProcenaRizikaComponent implements OnInit {
   selectedItem1: any;
   selectedItem2: any;
   selectedItem3: any;
+  field1: number;
+  field2: number;
+  field3: number;
 
   constructor(
     private probabilityService: ProbabilityService,
@@ -96,6 +99,22 @@ export class ProcenaRizikaComponent implements OnInit {
 
   create() {
     console.log("Kreiran");
-    
   }
+
+  getResultClass() {
+    const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
+
+    if (result <= 70) {
+      return 'green-background';
+    } else if (result <= 200) {
+      return 'yellow-background';
+    } else {
+      return 'red-background';
+    }
+  }
+
+  getResult(): number {
+    return Number(this.field1) * Number(this.field2) * Number(this.field3);
+  }
+
 }

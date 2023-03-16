@@ -103,3 +103,7 @@
 .logoutDiv {
     align-self: center;
 }
+
+a {
+  cursor: pointer;
+}
