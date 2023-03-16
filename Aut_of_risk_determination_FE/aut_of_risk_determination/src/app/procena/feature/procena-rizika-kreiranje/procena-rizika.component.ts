@@ -135,9 +135,25 @@ export class ProcenaRizikaComponent implements OnInit {
     
   }
 
+  findData() {
+    this.probabilityService.getProbabilityById(Number(this.field1)).subscribe(response => {
+      this.field1 = response["code"];
+
+    });
+
+    this.effectService.getEffectById(Number(this.field2)).subscribe(response => {
+      this.field2 = response["code"];
+      
+    });
+
+    this.frequencyService.getFrequencyById(Number(this.field3)).subscribe(response => {
+      this.field3 = response["code"];
+    });
+  }
+
   getResultClass() {
     const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
-
+  
     if (result <= 70) {
       return 'green-background';
     } else if (result <= 200) {
