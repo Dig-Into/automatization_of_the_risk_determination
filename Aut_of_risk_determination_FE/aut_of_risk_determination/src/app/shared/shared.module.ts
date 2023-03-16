@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ContainerBigComponent } from './wrapper/wrapper-big.component';
+import { KinneyIndexComponent } from './kinney-index/kinney-index.component';
 
 
 
@@ -36,10 +38,14 @@ const modules = [
 
 
 @NgModule({
-  declarations: [  ],
+  declarations: [  
+    ContainerBigComponent, KinneyIndexComponent
+  ],
   imports: [...modules],
   exports: [
   ...modules,
+  ContainerBigComponent,
+  KinneyIndexComponent
 ]
 })
 export class SharedModule { }

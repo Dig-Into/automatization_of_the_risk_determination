@@ -11,15 +11,19 @@ import { ContainerComponent } from './shared/wrapper/wrapper.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
-import { RouteReuseStrategy } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.component';
+import { AuthInterceptor } from './utils/guards/auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContainerComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingScreenComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -32,12 +36,15 @@ import { FooterComponent } from './shared/footer/footer.component';
     MatExpansionModule,
     MegaMenuModule,
     MenubarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  loggedIn: boolean = false;
-
 }

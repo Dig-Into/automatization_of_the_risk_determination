@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-container-big',
@@ -14,8 +14,7 @@ import { Component, OnInit } from '@angular/core';
     }
   `]
 })
-export class ContainerBigComponent implements OnInit {
+export class ContainerBigComponent{
   constructor() { }
 
-  ngOnInit() { }
 }

@@ -1,0 +1,65 @@
+<div class="page">
+  <app-container-big>
+    <div style="width: 70%; padding: 20px;">
+      <div style="margin-bottom: 10px;">
+        <label for="opasnost-dropdown" class="labelText">Izaberi opasnost:</label>
+        <div style="display: flex; align-items: center;">
+          <select id="opasnost-dropdown">
+            <option value="opasnost-1">Opasnost 1</option>
+            <option value="opasnost-2">Opasnost 2</option>
+            <option value="opasnost-3">Opasnost 3</option>
+          </select>
+          <button class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
+        <div *ngFor="let input of inputs">
+          <input id="detalji-opasnosti" style="margin-right: 10px;">
+        </div>
+        <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
+          <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+
+      <div class="pefDiv">
+        <label for="p-dropdown" class="labelText">P</label>
+        <select id="p-dropdown" (change)="onSelect1($event.target)">
+          <option value="p-item" *ngFor="let item of probabilities" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem1">
+          <p class="descriptionText">{{ selectedItem1.description }}</p>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <label for="e-dropdown" class="labelText">E</label>
+        <select id="e-dropdown" (change)="onSelect2($event.target)">
+          <option value="e-item" *ngFor="let item of effects" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem2">
+          <p class="descriptionText">{{ selectedItem2.description }}</p>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <label for="f-dropdown" class="labelText">F</label>
+        <select id="f-dropdown" (change)="onSelect3($event.target)">
+          <option value="f-item" *ngFor="let item of frequencies" [value]="item.id">{{item.code}}</option>
+        </select>
+        <div *ngIf="selectedItem3">
+          <p class="descriptionText">{{ selectedItem3.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 30%; padding: 20px;">
+      <div [@fadeInFromRight]="fadeState" style="width: 30%; padding: 20px;">
+        <app-kinney-index *ngIf="showAnotherComponent"></app-kinney-index>
+      </div>
+    </div>
+    <div class="buttonsDiv">
+      <div class="helper">
+        <button (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
+        <button class="kreirajButton">Kreiraj</button>
+      </div>
+    </div>
+  </app-container-big>
+</div>

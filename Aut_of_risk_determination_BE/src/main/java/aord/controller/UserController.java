@@ -21,6 +21,7 @@ import aord.service.UserService;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(value = "user")
+
 public class UserController {
 	private final UserService userService;
 
@@ -47,6 +48,7 @@ public class UserController {
 		userService.register(registrationDto, UserRoleName.ROLE_USER);
 		return new ResponseEntity<>(CREATED);
 	}
+
 
 	@PostMapping(value = "/login")
 	public ResponseEntity<LoginResponseDTO> login(@RequestBody @Valid LoginDTO loginDto) {
