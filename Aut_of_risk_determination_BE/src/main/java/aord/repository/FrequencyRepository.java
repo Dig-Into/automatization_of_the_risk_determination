@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FrequencyRepository extends JpaRepository<Frequency, Long> {
+    Frequency findFrequencyByCode(Double code);
 }

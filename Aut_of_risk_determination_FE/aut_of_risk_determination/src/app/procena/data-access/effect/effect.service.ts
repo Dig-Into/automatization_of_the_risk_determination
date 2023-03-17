@@ -19,4 +19,9 @@ export class EffectService {
     return this.http.get(`${this.effectUrl}/findById`, {params});
   }
 
+  getEffectByCode(code: string) {
+    let params = new HttpParams().set("code", code);
+    return this.http.get(`${this.effectUrl}/findByCode`, {params});
+  }
+
 }

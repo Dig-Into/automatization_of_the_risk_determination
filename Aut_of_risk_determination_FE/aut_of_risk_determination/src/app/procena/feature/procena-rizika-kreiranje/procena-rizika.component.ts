@@ -35,6 +35,9 @@ export class ProcenaRizikaComponent implements OnInit {
   field1: number;
   field2: number;
   field3: number;
+  probabilityId: number;
+  effectId: number;
+  frequencyId: number;
 
   constructor(
     private probabilityService: ProbabilityService,
@@ -54,17 +57,17 @@ export class ProcenaRizikaComponent implements OnInit {
   onSelect1(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem1 = this.probabilities.find(item => item.id === Number(itemId));
+    this.selectedItem1 = this.probabilities.find(item => item.code === Number(itemId));
   }
   onSelect2(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem2 = this.effects.find(item => item.id === Number(itemId));
+    this.selectedItem2 = this.effects.find(item => item.code === Number(itemId));
   }
   onSelect3(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem3 = this.frequencies.find(item => item.id === Number(itemId));
+    this.selectedItem3 = this.frequencies.find(item => item.code === Number(itemId));
   }
 
   loadProbabilities() {
@@ -97,61 +100,59 @@ export class ProcenaRizikaComponent implements OnInit {
 
   create() {
     var selectedDangerName = document.getElementById("opasnost-dropdown")["value"];
-    var selectedProbability = document.getElementById("p-dropdown")["value"];
+    var selectedProbability = document.getElementById("p-dropdown")["value"]; 
     var selectedEffect = document.getElementById("e-dropdown")["value"];
     var selectedFrequency = document.getElementById("f-dropdown")["value"];
     var descriptions = Array.from(document.querySelectorAll(".details"));
 
-    descriptions.forEach(desc => {
-      this.descriptionArray.push(desc["value"]);
+    this.probabilityService.getProbabilityByCode(selectedProbability).subscribe(response => {
+      this.probabilityId = response["id"];
+
+      this.effectService.getEffectByCode(selectedEffect).subscribe(response => {
+        this.effectId = response["id"];
+
+        this.frequencyService.getFrequencyByCode(selectedFrequency).subscribe(response => {
+          this.frequencyId = response["id"];
+        
+          descriptions.forEach(desc => {
+            this.descriptionArray.push(desc["value"]);
+            
+          });
+
+          var value = this.getResult();
+          var dangerDetails = {
+              id: 0,
+              code: selectedDangerName,
+              value: value,
+              descriptions: this.descriptionArray,
+              probability: {
+                id: this.probabilityId,
+              },
+              effect: {
+                id: this.effectId,
+              },
+              frequency: {
+                id: this.frequencyId,
+              },
+              dangerName: {
+                id: selectedDangerName,
+              }
+          };
+
+          this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
+            console.log("Created successfully");
+          
+          })
+        
+        });
       
+      });
+    
     });
-    
-    var value = 54; // calculate Kinney Index instead of this hard-coded value
 
-    var dangerDetails = {
-        id: 0,
-        code: selectedDangerName,
-        value: value,
-        descriptions: this.descriptionArray,
-        probability: {
-          id: selectedProbability,
-        },
-        effect: {
-          id: selectedEffect,
-        },
-        frequency: {
-          id: selectedFrequency,
-        },
-        dangerName: {
-          id: selectedDangerName,
-        }
-    };
-
-    this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
-      console.log("Created successfully");
-    
-    })
-    
   }
 
-  findData() {
-    this.probabilityService.getProbabilityById(Number(this.field1)).subscribe(response => {
-      this.field1 = response["code"];
-
-    });
-
-    this.effectService.getEffectById(Number(this.field2)).subscribe(response => {
-      this.field2 = response["code"];
-      
-    });
-
-    this.frequencyService.getFrequencyById(Number(this.field3)).subscribe(response => {
-      this.field3 = response["code"];
-    });
-  }
-
-  getResultClass() {
+  getResultClass() {        
     const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
   
     if (result <= 70) {
@@ -164,7 +165,9 @@ export class ProcenaRizikaComponent implements OnInit {
   }
 
   getResult(): number {
-    return Number(this.field1) * Number(this.field2) * Number(this.field3);
+    const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
+    const roundedResult = parseFloat(result.toFixed(2));
+    return roundedResult;
   }
 
 }

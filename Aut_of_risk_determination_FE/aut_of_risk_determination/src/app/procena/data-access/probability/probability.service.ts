@@ -19,4 +19,9 @@ export class ProbabilityService {
     return this.http.get(`${this.probabilityUrl}/findById`, {params});
   }
 
+  getProbabilityByCode(code: string) {
+    let params = new HttpParams().set("code", code);
+    return this.http.get(`${this.probabilityUrl}/findByCode`, {params});
+  }
+
 }

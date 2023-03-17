@@ -37,4 +37,10 @@ public class FrequencyController {
         return new ResponseEntity<>(frequency, HttpStatus.OK);
     }
 
+    @GetMapping("/findByCode")
+    public ResponseEntity<FrequencyDTO> getByCode(@RequestParam Double code) {
+        FrequencyDTO frequency = toDTO.convert(service.findFrequencyByCode(code));
+        return new ResponseEntity<>(frequency, HttpStatus.OK);
+    }
+
 }

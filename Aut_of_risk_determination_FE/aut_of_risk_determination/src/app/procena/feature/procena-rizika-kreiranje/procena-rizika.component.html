@@ -26,7 +26,7 @@
             <label for="p-dropdown" class="labelText">P</label>
             <select id="p-dropdown" [(ngModel)]="field1" (change)="onSelect1($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="p-item" *ngFor="let item of probabilities" [value]="item.id">{{item.code}}</option>
+              <option value="p-item" *ngFor="let item of probabilities" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem1">
               <p class="descriptionText">{{ selectedItem1.description }}</p>
@@ -36,7 +36,7 @@
             <label for="e-dropdown" class="labelText">E</label>
             <select id="e-dropdown" [(ngModel)]="field2" (change)="onSelect2($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="e-item" *ngFor="let item of effects" [value]="item.id">{{item.code}}</option>
+              <option value="e-item" *ngFor="let item of effects" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem2">
               <p class="descriptionText">{{ selectedItem2.description }}</p>
@@ -46,7 +46,7 @@
             <label for="f-dropdown" class="labelText">F</label> 
             <select id="f-dropdown" [(ngModel)]="field3" (change)="onSelect3($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="f-item" *ngFor="let item of frequencies" [value]="item.id">{{item.code}}</option>
+              <option value="f-item" *ngFor="let item of frequencies" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem3">
               <p class="descriptionText">{{ selectedItem3.description }}</p>
@@ -63,7 +63,7 @@
       </div>
       <div class="buttonsDiv">
         <div class="helper">
-          <button (click)="findData(); showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
+          <button (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
           <button (click)="create()" class="kreirajButton">Kreiraj</button>
         </div>
       </div>

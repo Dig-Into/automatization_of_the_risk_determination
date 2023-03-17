@@ -18,5 +18,10 @@ export class FrequencyService {
     let params = new HttpParams().set("id", id);
     return this.http.get(`${this.frequencyUrl}/findById`, {params});
   }
+
+  getFrequencyByCode(code: string) {
+    let params = new HttpParams().set("code", code);
+    return this.http.get(`${this.frequencyUrl}/findByCode`, {params});
+  }
   
 }

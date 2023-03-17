@@ -25,4 +25,10 @@ public class ProbabilityServiceImpl implements ProbabilityService {
         return repo.findById(id).get();
     }
 
+    @Override
+    public Probability findProbabilityByCode(Double code) {
+        return repo.findProbabilityByCode(code);
+    }
+
+
 }
