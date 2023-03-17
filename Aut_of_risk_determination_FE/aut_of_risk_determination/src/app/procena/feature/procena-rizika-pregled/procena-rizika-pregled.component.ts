@@ -1,5 +1,8 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { DangerDetails } from 'src/app/model/DangerDetails';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 
 @Component({
@@ -17,17 +20,42 @@ import { DangerDetailsService } from '../../data-access/danger-details/danger-de
 })
 
 export class ProcenaRizikaPregledComponent implements OnInit {
-  displayedColumns: string[] = ['#', "šifra", ];
+  dangerDetails: DangerDetails[] = [];
+  dangerDetailsFiltered: DangerDetails[] = [];
 
+  displayedColumns: string[] = ['code', 'descriptions', 'probability', 'effect', 'frequency', 'value'];
+  dataSource = new MatTableDataSource(this.dangerDetails);
+  show: boolean = true;
 
-  ngOnInit(): void {
-    
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  constructor(
+    private dangerDetailsService: DangerDetailsService
+  ) {
+
   }
 
+  ngOnInit(): void {
+    this.getAllDangerDetails();
+  }
 
-  test() {
-    alert("You clicked it, didn't you...");
-    
+  getAllDangerDetails() {
+    this.dangerDetailsService.getAllDangerDetails().subscribe(response => {
+      this.dangerDetails = Object.values(response);
+      this.dangerDetailsFiltered = Object.values(response);
+      this.dataSource.data = this.dataSource.data.concat(this.dangerDetails.slice(0, 1000));
+      this.paginator._changePageSize(this.paginator.pageSize);
+  
+    });
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }

@@ -25,7 +25,7 @@ const ELEMENT_DATA: Tabela1[] = [
 const ELEMENT_DATA2: Tabela1[] = [
     {vrednost: 1, opis: 'mali (male povrede bez bolovanja)'},
     {vrednost: 2, opis: 'znatne (medicinski tretman i bolovanje)'},
-    {vrednost: 3, opis: 'ozbiljne (povreda sa ozbiljnim posledicama , hospitalizacija, moguć invaliditet)'},
+    {vrednost: 3, opis: 'ozbiljne (povreda sa ozbiljnim posledicama, hospitalizacija, moguć invaliditet)'},
     {vrednost: 6, opis: 'veoma ozbiljan / jedan smrtni slučaj'},
     {vrednost: 10, opis: 'katastrofalan (višestruki smrtni ishod)'},
 ]

@@ -1,5 +1,60 @@
-<div class="page">
-    <app-container-big>
-        <button (click)="test()">Test</button>
-    </app-container-big>
+<div class="page" id="page">
+
+    <div class="container">
+
+        <div class="dangerDetailsTable" *ngIf="show" >
+            <div class="dangerDetailsHeader">
+                <h1>Procena rizika grupisanih opasnosti i štetnosti na radnom mestu</h1>
+            </div>
+
+            <div class="tableContainer">
+
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Columns -->
+                    <ng-container matColumnDef="code">
+                        <th mat-header-cell *matHeaderCellDef> Šifra opasnosti </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.code }} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="descriptions">
+                        <th mat-header-cell *matHeaderCellDef> Vrsta i opis opasnosti/štetnosti </th>
+                        <td mat-cell *matCellDef="let element"> <strong> {{ element.dangerName.description }} </strong>
+                            <p *ngFor="let desc of element.descriptions" style="list-style-type:none;">
+                                {{ desc }}
+                            </p>
+                        </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="probability">
+                        <th mat-header-cell *matHeaderCellDef> Verovatnoća </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.probability.code}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="effect">
+                        <th mat-header-cell *matHeaderCellDef> Posledice </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.effect.code }} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="frequency">
+                        <th mat-header-cell *matHeaderCellDef> Učestalost </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.frequency.code }} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="value">
+                        <th mat-header-cell *matHeaderCellDef> Rizik </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.value }} </td>
+                    </ng-container>
+    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+                </table>
+
+            </div>
+  
+        </div>
+
+    </div>
+
 </div>

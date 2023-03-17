@@ -23,7 +23,7 @@
       <div class="flexDiv">
         <div class="left">
           <div style="display: flex;">
-            <label for="p-dropdown" class="labelText">P</label>
+            <label for="p-dropdown" class="labelText">V</label>
             <select id="p-dropdown" [(ngModel)]="field1" (change)="onSelect1($event.target)">
               <option value="" disabled selected hidden></option>
               <option value="p-item" *ngFor="let item of probabilities" [value]="item.code">{{item.code}}</option>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div style="display: flex;">
-            <label for="e-dropdown" class="labelText">E</label>
+            <label for="e-dropdown" class="labelText">P</label>
             <select id="e-dropdown" [(ngModel)]="field2" (change)="onSelect2($event.target)">
               <option value="" disabled selected hidden></option>
               <option value="e-item" *ngFor="let item of effects" [value]="item.code">{{item.code}}</option>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div style="display: flex;">
-            <label for="f-dropdown" class="labelText">F</label> 
+            <label for="f-dropdown" class="labelText">U</label> 
             <select id="f-dropdown" [(ngModel)]="field3" (change)="onSelect3($event.target)">
               <option value="" disabled selected hidden></option>
               <option value="f-item" *ngFor="let item of frequencies" [value]="item.code">{{item.code}}</option>
