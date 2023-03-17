@@ -51,12 +51,8 @@ k
 ;src/main/java/aord/service/impl/KinneyIndexServiceImpl.java,3\0\30054917321f4c37fceaeac2c5460d4c844d84ac
 m
 =src/main/java/aord/converter/ToDangerDetailsDTOConverter.java,4\4\442fd19b3a8d2051b034f5b814655f42d8c4c339
-a
-1src/main/java/aord/service/DangerTypeService.java,b\1\b128d26f5892244c49132ef26f33e1070a9ebf44
 d
 4src/main/java/aord/service/DangerDetailsService.java,1\f\1fa5e8c249d142f5231ae9d7bb0435badcb92b38
-j
-:src/main/java/aord/service/impl/DangerTypeServiceImpl.java,a\2\a23b10213ac79f10887341068916c5b8d7da6d2c
 m
 =src/main/java/aord/service/impl/DangerDetailsServiceImpl.java,8\a\8af8139e54f33283f214aa1285dde952d56482b2
 Y

@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { AuthService } from 'src/app/login/data-access/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent  {
+export class HeaderComponent implements OnInit {
+  isLoggedIn = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
-  logOut() {
-    localStorage.clear();
-    this.router.navigate(['/login']);
+  ngOnInit(): void {
+    this.isLoggedIn = this.authService.getIsLoggedIn();
+  }
+
+  logOut(): void {
+    this.authService.logout();
+    this.isLoggedIn = false;
+    window.location.href = '/login';
   }
 
   goHome() {

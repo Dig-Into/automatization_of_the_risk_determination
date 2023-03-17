@@ -7,13 +7,33 @@
           <select id="opasnost-dropdown">
             <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.description}}</option>
           </select>
-          <button class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+          <button (click)="openModal()" class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+
+          <div id="my-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <h2>Dodaj novu opasnost/štetnost</h2>
+              <select id="tip-opasnosti-dropdown" class="modalSelect">
+                <option selected disabled value="">Izaberi vrstu</option>
+                <option value="tip-opasnosti" *ngFor="let item of dangerTypes" [value]="item.id">{{item.name}}</option>
+              </select>
+              <div>
+                <input id="danger-number" min="0" type="number" style="width: 75px;" placeholder="Šifra" />
+                <div class="example-spacer"></div>
+                <input id="danger-description" type="text" style="width: 80%;" placeholder="Opis opasnosti" />
+              </div>
+              <div class="modalButtonsDiv">
+                <button class="cancel" (click)="closeModal()">Zatvori</button>
+                <button class="add" (click)="addItem()">Dodaj</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
       <div style="margin-bottom: 10px;">
         <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
         <div *ngFor="let input of inputs">
-          <input id="detalji-opasnosti" class="details" style="margin-right: 10px;">
+          <input id="detalji-opasnosti" class="details" style="margin-right: 10px;" autocomplete="off">
         </div>
         <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
           <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>

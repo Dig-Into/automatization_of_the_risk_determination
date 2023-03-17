@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { EffectService } from '../../data-access/effect/effect.service';
 import { FrequencyService } from '../../data-access/frequency/frequency.service';
 import { ProbabilityService } from '../../data-access/probability/probability.service';
+import { DangerTypeService } from '../../data-access/danger-type/danger-type.service';
 import { DangerNameService } from '../../data-access/danger-name/danger-name.service';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 
@@ -28,6 +29,7 @@ export class ProcenaRizikaComponent implements OnInit {
   effects: any;
   frequencies: any;
   dangerNames: any;
+  dangerTypes: any;
   selectedItem1: any;
   selectedItem2: any;
   selectedItem3: any;
@@ -43,6 +45,7 @@ export class ProcenaRizikaComponent implements OnInit {
     private probabilityService: ProbabilityService,
     private frequencyService: FrequencyService,
     private effectService: EffectService,
+    private dangerTypeService: DangerTypeService,
     private dangerNameService: DangerNameService,
     private dangerDetailsService: DangerDetailsService
     ) {}
@@ -51,6 +54,7 @@ export class ProcenaRizikaComponent implements OnInit {
       this.loadProbabilities();
       this.loadFrequencies();
       this.loadEffects();
+      this.loadDangerTypes();
       this.loadDangerNames();
   }
 
@@ -91,6 +95,12 @@ export class ProcenaRizikaComponent implements OnInit {
   loadDangerNames() {
     this.dangerNameService.getAllDangerNames().subscribe(response => {
       this.dangerNames = response;
+    })
+  }
+
+  loadDangerTypes() {
+    this.dangerTypeService.getAllDangerTypes().subscribe(response => {
+      this.dangerTypes = response;
     })
   }
 
@@ -167,7 +177,41 @@ export class ProcenaRizikaComponent implements OnInit {
   getResult(): number {
     const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
     const roundedResult = parseFloat(result.toFixed(2));
+    
     return roundedResult;
+
+  }
+
+  openModal() {
+    document.getElementById('my-modal').style.display = 'block';
+  }
+  
+  closeModal() {
+    document.getElementById('my-modal').style.display = 'none';
+  }
+  
+  addItem() {
+    var dangType = document.getElementById("tip-opasnosti-dropdown")["value"];
+    var dangNumber = document.getElementById("danger-number")["value"];
+    var dangDesc = document.getElementById("danger-description")["value"];
+
+    var dangerName = {
+      id: 0,
+      dangerNumber: dangNumber,
+      description: dangDesc,
+      dangerType: {
+        id: dangType
+      }
+    };
+
+    this.dangerNameService.createDangerName(dangerName).subscribe(response => {
+      console.log("Created");
+      this.closeModal();
+      setTimeout(() => {
+        this.loadDangerNames();
+      }, 250)
+    });
+
   }
 
 }
