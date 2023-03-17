@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table'  
 import { ProcenaRizikaComponent } from './procena-rizika.component';
 import { ProcenaRoutingModule } from './procena-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module'; 
@@ -11,10 +15,13 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     ProcenaRoutingModule,
-    MatTableModule,
-    SharedModule
-    
+    SharedModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDialogModule
   ],
-  declarations: [ProcenaRizikaComponent]
+  declarations: [ProcenaRizikaComponent],
 })
 export class ProcenaModule {}

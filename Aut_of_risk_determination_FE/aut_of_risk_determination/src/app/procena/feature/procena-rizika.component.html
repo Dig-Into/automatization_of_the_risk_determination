@@ -7,13 +7,33 @@
           <select id="opasnost-dropdown">
             <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.description}}</option>
           </select>
-          <button class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+          <button (click)="openModal()" class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+
+          <div id="my-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <h2>Dodaj novu opasnost/štetnost</h2>
+              <select class="modalSelect">
+                <option selected disabled value="">Izaberi vrstu</option>
+                <option>Zameni sa get endpointom</option>
+              </select>
+              <div>
+                <input min="0" type="number" style="width: 75px;" placeholder="Šifra" />
+                <div class="example-spacer"></div>
+                <input type="text" style="width: 80%;" placeholder="Opis opasnosti" />
+              </div>
+              <div class="modalButtonsDiv">
+                <button class="cancel" (click)="closeModal()">Zatvori</button>
+                <button class="add" (click)="addItem()">Dodaj</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
       <div style="margin-bottom: 10px;">
         <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
         <div *ngFor="let input of inputs">
-          <input id="detalji-opasnosti" style="margin-right: 10px;">
+          <input id="detalji-opasnosti" style="margin-right: 10px;" autocomplete="off">
         </div>
         <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
           <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
@@ -26,7 +46,7 @@
             <label for="p-dropdown" class="labelText">P</label>
             <select id="p-dropdown" [(ngModel)]="field1" (change)="onSelect1($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="p-item" *ngFor="let item of probabilities" [value]="item.id">{{item.code}}</option>
+              <option value="p-item" *ngFor="let item of probabilities" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem1">
               <p class="descriptionText">{{ selectedItem1.description }}</p>
@@ -36,7 +56,7 @@
             <label for="e-dropdown" class="labelText">E</label>
             <select id="e-dropdown" [(ngModel)]="field2" (change)="onSelect2($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="e-item" *ngFor="let item of effects" [value]="item.id">{{item.code}}</option>
+              <option value="e-item" *ngFor="let item of effects" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem2">
               <p class="descriptionText">{{ selectedItem2.description }}</p>
@@ -46,7 +66,7 @@
             <label for="f-dropdown" class="labelText">F</label> 
             <select id="f-dropdown" [(ngModel)]="field3" (change)="onSelect3($event.target)">
               <option value="" disabled selected hidden></option>
-              <option value="f-item" *ngFor="let item of frequencies" [value]="item.id">{{item.code}}</option>
+              <option value="f-item" *ngFor="let item of frequencies" [value]="item.code">{{item.code}}</option>
             </select>
             <div *ngIf="selectedItem3">
               <p class="descriptionText">{{ selectedItem3.description }}</p>

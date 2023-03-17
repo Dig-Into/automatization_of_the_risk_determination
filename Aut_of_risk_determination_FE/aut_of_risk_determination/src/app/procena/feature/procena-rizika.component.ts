@@ -5,6 +5,7 @@ import { FrequencyService } from '../data-access/frequency/frequency.service';
 import { ProbabilityService } from '../data-access/probability/probability.service';
 import { DangerNameService } from '../data-access/danger-name/danger-name.service';
 
+
 export interface Probability {
   id: number,
   code: number,
@@ -43,7 +44,7 @@ export class ProcenaRizikaComponent implements OnInit {
     private probabilityService: ProbabilityService,
     private frequencyService: FrequencyService,
     private effectService: EffectService,
-    private dangerNameService: DangerNameService
+    private dangerNameService: DangerNameService,
     ) {}
 
   ngOnInit(): void {
@@ -56,17 +57,17 @@ export class ProcenaRizikaComponent implements OnInit {
   onSelect1(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem1 = this.probabilities.find(item => item.id === Number(itemId));
+    this.selectedItem1 = this.probabilities.find(item => item.code === Number(itemId));
   }
   onSelect2(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem2 = this.effects.find(item => item.id === Number(itemId));
+    this.selectedItem2 = this.effects.find(item => item.code === Number(itemId));
   }
   onSelect3(target: EventTarget) {
     const selectElement = target as HTMLSelectElement;
     const itemId = Number(selectElement.value);
-    this.selectedItem3 = this.frequencies.find(item => item.id === Number(itemId));
+    this.selectedItem3 = this.frequencies.find(item => item.code === Number(itemId));
   }
 
   loadProbabilities() {
@@ -116,5 +117,20 @@ export class ProcenaRizikaComponent implements OnInit {
   getResult(): number {
     return Number(this.field1) * Number(this.field2) * Number(this.field3);
   }
+
+  openModal() {
+    document.getElementById('my-modal').style.display = 'block';
+  }
+  
+  closeModal() {
+    document.getElementById('my-modal').style.display = 'none';
+  }
+  
+  addItem() {
+    // Ovde dodaj create endpoint
+    this.closeModal();
+  }
+
+
 
 }

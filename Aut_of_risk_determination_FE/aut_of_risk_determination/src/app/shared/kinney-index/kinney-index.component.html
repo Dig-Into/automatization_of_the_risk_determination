@@ -1,6 +1,10 @@
 <div class="component">
-    <h2>{{result}}</h2>
-    <p *ngIf="result <= 70">Radno mesto nije sa povećanim rizikom</p>
-    <p *ngIf="result > 70 && result <= 200">Umeren rizik</p>
-    <p *ngIf="result > 200">Radno mesto je sa povećanim rizikom</p>
+    <div class="headerDiv">
+        <h2>{{result}}</h2>
+    </div>
+    <div class="bodyDiv">
+        <p *ngIf="result <= 70">Radno mesto nije sa povećanim rizikom</p>
+        <p *ngIf="result > 70 && result <= 200">Umeren rizik</p>
+        <p *ngIf="result > 200">Radno mesto je sa povećanim rizikom</p>
+    </div>
 </div>
