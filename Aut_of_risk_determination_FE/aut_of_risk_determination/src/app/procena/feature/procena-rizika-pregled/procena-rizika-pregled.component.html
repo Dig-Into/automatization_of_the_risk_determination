@@ -14,7 +14,7 @@
                     <!-- Columns -->
                     <ng-container matColumnDef="code">
                         <th mat-header-cell *matHeaderCellDef> Šifra opasnosti </th>
-                        <td mat-cell *matCellDef="let element"> {{ element.code }} </td>
+                        <td mat-cell *matCellDef="let element"> {{ element.dangerName.dangerNumber }} </td>
                     </ng-container>
     
                     <ng-container matColumnDef="descriptions">

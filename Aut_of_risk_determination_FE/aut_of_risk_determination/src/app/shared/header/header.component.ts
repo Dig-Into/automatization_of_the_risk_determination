@@ -26,4 +26,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  goToKreirajProcenu() {
+    this.router.navigate(['/procena-rizika-kreiranje']);
+  }
+
+  goToPregledajProcenu() {
+    this.router.navigate(['/procena-rizika-pregled']);
+  }
+
 }

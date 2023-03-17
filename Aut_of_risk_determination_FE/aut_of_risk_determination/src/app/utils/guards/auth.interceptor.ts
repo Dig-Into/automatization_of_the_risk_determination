@@ -1,19 +1,32 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { AuthService } from 'src/app/login/data-access/auth.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
+  constructor(private authService: AuthService) {}
 
-  constructor() {}
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-  intercept(req: HttpRequest<any>, next: HttpHandler) {
-    const token = localStorage.getItem('token');
-    if (token) {
-      const authReq = req.clone({
-        headers: req.headers.set('Authorization', `Bearer ${token}`)
+    if (this.authService.getIsLoggedIn()) {
+      const token = localStorage.getItem('token');
+      request = request.clone({
+        setHeaders: {
+          Authorization: `Bearer ${token}`
+        }
       });
-      return next.handle(authReq);
     }
-    return next.handle(req);
+
+
+    return next.handle(request).pipe(
+      catchError(error => {
+        if (error.status === 401) {
+          window.location.href = '/login';
+        }
+        return throwError(error);
+      })
+    );
   }
 }
