@@ -27,6 +27,14 @@ export class ProcenaRizikaPregledComponent implements OnInit {
   dataSource = new MatTableDataSource(this.dangerDetails);
   show: boolean = true;
 
+  target: string = "";
+  found: boolean = false;
+  data: string = "";
+  dataFound: boolean = false;
+
+  viewTable : boolean = true;
+  showData: boolean = false;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
@@ -57,5 +65,34 @@ export class ProcenaRizikaPregledComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  reset() {
+    this.target = "";
+    this.emptyTable();
+    this.getAllDangerDetails();
+}
+
+  emptyTable() {
+    this.dataSource.data = [];
+    this.paginator._changePageSize(this.paginator.pageSize);
+  }
+
+  isFound() {
+    return this.found;
+  }
+
+  getViewTable(){
+    return this.viewTable;
+  }
+
+  getShowData(){
+    return this.showData;
+  }
+
+  goBack(){
+    this.showData = false;
+    this.viewTable = true;
+}
+
 
 }
