@@ -19,12 +19,21 @@ const routes: Routes = [
     path: 'procena-rizika-kreiranje',
     loadChildren: () =>
       import('./procena/feature/procena-rizika-kreiranje/procena.module').then((m) => m.ProcenaModule),
+      canActivate: [AuthGuard]
   },
   {
     path: 'procena-rizika-pregled',
     loadChildren: () =>
       import('./procena/feature/procena-rizika-pregled/procena-rizika-pregled.module').then((m) => m.ProcenaRizikaPregledModule),
-  }
+      canActivate: [AuthGuard]
+  },
+  {
+    path: 'mere',
+    loadChildren: () =>
+      import('./mere/feature/mere/mere.module').then((m) => m.MereModule),
+      canActivate: [AuthGuard]
+    },
+
 ];
 
 @NgModule({

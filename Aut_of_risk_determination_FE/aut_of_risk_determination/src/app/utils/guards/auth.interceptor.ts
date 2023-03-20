@@ -3,15 +3,36 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { AuthService } from 'src/app/login/data-access/auth.service';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
+  // intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+  //   if (this.authService.getIsLoggedIn()) {
+  //     const token = localStorage.getItem('token');
+  //     request = request.clone({
+  //       setHeaders: {
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     });
+  //   }
+
+
+  //   return next.handle(request).pipe(
+  //     catchError(error => {
+  //       if (error.status === 401) {
+  //         this.router.navigate(['/login']);
+  //       }
+  //       return throwError(error);
+  //     })
+  //   );
+  // }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-    if (this.authService.getIsLoggedIn()) {
-      const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
+    if (token) {
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${token}`
@@ -19,11 +40,10 @@ export class AuthInterceptor implements HttpInterceptor {
       });
     }
 
-
     return next.handle(request).pipe(
       catchError(error => {
-        if (error.status === 401) {
-          window.location.href = '/login';
+        if (error.status === 401 && !error.error.message.includes('Token has expired')) {
+          this.router.navigate(['/login']);
         }
         return throwError(error);
       })

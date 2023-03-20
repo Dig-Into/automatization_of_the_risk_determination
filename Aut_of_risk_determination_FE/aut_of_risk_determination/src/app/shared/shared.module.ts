@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContainerBigComponent } from './wrapper/wrapper-big.component';
 import { KinneyIndexComponent } from './kinney-index/kinney-index.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -39,13 +40,14 @@ const modules = [
 
 @NgModule({
   declarations: [  
-    ContainerBigComponent, KinneyIndexComponent
+    ContainerBigComponent, KinneyIndexComponent, SearchComponent, 
   ],
   imports: [...modules],
   exports: [
   ...modules,
   ContainerBigComponent,
-  KinneyIndexComponent
+  KinneyIndexComponent,
+  SearchComponent
 ]
 })
 export class SharedModule { }

@@ -96,6 +96,7 @@ INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES
 
 COMMIT;
 
+
 ---- danger_details
 --INSERT INTO aord.danger_details (code, danger_name_id, descriptions, probability_id, effect_id, frequency_id, value) VALUES (1, 1, "Rad sa trimerom, kosilicom, motorna testera", 5, 3, 4, 54);
 --INSERT INTO aord.danger_details (code, danger_name_id, descriptions, probability_id, effect_id, frequency_id, value) VALUES (2, 2, CONCAT_WS(";", "pad tereta i predmeta sa visine", "pad predmeta opreme za rad iz ruku zbog nepažnje zaposlenog, povrede donjih ekstremiteta", "odletanje čestica, slobodno kretanje delova ili materijala koje mogu naneti povredu"), 5, 3, 4, 54);

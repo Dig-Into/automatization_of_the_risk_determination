@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   logOut(): void {
     this.authService.logout();
     this.isLoggedIn = false;
-    window.location.href = '/login';
+    this.router.navigate(['/login']);
   }
 
   goHome() {
@@ -32,6 +32,10 @@ export class HeaderComponent implements OnInit {
 
   goToPregledajProcenu() {
     this.router.navigate(['/procena-rizika-pregled']);
+  }
+
+  goToMere() {
+    this.router.navigate(['/mere']);
   }
 
 }

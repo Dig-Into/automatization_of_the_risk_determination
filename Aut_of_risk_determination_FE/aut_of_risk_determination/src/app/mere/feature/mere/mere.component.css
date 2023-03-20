@@ -1,0 +1,47 @@
+.sidebar {
+    position: relative;
+    width: 350px;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #2f3136;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 150px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sidebar-item {
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    overflow-y: scroll;
+    font-size: smaller;
+}
+
+.searchBarComponent {
+    padding-bottom: 5px;
+}
+
+.sidebar-header {
+    padding: 10px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.sidebar-item-container {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    
+}

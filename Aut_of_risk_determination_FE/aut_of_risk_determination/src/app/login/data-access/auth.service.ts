@@ -8,17 +8,19 @@ export class AuthService {
 
   constructor() { }
 
-  login(): void {
+  login(): void {    
     this.isLoggedIn = true;
+    localStorage.setItem('isLoggedIn', 'true');
   }
 
   logout(): void {
     this.isLoggedIn = false;
+    localStorage.setItem('isLoggedIn', 'false');
     localStorage.removeItem('token');
   }
 
   getIsLoggedIn(): boolean {
-    return this.isLoggedIn;
+    return JSON.parse(localStorage.getItem('isLoggedIn') || 'false');
   }
   
 }

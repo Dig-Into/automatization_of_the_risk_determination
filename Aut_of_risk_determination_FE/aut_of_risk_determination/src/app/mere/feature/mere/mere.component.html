@@ -1,0 +1,18 @@
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h3>Lista mogućih opasnosti i štetnosti</h3>
+        <div class="searchBarComponent">
+            <app-search></app-search>
+        </div>
+    </div>
+    <div class="sidebar-item-container" *ngFor="let item of dangers">
+        <li>{{item.code}}</li>  
+        <div class="sidebar-item">
+            <li >{{item.description}}</li>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <!-- Dodati -->
+    
+</div>
