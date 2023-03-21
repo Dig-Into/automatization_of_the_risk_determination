@@ -33,6 +33,11 @@ export class MereComponent {
     this.getAllDangerNames()
   }
 
+  addItem() {
+    console.log("dodat");
+    
+  }
+
   // getAllMere() {
   //   this.mere = [
   //       {id: '1', code: '1', description: 'Strogo je zabranjeno da se uklanja fabrička zaštita sa opreme za rad, štitnika i zaštite prenosnika snage. Zabranjena je u upotreba bilo kakvih alata i opreme na kojima je vršena modifikacija, odnosno bilo kakva odstupanja u odnosu na fabričko stanje. Obavezno izvršiti vizuelni pregled pre upotrebe opreme za rad, a takođe u pauzama radova proveriti ispravnost i funkcionalnost sigurnosnih sklopova i spojeva. Mašine, alate i opremu koristiti isključivo prema nameni, odnosno u skladu sa uputstvom za upotrebu proizvođača. Tokom korišćenja opreme i alata na mehanizovani pogon neophodna je upotreba ličnih.'},
