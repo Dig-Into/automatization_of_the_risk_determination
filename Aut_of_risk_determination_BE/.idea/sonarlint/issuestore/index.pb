@@ -51,10 +51,6 @@ k
 ;src/main/java/aord/service/impl/KinneyIndexServiceImpl.java,3\0\30054917321f4c37fceaeac2c5460d4c844d84ac
 m
 =src/main/java/aord/converter/ToDangerDetailsDTOConverter.java,4\4\442fd19b3a8d2051b034f5b814655f42d8c4c339
-d
-4src/main/java/aord/service/DangerDetailsService.java,1\f\1fa5e8c249d142f5231ae9d7bb0435badcb92b38
-m
-=src/main/java/aord/service/impl/DangerDetailsServiceImpl.java,8\a\8af8139e54f33283f214aa1285dde952d56482b2
 Y
 )src/main/java/aord/model/KinneyIndex.java,d\d\dd3892f3256460d0851642084981749d3b60cf0d
 Y
@@ -65,14 +61,6 @@ Y
 ,src/main/java/aord/dto/DangerDetailsDTO.java,7\b\7bdba327de061c16134be70f116158919901a38b
 j
 :src/main/java/aord/converter/ToDangerDetailsConverter.java,0\4\0435647900efd16c47805323aebb3f8fe8c79b0f
-d
-4src/main/java/aord/model/RiskRemovalMeasurement.java,6\7\670195af3bf7007b517a62c8ec94d871db801e86
-j
-:src/main/java/aord/service/impl/DangerNameServiceImpl.java,3\1\313d320f2f64b2c458887c2fe19bd617c1ef4b14
-a
-1src/main/java/aord/service/DangerNameService.java,f\9\f933c40064c70dc348a8cf57a766ada702db4fed
-j
-:src/main/java/aord/repository/DangerDetailsRepository.java,0\1\01fd753b9df79fa597ba910861376e9a5ca0d91c
 e
 5src/main/java/aord/repository/UserRoleRepository.java,6\4\64e505f6ba7f16ca2fd926d92a0ea55d3191828d
 a
@@ -85,14 +73,8 @@ b
 2src/main/java/aord/service/ProbabilityService.java,0\7\0704a601743373c118ff71d7e1effb4c43bcda59
 `
 0src/main/java/aord/service/FrequencyService.java,9\6\964b243ee9650f3f5d8e948c1f5ec8574a60c99b
-h
-8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
-g
-7src/main/java/aord/controller/DangerNameController.java,a\4\a460ba7a72a6da52a6b58679b42c2badf75da7fe
 k
 ;src/main/java/aord/service/impl/ProbabilityServiceImpl.java,4\0\40b4b93a28e7332533f14eadd7a016272b550fe0
-g
-7src/main/java/aord/repository/DangerNameRepository.java,e\5\e56150cfabfabbee1c5ed12719b318415d8ab94c
 a
 1src/main/java/aord/service/DangerTypeService.java,b\1\b128d26f5892244c49132ef26f33e1070a9ebf44
 j
@@ -105,8 +87,6 @@ c
 0src/main/java/aord/repository/JWTRepository.java,e\d\ed9d93323de11dce18ca43d588c852f7abc7290f
 h
 8src/main/java/aord/repository/KinneyIndexRepository.java,8\2\82adc1a972eaae091a7968d2bd1cf5084e7a73ed
-f
-6src/main/java/aord/repository/FrequencyRepository.java,8\6\86a6ebf5721dfb6d2c3b6cf02634832b9d2e403d
 f
 6src/main/java/aord/service/impl/EffectServiceImpl.java,0\2\0242f889d11a2ef4366c8ad29de335b2264c7204
 i
@@ -121,5 +101,5 @@ X
 (src/main/java/aord/model/DangerType.java,0\b\0bfff6dfec73f00d14f41703298806f195ba33eb
 g
 7src/main/java/aord/repository/DangerTypeRepository.java,3\2\32d40eac86d56530e759f24aa71aa589f612cb40
-c
-3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
+h
+8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93

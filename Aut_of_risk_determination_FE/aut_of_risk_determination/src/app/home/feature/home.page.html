@@ -93,7 +93,7 @@
 
             <ng-container matColumnDef="column4">
               <mat-header-cell *matHeaderCellDef></mat-header-cell>
-              <mat-cell *matCellDef="let item" [ngStyle]="{'background': item.kinney == 'Radno mesto nije sa povećanim rizikom' ? '#37AC00' : (item.kinney == 'Umeren rizik' ? 'rgb(186 202 16)' : '#b23b3b')}" > {{item.kinney}} </mat-cell>
+              <mat-cell *matCellDef="let item" [ngStyle]="{'background': item.kinney == 'Radno mesto nije sa povećanim rizikom' ? '#37AC00' : (item.kinney == 'Umeren rizik' ? 'rgb(186 202 16)' : (item.kinney == 'Radno mesto je sa povećanim rizikom' ? 'rgb(210, 125, 45)' : '#b23b3b'))}" > {{item.kinney}} </mat-cell>
             </ng-container>
         
           <mat-header-row *matHeaderRowDef="['column1', 'column2', 'column3', 'column4']"></mat-header-row>

@@ -43,7 +43,7 @@ const ELEMENT_DATA4: Tabela2[] = [
     {id: 2, vrednost: '20 < R <= 70', opis: 'mali rizik - obratiti pažnju, rešiti ga redovnom procedurom', kinney: 'Radno mesto nije sa povećanim rizikom'},
     {id: 3, vrednost: '70 < R <= 200', opis: 'umeren rizik / definisati mere za smanjenje rizika', kinney: 'Umeren rizik'},
     {id: 4, vrednost: '200 < R <= 400', opis: 'visok rizik / odmah poboljšatii situaciju, potrebna brza reakcija od strane višeg rukovodstva', kinney: 'Radno mesto je sa povećanim rizikom'},
-    {id: 5, vrednost: 'R > 400', opis: 'ekstremno visok rizik / zaustaviti sve radove, potrebna momentalna akcija do strane najvišeg rukovodstva', kinney: 'Radno mesto je sa povećanim rizikom'}
+    {id: 5, vrednost: 'R > 400', opis: 'ekstremno visok rizik / zaustaviti sve radove, potrebna momentalna akcija do strane najvišeg rukovodstva', kinney: 'Radno mesto je sa veoma velikim rizikom'}
 ]
 
 

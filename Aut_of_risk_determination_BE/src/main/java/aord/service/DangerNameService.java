@@ -11,6 +11,7 @@ public interface DangerNameService {
     List<DangerName> getAll();
     DangerName getById(Long id);
     List<Integer> getAllDangerNameCodes();
+    DangerName findDangerNameByDangerNumber(Integer dangerNumber);
     void save(DangerName convert);
     void update(DangerNameDTO mechanicalDanger);
     void delete(Long id);

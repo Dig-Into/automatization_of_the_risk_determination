@@ -26,6 +26,11 @@ export class DangerNameService {
     return this.http.get(`${this.dangerNameUrl}/getAllCodes`);
   }
 
+  getDangerNameByDangerNumber(dangerNumber: number) {
+    let params = new HttpParams().set("dangerNumber", dangerNumber);
+    return this.http.get(`${this.dangerNameUrl}/getByDangerNumber`, {params});
+  }
+
   createDangerName(dangerName: DangerName) {
     return this.http.post(`${this.dangerNameUrl}/create`, dangerName);
   }

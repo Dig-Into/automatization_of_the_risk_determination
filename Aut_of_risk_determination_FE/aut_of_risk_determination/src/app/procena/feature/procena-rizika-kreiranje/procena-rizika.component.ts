@@ -169,6 +169,8 @@ export class ProcenaRizikaComponent implements OnInit {
       return 'green-background';
     } else if (result <= 200) {
       return 'yellow-background';
+    } else if (result <= 400) {
+      return 'orange-background';
     } else {
       return 'red-background';
     }
