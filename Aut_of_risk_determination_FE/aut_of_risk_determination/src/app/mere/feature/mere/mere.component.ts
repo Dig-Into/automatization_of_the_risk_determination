@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DangerDetailsService } from 'src/app/procena/data-access/danger-details/danger-details.service';
-import { MereService } from '../../data-service/mere.service';
+import { DangerNameService } from 'src/app/procena/data-access/danger-name/danger-name.service';
 
 @Component({
   selector: 'app-mere',
@@ -12,11 +11,26 @@ import { MereService } from '../../data-service/mere.service';
 export class MereComponent {
   mere: any;
   dangers: any;
+  rokovi: any;
 
-  constructor(private dangerDetailsService: DangerDetailsService) {}
+  constructor(private dangerNamesService: DangerNameService) {}
 
   ngOnInit() {
-    this.getAllDangerDetails()
+    this.rokovi = [
+    {
+      id: '1',
+      description: 'Stalno'
+    },
+    {
+      d: '2',
+      description: 'Povremeno'
+    },
+    {
+      d: '3',
+      description: 'Nikad'
+    },
+  ]
+    this.getAllDangerNames()
   }
 
   // getAllMere() {
@@ -40,8 +54,8 @@ export class MereComponent {
   //     ]
   //   }
 
-    getAllDangerDetails() {
-      this.dangerDetailsService.getAllDangerDetails().subscribe(response => {
+    getAllDangerNames() {
+      this.dangerNamesService.getAllDangerNames().subscribe(response => {
         this.dangers = response;
       });
     }

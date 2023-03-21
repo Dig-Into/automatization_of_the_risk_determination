@@ -1,18 +1,47 @@
-<div class="sidebar">
-    <div class="sidebar-header">
-        <h3>Lista mogućih opasnosti i štetnosti</h3>
-        <div class="searchBarComponent">
-            <app-search></app-search>
+<div class="page">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Lista mogućih opasnosti i štetnosti</h3>
+            <div class="searchBarComponent">
+                <app-search></app-search>
+            </div>
+        </div>
+        <div class="sidebar-item-container" *ngFor="let item of dangers">
+            <li class="dangerNumber">{{item.dangerNumber}}</li>  
+            <div class="sidebar-item">
+                <li >{{item.description}}</li>
+            </div>
         </div>
     </div>
-    <div class="sidebar-item-container" *ngFor="let item of dangers">
-        <li>{{item.code}}</li>  
-        <div class="sidebar-item">
-            <li >{{item.description}}</li>
-        </div>
+    <div class="content">
+        <h2 class="header">Utvrđivanje načina i mera za otklanjanje, smanjenje ili sprečavanje rizika</h2>
+
+            <div class="create-container">
+                <div class="top-div">
+                    <div class="left">
+                        <label class="sifra" for="sifra">Unesite šifru</label>
+                        <div class="unesi-sifru">
+                            <input id="danger-number" min="0" type="number" style="width: 75px;" placeholder="Šifra" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <label class="rok" for="rok">Unesite rok za sprovođenje mera</label>
+                        <div class="unesi-rok">
+                            <select id="rok-dropdown">
+                                <option value="rok" *ngFor="let item of rokovi" [value]="item.id">{{item.description}}</option>
+                              </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="unesi-opis">
+                    <label class="opis" for="opis">Mere za otklanjanje, smanjenje ili sprečavanje rizika</label>
+                    <textarea id="opis" name="opis"
+                            rows="5" cols="33">Opis...
+                    </textarea>
+                </div>
+                
+            </div>
+
     </div>
 </div>
-<div class="content">
-    <!-- Dodati -->
-    
-</div>
+

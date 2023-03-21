@@ -9,6 +9,11 @@ export class SearchComponent implements OnInit {
   search: any;
 
   ngOnInit() {
+    setTimeout(()=>{                       
+      this.openSearch();
+    }, 1000);
+  
+
     this.search = document.getElementById('mysearch');;
   }
 

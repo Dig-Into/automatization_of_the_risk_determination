@@ -12,6 +12,7 @@ import { LoginService } from '../data-access/login.service';
 export class LoginComponent {
   email: string;
   password: string;
+  rememberMe: boolean;
 
   constructor(private loginService: LoginService, private router: Router, private authService: AuthService) {}
 
