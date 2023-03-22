@@ -103,3 +103,9 @@ g
 7src/main/java/aord/repository/DangerTypeRepository.java,3\2\32d40eac86d56530e759f24aa71aa589f612cb40
 h
 8src/main/java/aord/controller/ProbabilityController.java,e\8\e8c2379274054918955d34a5fa1ed08d1ba48c93
+c
+3src/main/java/aord/controller/EffectController.java,2\6\26b2957228a4058d8d22f734f5db312e72c0c0da
+X
+(src/main/java/aord/model/DangerName.java,9\8\98cd14cd6d1ee846923042c29613bb80adf7e3e2
+f
+6src/main/java/aord/repository/FrequencyRepository.java,8\6\86a6ebf5721dfb6d2c3b6cf02634832b9d2e403d

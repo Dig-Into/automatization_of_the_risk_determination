@@ -165,8 +165,10 @@ export class ProcenaRizikaComponent implements OnInit {
   getResultClass() {        
     const result = Number(this.field1) * Number(this.field2) * Number(this.field3);
   
-    if (result <= 70) {
-      return 'green-background';
+    if (result <= 20) {
+      return 'dark-green-background';
+    } else if (result <= 70) {
+      return 'light-green-background';
     } else if (result <= 200) {
       return 'yellow-background';
     } else if (result <= 400) {

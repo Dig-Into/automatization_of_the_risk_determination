@@ -10,7 +10,7 @@ import { MereService } from '../../data-service/mere.service';
 })
 
 
-export class MereComponent {
+export class MereComponent implements OnInit {
   mere: any;
   dangers: any;
   rokovi: any;

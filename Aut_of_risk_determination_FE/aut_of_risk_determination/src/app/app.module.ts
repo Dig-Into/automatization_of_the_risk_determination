@@ -22,7 +22,7 @@ import { AuthInterceptor } from './utils/guards/auth.interceptor';
     HeaderComponent,
     ContainerComponent,
     FooterComponent,
-    LoadingScreenComponent,  
+    LoadingScreenComponent,
   ],
   imports: [
     BrowserModule,
