@@ -1,9 +1,10 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { Mera } from 'src/app/model/Mera';
 import { MereService } from '../../data-service/mere.service';
+import { KinneyIndexService } from 'src/app/shared/kinney-index/data-access/kinney-index.service';
 
 @Component({
   selector: 'app-mere-pregled',
@@ -19,7 +20,7 @@ import { MereService } from '../../data-service/mere.service';
   ]
 })
 
-export class MerePregledComponent implements OnInit {
+export class MerePregledComponent implements OnInit, AfterViewInit {
   riskMeasurements: Mera[] = [];
   riskMeasurementsFiltered: Mera[] = [];
 
@@ -34,11 +35,14 @@ export class MerePregledComponent implements OnInit {
 
   viewTable : boolean = true;
   showData: boolean = false;
+  result: string = "";
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild('cellRef', {static: false}) cellRef: ElementRef;
 
   constructor(
-    private mereService: MereService
+    private mereService: MereService,
+    private kinneyIndexService: KinneyIndexService
   ) {
 
   }
@@ -46,6 +50,16 @@ export class MerePregledComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllRiskRemovalMeasurements();
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    setTimeout(() => {
+      const value = this.cellRef.nativeElement.innerText;
+      this.result = this.kinneyIndexService.calculateRang(value);
+    }, 100);
+    
+
   }
 
   getAllRiskRemovalMeasurements() {
@@ -56,10 +70,6 @@ export class MerePregledComponent implements OnInit {
       this.paginator._changePageSize(this.paginator.pageSize);
 
     });
-  }
-
-  ngAfterViewInit(): void {
-    this.dataSource.paginator = this.paginator;
   }
 
   applyFilter(event: Event) {

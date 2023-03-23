@@ -2,7 +2,6 @@
     position: fixed;
     bottom: 0;
     margin: auto;
-    padding: 2rem;
     width: 100%;
     background: rgb(53,50,55);
     background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
@@ -15,7 +14,7 @@
 
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 ul {

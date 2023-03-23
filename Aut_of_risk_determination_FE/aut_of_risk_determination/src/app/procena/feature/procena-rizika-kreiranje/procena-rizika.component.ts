@@ -6,6 +6,7 @@ import { ProbabilityService } from '../../data-access/probability/probability.se
 import { DangerTypeService } from '../../data-access/danger-type/danger-type.service';
 import { DangerNameService } from '../../data-access/danger-name/danger-name.service';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-procena-rizika-kreiranje',
@@ -47,7 +48,8 @@ export class ProcenaRizikaComponent implements OnInit {
     private effectService: EffectService,
     private dangerTypeService: DangerTypeService,
     private dangerNameService: DangerNameService,
-    private dangerDetailsService: DangerDetailsService
+    private dangerDetailsService: DangerDetailsService,
+    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -150,7 +152,9 @@ export class ProcenaRizikaComponent implements OnInit {
           };
 
           this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
-            console.log("Created successfully");
+            setTimeout(() => {
+              this.router.navigate(['/procena-rizika-pregled']);
+            }, 250);
           
           })
         

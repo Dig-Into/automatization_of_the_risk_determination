@@ -14,4 +14,5 @@ public interface DangerNameRepository extends JpaRepository<DangerName, Long> {
     List<Integer> getAllDangerNameCodes();
 
     DangerName findDangerNameByDangerNumber(Integer dangerNumber);
+
 }

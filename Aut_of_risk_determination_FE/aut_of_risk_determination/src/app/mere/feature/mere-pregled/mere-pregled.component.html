@@ -12,12 +12,12 @@
                 <!-- Columns -->
                 <ng-container matColumnDef="code">
                     <th mat-header-cell *matHeaderCellDef style="text-align: center"> Šifra opasnosti </th>
-                    <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.dangerDetails.id }} </td>
+                    <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.dangerDetails.dangerName.dangerNumber }} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="value">
                     <th mat-header-cell *matHeaderCellDef style="text-align: center"> Rizik </th>
-                    <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.riskFactorValue }} </td>
+                    <td mat-cell *matCellDef="let element" style="text-align: center" #cellRef> {{ element.riskFactorValue }} {{result}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="description">

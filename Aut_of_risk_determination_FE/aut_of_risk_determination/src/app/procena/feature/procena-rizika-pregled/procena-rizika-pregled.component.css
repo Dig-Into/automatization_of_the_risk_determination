@@ -60,6 +60,11 @@
     background: rgba(29,28,28, 1);
 }
 
-.mdc-data-table__row:last-child .mdc-data-table__cell {
+.mdc-data-table__row .mdc-data-table__cell {
     color: white;
+}
+
+#forward {
+    margin-left: 700px;
+    color: #37AC00;
 }

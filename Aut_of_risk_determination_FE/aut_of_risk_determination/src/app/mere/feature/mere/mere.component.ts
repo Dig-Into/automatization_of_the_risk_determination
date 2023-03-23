@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DangerNameService } from 'src/app/procena/data-access/danger-name/danger-name.service';
 import { DangerDetailsService } from 'src/app/procena/data-access/danger-details/danger-details.service';
 import { MereService } from '../../data-service/mere.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mere',
@@ -18,7 +19,8 @@ export class MereComponent implements OnInit {
   constructor(
     private mereService: MereService,
     private dangerNameService: DangerNameService,
-    private dangerDetailsService: DangerDetailsService
+    private dangerDetailsService: DangerDetailsService,
+    private router: Router
     ) {}
 
   ngOnInit() {
@@ -38,12 +40,13 @@ export class MereComponent implements OnInit {
   ]
     
     this.getAllDangerDetails();
+    // this.getAllCodes();
   
   }
 
 
   addItem() {
-    var dangerNumber = document.getElementById("danger-number")["value"]
+    var dangerNumber = document.getElementById("sifra-dropdown")["value"]
     var measurementImplFreq = document.getElementById("rok-dropdown")["value"];
     var description = document.getElementById("opis")["value"];
 
@@ -64,7 +67,9 @@ export class MereComponent implements OnInit {
         
         
         this.mereService.createMere(riskRemovalMeasurement).subscribe(response => {
-          console.log("Created successfully");
+          setTimeout(() => {
+            this.router.navigate(['/mere-pregled']);
+          }, 250);
           
         });
         

@@ -87,6 +87,10 @@ select:focus, input:focus {
     cursor: pointer;
 }
 
+.izracunajButton:hover, .kreirajButton:hover, .addNew:hover {
+    background-color: #62d72c;
+}
+
 .descriptionText {
     color: #fff;
     margin-left: 10px;
