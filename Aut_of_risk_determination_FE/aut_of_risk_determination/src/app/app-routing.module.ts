@@ -32,7 +32,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./mere/feature/mere/mere.module').then((m) => m.MereModule),
       canActivate: [AuthGuard]
-    },
+  },
+  {
+    path: 'mere-pregled',
+    loadChildren: () =>
+      import('./mere/feature/mere-pregled/mere-pregled.module').then((m) => m.MerePregledModule),
+      canActivate: [AuthGuard]
+  }
 
 ];
 

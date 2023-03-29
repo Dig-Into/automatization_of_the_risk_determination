@@ -5,7 +5,7 @@
         <label for="opasnost-dropdown" class="labelText">Izaberi opasnost:</label>
         <div style="display: flex; align-items: center;">
           <select id="opasnost-dropdown">
-            <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.description}}</option>
+            <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.dangerNumber}} - {{item.description}}</option>
           </select>
           <button (click)="openModal()" class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
 
@@ -19,7 +19,7 @@
               <div>
                 <input id="danger-number" min="0" type="number" style="width: 75px;" placeholder="Šifra" />
                 <div class="example-spacer"></div>
-                <input id="danger-description" type="text" style="width: 80%;" placeholder="Opis opasnosti" />
+                <input id="danger-description" type="text" style="width: 80%;" placeholder="Opis opasnosti" autocomplete="off"/>
               </div>
               <div class="modalButtonsDiv">
                 <button class="cancel" (click)="closeModal()">Zatvori</button>

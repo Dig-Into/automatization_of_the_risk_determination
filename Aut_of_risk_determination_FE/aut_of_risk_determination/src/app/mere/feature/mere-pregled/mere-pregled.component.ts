@@ -2,14 +2,14 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { DangerDetails } from 'src/app/model/DangerDetails';
-import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
+import { Mera } from 'src/app/model/Mera';
+import { MereService } from '../../data-service/mere.service';
 import { KinneyIndexService } from 'src/app/shared/kinney-index/data-access/kinney-index.service';
 
 @Component({
-  selector: 'app-procena-rizika-pregled',
-  templateUrl: './procena-rizika-pregled.component.html',
-  styleUrls: ['./procena-rizika-pregled.component.css'],
+  selector: 'app-mere-pregled',
+  templateUrl: './mere-pregled.component.html',
+  styleUrls: ['./mere-pregled.component.css'],
   animations: [
     trigger('fadeInFromRight', [
       transition(':enter', [
@@ -20,12 +20,12 @@ import { KinneyIndexService } from 'src/app/shared/kinney-index/data-access/kinn
   ]
 })
 
-export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
-  dangerDetails: DangerDetails[] = [];
-  dangerDetailsFiltered: DangerDetails[] = [];
+export class MerePregledComponent implements OnInit, AfterViewInit {
+  riskMeasurements: Mera[] = [];
+  riskMeasurementsFiltered: Mera[] = [];
 
-  displayedColumns: string[] = ['code', 'descriptions', 'probability', 'effect', 'frequency', 'value'];
-  dataSource = new MatTableDataSource(this.dangerDetails);
+  displayedColumns: string[] = ['code', 'value', 'description', 'measurementFreq'];
+  dataSource = new MatTableDataSource(this.riskMeasurements);
   show: boolean = true;
 
   target: string = "";
@@ -41,15 +41,15 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
   @ViewChild('cellRef', {static: false}) cellRef: ElementRef;
 
   constructor(
-    private dangerDetailsService: DangerDetailsService,
+    private mereService: MereService,
     private kinneyIndexService: KinneyIndexService
   ) {
 
   }
 
+
   ngOnInit(): void {
-    this.getAllDangerDetails();
-    
+    this.getAllRiskRemovalMeasurements();
   }
 
   ngAfterViewInit(): void {
@@ -62,13 +62,13 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
 
   }
 
-  getAllDangerDetails() {
-    this.dangerDetailsService.getAllDangerDetails().subscribe(response => {
-      this.dangerDetails = Object.values(response);
-      this.dangerDetailsFiltered = Object.values(response);
-      this.dataSource.data = this.dataSource.data.concat(this.dangerDetails.slice(0, 1000));
+  getAllRiskRemovalMeasurements() {
+    this.mereService.getAllMere().subscribe(response => {
+      this.riskMeasurements = Object.values(response);
+      this.riskMeasurementsFiltered = Object.values(response);
+      this.dataSource.data = this.dataSource.data.concat(this.riskMeasurements.slice(0, 1000));
       this.paginator._changePageSize(this.paginator.pageSize);
-  
+
     });
   }
 
@@ -80,7 +80,7 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
   reset() {
     this.target = "";
     this.emptyTable();
-    this.getAllDangerDetails();
+    this.getAllRiskRemovalMeasurements();
   }
 
   emptyTable() {
@@ -104,6 +104,5 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
     this.showData = false;
     this.viewTable = true;
   }
-
 
 }

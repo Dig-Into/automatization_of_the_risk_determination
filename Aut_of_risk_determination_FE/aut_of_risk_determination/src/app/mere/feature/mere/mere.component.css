@@ -90,6 +90,16 @@
 
 }
 
+#sifra-dropdown {
+    height: 30px;
+    margin-top: 10px;
+    background-color: #1c1c1e;
+    color: #fff;
+    border: none;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
 input:focus, select:focus {
     outline: 1px ridge #37AC00;
 }
@@ -149,21 +159,22 @@ textarea:focus {
 
 .bottom-div {
     width: 100%;
-    padding-top: 5rem;
+    padding-top: 2.5rem;
     display: flex;
     justify-content: flex-end;
     padding-right: 6rem;
 }
 
 .addNew {
-    width: 100px;
-    height: 50px;
-    border-radius: 12px;
-    background-color: #37AC01;
+    background: #37AC00;
     color: #fff;
+    width: 80px;
+    height: 40px;
     border: none;
+    border-radius: 8px;
+    margin: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    
 }
 
 .addNew:hover {

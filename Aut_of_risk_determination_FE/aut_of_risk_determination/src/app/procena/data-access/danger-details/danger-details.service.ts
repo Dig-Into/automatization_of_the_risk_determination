@@ -22,6 +22,11 @@ export class DangerDetailsService {
     return this.http.get(`${this.dangerDetailsUrl}/findById/`, {params});
   }
 
+  getDangerDetailsByCode(code: number) {
+    let params = new HttpParams().set("code", code);
+    return this.http.get(`${this.dangerDetailsUrl}/getByCode`, {params});
+  }
+
   createDangerDetails(dangerDetails: DangerDetails) {
     return this.http.post(`${this.dangerDetailsUrl}/create`, dangerDetails);
   }

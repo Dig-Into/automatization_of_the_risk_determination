@@ -3,6 +3,7 @@ package aord.controller;
 import aord.converter.ToDangerDetailsConverter;
 import aord.converter.ToDangerDetailsDTOConverter;
 import aord.dto.DangerDetailsDTO;
+import aord.model.DangerDetails;
 import aord.service.DangerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,6 +36,12 @@ public class DangerDetailsController {
     public ResponseEntity<DangerDetailsDTO> getById(@RequestParam Long id) {
         DangerDetailsDTO dangerDetail = toDTO.convert(service.getById(id));
         return new ResponseEntity<>(dangerDetail, HttpStatus.OK);
+    }
+
+    @GetMapping("getByCode")
+    public ResponseEntity<DangerDetailsDTO> getByCode(@RequestParam Integer code) {
+        DangerDetailsDTO dangerDetails = toDTO.convert(service.findDangerDetailsByCode(code));
+        return new ResponseEntity<>(dangerDetails, HttpStatus.OK);
     }
 
     @PostMapping("/create")

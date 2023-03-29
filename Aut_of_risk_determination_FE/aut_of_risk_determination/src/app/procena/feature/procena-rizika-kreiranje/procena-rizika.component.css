@@ -87,25 +87,42 @@ select:focus, input:focus {
     cursor: pointer;
 }
 
+.izracunajButton:hover, .kreirajButton:hover, .addNew:hover {
+    background-color: #62d72c;
+}
+
 .descriptionText {
     color: #fff;
     margin-left: 10px;
 }
 
-.green-background {
-    background-color: green;
+.dark-green-background {
+    background-color: rgb(34, 139, 34);
     border-radius: 5px;
     margin-right: 5px;
 }
+
+.light-green-background {
+    background-color: rgb(50, 205, 50);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
   
 .yellow-background {
-    background-color: yellow;
+    background-color: rgb(186 202 16);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.orange-background {
+    background-color: rgb(210, 125, 45);
     border-radius: 5px;
     margin-right: 5px;
 }
   
 .red-background {
-    background-color: red;
+    background-color: #b23b3b;
     border-radius: 5px;
     margin-right: 5px;
 }

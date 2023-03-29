@@ -2,7 +2,8 @@
 
         <div class="dangerDetailsTable" *ngIf="show" >
             <div class="dangerDetailsHeader">
-                <h2 class="dangerHeader"> Procena rizika grupisanih opasnosti i štetnosti na radnom mestu</h2>
+                <h2 class="dangerHeader"> Procena rizika grupisanih opasnosti i štetnosti na radnom mestu <a id="forward" href="/mere"><i class="fa-sharp fa-solid fa-arrow-right"></i></a> </h2>
+                
             </div>
 
             <div class="tableContainer">
@@ -26,22 +27,22 @@
     
                     <ng-container matColumnDef="probability">
                         <th mat-header-cell *matHeaderCellDef style="text-align: center"> Verovatnoća </th>
-                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.probability.code}} </td>
+                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.probability.code}} - {{element.probability.description}} </td>
                     </ng-container>
     
                     <ng-container matColumnDef="effect">
                         <th mat-header-cell *matHeaderCellDef style="text-align: center"> Posledice </th>
-                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.effect.code }} </td>
+                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.effect.code }} - {{element.effect.description}} </td>
                     </ng-container>
     
                     <ng-container matColumnDef="frequency">
                         <th mat-header-cell *matHeaderCellDef style="text-align: center"> Učestalost </th>
-                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.frequency.code }} </td>
+                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.frequency.code }} - {{element.frequency.description}} </td>
                     </ng-container>
     
                     <ng-container matColumnDef="value">
                         <th mat-header-cell *matHeaderCellDef style="text-align: center"> Rizik </th>
-                        <td mat-cell *matCellDef="let element" style="text-align: center"> {{ element.value }} </td>
+                        <td mat-cell *matCellDef="let element" style="text-align: center" #cellRef> {{ element.value }} {{result}} </td>
                     </ng-container>
     
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

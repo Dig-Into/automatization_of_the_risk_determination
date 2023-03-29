@@ -1,8 +1,12 @@
+import { DangerDetails } from "./DangerDetails";
+
 export class Mera {
     constructor(
         public id: number,
-        public code: number,
-        public description: string
+        public riskFactorValue: number,
+        public measurementImplFreq: string,
+        public description: string,
+        public dangerDetails: DangerDetails
     ) {
 
     }

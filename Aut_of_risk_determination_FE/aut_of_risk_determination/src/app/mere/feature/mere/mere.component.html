@@ -7,9 +7,9 @@
             </div>
         </div>
         <div class="sidebar-item-container" *ngFor="let item of dangers">
-            <li class="dangerNumber">{{item.dangerNumber}}</li>  
+            <li class="dangerNumber">{{item.dangerName.dangerNumber}}</li>  
             <div class="sidebar-item">
-                <li >{{item.description}}</li>
+                <li >{{item.dangerName.description}}</li>
             </div>
         </div>
     </div>
@@ -19,25 +19,25 @@
             <div class="create-container">
                 <div class="top-div">
                     <div class="left">
-                        <label class="sifra" for="sifra">Unesite šifru</label>
-                        <div class="unesi-sifru">
-                            <input id="danger-number" min="0" type="number" style="width: 75px;" placeholder="Šifra" />
+                        <label class="sifra" for="sifra">Odaberite šifru</label>
+                        <div class="odaberi-sifru">
+                            <select id="sifra-dropdown">
+                                <option id="odabrana-sifra" *ngFor="let item of dangers" [value]="item.dangerName.dangerNumber">{{item.dangerName.dangerNumber}}</option>
+                            </select>
                         </div>
                     </div>
                     <div class="right">
-                        <label class="rok" for="rok">Unesite rok za sprovođenje mera</label>
-                        <div class="unesi-rok">
+                        <label class="rok" for="rok">Odaberite rok za sprovođenje mera</label>
+                        <div class="odaberi-rok">
                             <select id="rok-dropdown">
-                                <option value="rok" *ngFor="let item of rokovi" [value]="item.id">{{item.description}}</option>
+                                <option id="odabrani-rok" *ngFor="let item of rokovi" [value]="item.description">{{item.description}}</option>
                               </select>
                         </div>
                     </div>
                 </div>
                 <div class="unesi-opis">
                     <label class="opis" for="opis">Mere za otklanjanje, smanjenje ili sprečavanje rizika</label>
-                    <textarea id="opis" name="opis"
-                            rows="5" cols="33">Opis...
-                    </textarea>
+                    <textarea id="opis" name="opis" rows="5" cols="33">Opis...</textarea>
                 </div>
                 <div class="bottom-div">
                     <button class="addNew" (click)="addItem()">Dodaj</button>
