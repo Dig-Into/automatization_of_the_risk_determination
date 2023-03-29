@@ -15,6 +15,8 @@ export class MereComponent implements OnInit {
   mere: any;
   dangers: any;
   rokovi: any;
+  dangercodes: any[] = [];
+  filteredDangers: any;
 
   constructor(
     private mereService: MereService,

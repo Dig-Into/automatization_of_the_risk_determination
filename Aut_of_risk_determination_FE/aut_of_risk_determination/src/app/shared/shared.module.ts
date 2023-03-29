@@ -15,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContainerBigComponent } from './wrapper/wrapper-big.component';
 import { KinneyIndexComponent } from './kinney-index/kinney-index.component';
 import { SearchComponent } from './search/search.component';
+import { SnackService } from '../utils/services/snack.service';
 
 
 
@@ -33,16 +34,17 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSnackBarModule,
-  RouterModule
+  RouterModule,
 ];
 
 
 
 @NgModule({
   declarations: [  
-    ContainerBigComponent, KinneyIndexComponent, SearchComponent, 
+    ContainerBigComponent, KinneyIndexComponent, SearchComponent
   ],
   imports: [...modules],
+  providers: [SnackService],
   exports: [
   ...modules,
   ContainerBigComponent,

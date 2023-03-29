@@ -7,6 +7,8 @@ import { DangerTypeService } from '../../data-access/danger-type/danger-type.ser
 import { DangerNameService } from '../../data-access/danger-name/danger-name.service';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackService } from 'src/app/utils/services/snack.service';
 
 @Component({
   selector: 'app-procena-rizika-kreiranje',
@@ -23,7 +25,7 @@ import { Router } from '@angular/router';
 })
 
 export class ProcenaRizikaComponent implements OnInit {
-  inputs: string[] = [''];
+  inputs: string[] = [];
   showAnotherComponent = false;
   fadeState = '';
   probabilities: any;
@@ -41,6 +43,8 @@ export class ProcenaRizikaComponent implements OnInit {
   probabilityId: number;
   effectId: number;
   frequencyId: number;
+  populated: boolean = false;
+  descPopulated: boolean = false;
 
   constructor(
     private probabilityService: ProbabilityService,
@@ -49,7 +53,8 @@ export class ProcenaRizikaComponent implements OnInit {
     private dangerTypeService: DangerTypeService,
     private dangerNameService: DangerNameService,
     private dangerDetailsService: DangerDetailsService,
-    private router: Router
+    private router: Router,
+    private snackService: SnackService
     ) {}
 
   ngOnInit(): void {
@@ -110,12 +115,43 @@ export class ProcenaRizikaComponent implements OnInit {
     this.inputs.push('');
   }
 
+  removeInput(index) {
+    this.inputs.splice(index, 1);
+  }
+
   create() {
     var selectedDangerName = document.getElementById("opasnost-dropdown")["value"];
     var selectedProbability = document.getElementById("p-dropdown")["value"]; 
     var selectedEffect = document.getElementById("e-dropdown")["value"];
     var selectedFrequency = document.getElementById("f-dropdown")["value"];
     var descriptions = Array.from(document.querySelectorAll(".details"));
+
+    for(var i = 0; i < descriptions.length; i++) {
+      if (descriptions[i]["value"] !== "" && descriptions.length !== 0) {
+        this.descPopulated = true;
+      } else {
+        this.descPopulated = false;
+      }
+    }
+    console.log(this.descPopulated + "1");
+
+    if (selectedDangerName && selectedProbability && selectedEffect && selectedFrequency && this.descPopulated) {
+      this.populated = true;
+      console.log(this.descPopulated + "2");
+    } else {
+      this.populated = false;
+      this.snackService.creationError();
+    }
+
+    this.inputs.forEach((input, index) => {
+      if (this.inputs[index] == "") {
+        this.descPopulated = false;
+      } else {
+        this.descPopulated = true;
+      }
+    })
+
+    
 
     this.probabilityService.getProbabilityByCode(selectedProbability).subscribe(response => {
       this.probabilityId = response["id"];
@@ -151,12 +187,15 @@ export class ProcenaRizikaComponent implements OnInit {
               }
           };
 
-          this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
-            setTimeout(() => {
-              this.router.navigate(['/procena-rizika-pregled']);
-            }, 250);
           
-          })
+          if (this.populated) {
+            this.dangerDetailsService.createDangerDetails(dangerDetails).subscribe(response => {
+              setTimeout(() => {
+                this.router.navigate(['/procena-rizika-pregled']);
+              }, 250);
+            
+            })
+          }
         
         });
       

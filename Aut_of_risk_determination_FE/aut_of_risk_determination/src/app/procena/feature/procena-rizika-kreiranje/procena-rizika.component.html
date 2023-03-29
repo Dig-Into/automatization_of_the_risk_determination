@@ -32,8 +32,9 @@
       </div>
       <div style="margin-bottom: 10px;">
         <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
-        <div *ngFor="let input of inputs">
-          <input id="detalji-opasnosti" class="details" style="margin-right: 10px;" autocomplete="off">
+        <div *ngFor="let input of inputs; let i = index">
+          <input id="detalji-opasnosti-{{i}}" class="details" style="margin-right: 10px;" autocomplete="off">
+          <button class="removeInput" (click)="removeInput(i)"><i class="fa fa-minus"></i></button>
         </div>
         <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
           <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
@@ -83,8 +84,8 @@
       </div>
       <div class="buttonsDiv">
         <div class="helper">
-          <button (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
-          <button (click)="create()" class="kreirajButton">Kreiraj</button>
+          <button [disabled]="!selectedItem1 || !selectedItem2 || !selectedItem3" (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
+          <button [disabled]="" (click)="create()" class="kreirajButton">Kreiraj</button>
         </div>
       </div>
     </div>

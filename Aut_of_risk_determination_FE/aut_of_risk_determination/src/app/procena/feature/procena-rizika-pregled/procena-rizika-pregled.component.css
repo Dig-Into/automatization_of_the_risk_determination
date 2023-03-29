@@ -21,6 +21,13 @@
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#forward {
+    width: 100px;
+    margin-left: auto;
+    color: #37AC00;
 }
 
 .dangerHeader {
@@ -64,7 +71,8 @@
     color: white;
 }
 
-#forward {
-    margin-left: 700px;
-    color: #37AC00;
+@media screen and (max-height: 1200px) {
+    .page {
+        height: fit-content;
+    }
 }

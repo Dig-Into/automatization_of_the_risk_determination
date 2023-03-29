@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Input() displayed: any;
+  @Output() filter = new EventEmitter<any[]>();
+  
   search: any;
 
   ngOnInit() {
@@ -23,6 +26,19 @@ export class SearchComponent implements OnInit {
 
   public clear() {
     this.search.value = '';
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value.toLowerCase();
+    // this.displayed.filter = filterValue.trim().toLowerCase();
+     // filter the displayed array by checking if the dangerName property includes the filter value
+    const filtered = this.displayed.filter((item: any) => {
+      return item.dangerName.description.toLowerCase().includes(filterValue);
+    });
+
+    // update the filtered array in the parent component
+    this.filter.emit(filtered);
+
   }
 
 }

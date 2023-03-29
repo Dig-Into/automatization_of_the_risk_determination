@@ -22,11 +22,15 @@ export class SnackService {
         this.router.navigate(['/login'])
       )
     )
-    
-
     .subscribe();
+  }
 
+  creationError() {
+    this.snackBar.open('Morate popuniti sva polja kako bi nastavili!', 'OK', {
+      duration: 5000
+    });
 
-
+    return this.snackBar._openedSnackBarRef
+    ?.onAction().subscribe();
   }
 }

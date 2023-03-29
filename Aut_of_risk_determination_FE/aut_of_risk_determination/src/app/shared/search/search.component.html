@@ -1,7 +1,9 @@
 <div class="search" id="search">
     <div class="icon" (click)="openSearch()"></div>
     <div class="input">
-      <input type="text" placeholder="Pretraži" id="mysearch">
+
+        <input type="text" id="mysearch" matInput (keyup)="applyFilter($event)" placeholder="Pretraži" #input>  
+      
     </div>
     <span class="clear" (click)="clear()"></span>
 </div>

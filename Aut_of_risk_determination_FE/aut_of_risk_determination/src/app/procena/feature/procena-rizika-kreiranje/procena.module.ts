@@ -22,7 +22,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     MatInputModule,
     MatSelectModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
   ],
   declarations: [ProcenaRizikaComponent],
 })

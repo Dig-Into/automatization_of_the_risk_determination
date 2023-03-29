@@ -1,7 +1,7 @@
 .page {
     padding-top: 100px;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     background: rgb(53,50,55);
     background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
     padding-bottom: 200px;
@@ -24,7 +24,18 @@
     font-size: 24px;
 }
 
-#opasnost-dropdown, #detalji-opasnosti {
+#opasnost-dropdown {
+    margin-top: 10px;
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #1c1c1e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+
+.details {
     margin-top: 10px;
     width: 400px;
     height: 40px;
@@ -72,6 +83,13 @@ select:focus, input:focus {
     padding-bottom: 100px;
 }
 
+.removeInput {
+    background: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+
 .helper {
     float: right;
 }
@@ -89,6 +107,15 @@ select:focus, input:focus {
 
 .izracunajButton:hover, .kreirajButton:hover, .addNew:hover {
     background-color: #62d72c;
+}
+
+.izracunajButton:disabled{
+    background-color: #c3f9aa;
+    color: black;
+}
+
+.izracunajButton:disabled:hover {
+    cursor: text;
 }
 
 .descriptionText {
