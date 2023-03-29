@@ -7,7 +7,6 @@ import { DangerTypeService } from '../../data-access/danger-type/danger-type.ser
 import { DangerNameService } from '../../data-access/danger-name/danger-name.service';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackService } from 'src/app/utils/services/snack.service';
 
 @Component({
@@ -131,27 +130,16 @@ export class ProcenaRizikaComponent implements OnInit {
         this.descPopulated = true;
       } else {
         this.descPopulated = false;
+        descriptions = [];
       }
     }
-    console.log(this.descPopulated + "1");
 
     if (selectedDangerName && selectedProbability && selectedEffect && selectedFrequency && this.descPopulated) {
       this.populated = true;
-      console.log(this.descPopulated + "2");
     } else {
       this.populated = false;
       this.snackService.creationError();
     }
-
-    this.inputs.forEach((input, index) => {
-      if (this.inputs[index] == "") {
-        this.descPopulated = false;
-      } else {
-        this.descPopulated = true;
-      }
-    })
-
-    
 
     this.probabilityService.getProbabilityByCode(selectedProbability).subscribe(response => {
       this.probabilityId = response["id"];
@@ -252,7 +240,6 @@ export class ProcenaRizikaComponent implements OnInit {
     };
 
     this.dangerNameService.createDangerName(dangerName).subscribe(response => {
-      console.log("Created");
       this.closeModal();
       setTimeout(() => {
         this.loadDangerNames();

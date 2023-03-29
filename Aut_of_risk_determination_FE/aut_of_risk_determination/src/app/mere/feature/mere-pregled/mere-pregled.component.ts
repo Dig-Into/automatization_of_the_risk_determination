@@ -36,6 +36,7 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
   viewTable : boolean = true;
   showData: boolean = false;
   result: string = "";
+  results: string[] = [];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('cellRef', {static: false}) cellRef: ElementRef;
@@ -55,10 +56,15 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     setTimeout(() => {
-      const value = this.cellRef.nativeElement.innerText;
-      this.result = this.kinneyIndexService.calculateRang(value);
+      const rows = document.querySelectorAll('.riskValue');
+      
+      rows.forEach(row => {
+        const rowValue = Number(row.textContent);
+        const result = this.kinneyIndexService.calculateRang(rowValue);
+        this.results.push(result);
+      });      
+      
     }, 100);
-    
 
   }
 

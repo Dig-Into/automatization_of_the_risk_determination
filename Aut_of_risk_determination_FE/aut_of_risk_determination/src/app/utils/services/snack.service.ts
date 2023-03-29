@@ -11,7 +11,7 @@ export class SnackService {
   constructor(private snackBar: MatSnackBar, private router: Router) { }
 
   authError() {
-    this.snackBar.open('Morate se prijaviti kako bi ste videli ovaj sadržaj!', 'OK', {
+    this.snackBar.open('Morate se prijaviti kako biste videli ovaj sadržaj!', 'OK', {
       duration: 5000
     });
 
@@ -26,7 +26,7 @@ export class SnackService {
   }
 
   creationError() {
-    this.snackBar.open('Morate popuniti sva polja kako bi nastavili!', 'OK', {
+    this.snackBar.open('Morate popuniti sva polja kako biste nastavili!', 'OK', {
       duration: 5000
     });
 
