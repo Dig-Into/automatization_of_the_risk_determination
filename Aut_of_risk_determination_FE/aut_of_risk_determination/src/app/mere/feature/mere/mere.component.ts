@@ -33,11 +33,11 @@ export class MereComponent implements OnInit {
     },
     {
       id: '2',
-      description: 'Povremeno'
+      description: 'Periodično'
     },
     {
       id: '3',
-      description: 'Nikad'
+      description: 'Prethodno'
     },
   ]
     
