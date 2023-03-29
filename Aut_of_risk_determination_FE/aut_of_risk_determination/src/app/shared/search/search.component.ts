@@ -33,7 +33,8 @@ export class SearchComponent implements OnInit {
     // this.displayed.filter = filterValue.trim().toLowerCase();
      // filter the displayed array by checking if the dangerName property includes the filter value
     const filtered = this.displayed.filter((item: any) => {
-      return item.dangerName.description.toLowerCase().includes(filterValue);
+      return item.dangerName.description.toLowerCase().includes(filterValue) ||
+             item.dangerName.dangerNumber.toString().includes(filterValue);
     });
 
     // update the filtered array in the parent component
