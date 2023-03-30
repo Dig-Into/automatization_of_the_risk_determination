@@ -109,3 +109,5 @@ X
 (src/main/java/aord/model/DangerName.java,9\8\98cd14cd6d1ee846923042c29613bb80adf7e3e2
 f
 6src/main/java/aord/repository/FrequencyRepository.java,8\6\86a6ebf5721dfb6d2c3b6cf02634832b9d2e403d
+a
+1src/main/java/aord/service/DangerNameService.java,f\9\f933c40064c70dc348a8cf57a766ada702db4fed
