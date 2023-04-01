@@ -5,7 +5,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { DangerDetails } from 'src/app/model/DangerDetails';
 import { DangerDetailsService } from '../../data-access/danger-details/danger-details.service';
 import { KinneyIndexService } from 'src/app/shared/kinney-index/data-access/kinney-index.service';
-import * as XLSX from 'xlsx';
+import { jsPDF } from 'jspdf';
+import * as Excel from 'exceljs';
+import * as path from 'path';
+import autoTable from 'jspdf-autotable';
 
 @Component({
   selector: 'app-procena-rizika-pregled',
@@ -112,41 +115,86 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
     this.viewTable = true;
   }
 
-  generateExcel() {
-    let element = document.getElementById("procenaRizikaTable") as HTMLTableElement;
-
-    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
-
-    // Add header row style
-    ws["!cols"] = [
-      { width: 8 },
-      { width: 35 },
-      { width: 13 },
-      { width: 11 },
-      { width: 12 },
-      { width: 10 }
-    ];
-
-    // Modify each row to extract numerical values from columns C, D, and E
-    for (let i = 2; i <= element.rows.length; i++) {
-      const row = element.rows[i - 1];
-      const cValue = row.cells[2].innerText.split(" ")[0]; // Extract numerical value from column C
-      const dValue = row.cells[3].innerText.split(" ")[0]; // Extract numerical value from column D
-      const eValue = row.cells[4].innerText.split(" ")[0]; // Extract numerical value from column E
-      ws[`C${i}`] = { v: Number(cValue) }; // Assign numerical value to column C cell
-      ws[`D${i}`] = { v: Number(dValue) }; // Assign numerical value to column D cell
-      ws[`E${i}`] = { v: Number(eValue) }; // Assign numerical value to column E cell
-        
+  generatePDF() {
+    const doc = new jsPDF();
+    const table = document.querySelector('.dangerDetailsTable');
+    const rows = table.querySelectorAll('tr');
+    const columns = ['Šifra opasnosti', 'Vrsta i opis opasnosti/štetnosti', 'Verovatnoća', 'Posledice', 'Učestalost', 'Rizik'];
+          
+    // An empty array to store the table data
+    const data = [];
+  
+    // Loop through each row of the table
+    for (let i = 1; i < rows.length; i++) {
+      // Get all cells in the row
+      const cells = rows[i].querySelectorAll('td');
+  
+      // An empty object to store the row data
+      const rowData = {};
+  
+      // Loop through each cell in the row
+      for (let j = 0; j < cells.length; j++) {
+        // Get the value of the cell
+        const cellValue = cells[j].innerText;
+  
+        // Add the value to the row data object
+        rowData[columns[j]] = cellValue;
+      }
+  
+      // Add the row data to the table data array
+      data.push(rowData);
+      
     }
+      
+    
+    console.log("Kolone: ", columns);
+    
+    console.log("Podaci:" , data);
+    
 
-    ws['A1'] = {v: "Rb. / šifra"};
-    ws['B1'] = {v: "Grupa, vrsta i opis opasnosti i štetnosti"}
+    // Add the table to the PDF document
+    autoTable(doc, {
+      head: [columns],
+      body: data
+    });
 
-    const wb: XLSX.WorkBook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'ProcenaRizikaSheet');
-
-    XLSX.writeFile(wb, 'ProcenaRizika.xlsx');
+    // Download the PDF document as a file
+    doc.save('Procena rizika.pdf');
 
   }
-  
+
+  generateExcel() {
+    const workbook = new Excel.Workbook();
+    const worksheet = workbook.addWorksheet('Procena rizika');
+
+    const columns = [
+      { key: 'sifraOpasnosti', header: 'Šifra opasnosti' },
+      { key: 'vrstaOpis', header: 'Vrsta i opis opasnosti/štetnosti' },
+      { key: 'verovatnoca', header: 'Verovatnoća' },
+      { key: 'posledice', header: 'Posledice' },
+      { key: 'ucestalost', header: 'Učestalost' },
+      { key: 'rizik', header: 'Rizik' }
+    ];
+
+    worksheet.columns = columns;
+
+    this.dangerDetailsService.getAllDangerDetails().subscribe(response => {
+      const jsonString = JSON.stringify(response);
+      const dataArray = JSON.parse(jsonString);
+      
+      dataArray.forEach(data => {
+        worksheet.addRow(data);
+      });
+
+      const exportPath = path.resolve(__dirname, 'ProcenaRizika.xlsx');
+      console.log(exportPath);
+
+      setTimeout(() => {
+        workbook.xlsx.writeFile(exportPath);
+      }, 1000);
+      
+    });
+    
+  }
+
 }
