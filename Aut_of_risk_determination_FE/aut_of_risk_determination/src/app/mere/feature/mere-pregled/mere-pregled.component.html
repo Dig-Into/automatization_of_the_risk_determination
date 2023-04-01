@@ -3,11 +3,12 @@
     <div class="riskRemovalMeasurementTable" *ngIf="show" >
         <div class="riskRemovalMeasurementHeader">
             <h2 class="riskHeader"> Utvrđivanje načina i mera za otklanjanje, smanjenje ili sprečavanje rizika</h2>
+            <button class="generateExcel" (click)="generateExcel()" style="margin-right: 15px;">Eksportuj u Excel</button>
+
         </div>
 
         <div class="tableContainer">
-
-            <table mat-table [dataSource]="dataSource">
+            <table id="mereTable" mat-table [dataSource]="dataSource">
 
                 <!-- Columns -->
                 <ng-container matColumnDef="code">

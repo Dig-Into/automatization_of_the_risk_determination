@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Mera } from 'src/app/model/Mera';
 import { MereService } from '../../data-service/mere.service';
 import { KinneyIndexService } from 'src/app/shared/kinney-index/data-access/kinney-index.service';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-mere-pregled',
@@ -109,6 +110,29 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
   goBack(){
     this.showData = false;
     this.viewTable = true;
+  }
+
+  generateExcel() {
+    let element = document.getElementById("mereTable") as HTMLTableElement;
+
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    // Add header row style
+    ws["!cols"] = [
+      { width: 8 },
+      { width: 10 },
+      { width: 50 },
+      { width: 20 }
+    ];
+
+    ws['A1'] = {v: "Rb. / šifra"};
+
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'MereZaSprečavanjeRizikaSheet');
+
+    XLSX.writeFile(wb, 'MereZaSprečavanjeRizika.xlsx');
+
+    
   }
 
 }

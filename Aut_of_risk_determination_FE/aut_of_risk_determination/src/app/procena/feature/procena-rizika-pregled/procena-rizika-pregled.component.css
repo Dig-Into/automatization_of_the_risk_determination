@@ -76,3 +76,17 @@
         height: fit-content;
     }
 }
+
+.generateExcel {
+    background: #37AC00;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.generateExcel:hover {
+    background-color: #62d72c;
+}
