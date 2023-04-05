@@ -3,6 +3,9 @@ import { DangerNameService } from 'src/app/procena/data-access/danger-name/dange
 import { DangerDetailsService } from 'src/app/procena/data-access/danger-details/danger-details.service';
 import { MereService } from '../../data-service/mere.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { SnackService } from 'src/app/utils/services/snack.service';
+
 
 @Component({
   selector: 'app-mere',
@@ -22,7 +25,8 @@ export class MereComponent implements OnInit {
     private mereService: MereService,
     private dangerNameService: DangerNameService,
     private dangerDetailsService: DangerDetailsService,
-    private router: Router
+    private router: Router,
+    private snackService: SnackService
     ) {}
 
   ngOnInit() {
@@ -66,21 +70,31 @@ export class MereComponent implements OnInit {
             id: response["id"]
         }
       };
-        
+      
+      if (!dangerNumber || !measurementImplFreq || !description) {
+        this.snackService.creationError();
+      }
+      
         
         this.mereService.createMere(riskRemovalMeasurement).subscribe(response => {
           setTimeout(() => {
             this.router.navigate(['/mere-pregled']);
           }, 250);
           
+        },
+        (error: HttpErrorResponse) => {
+          this.snackService.creationError();
         });
         
+      },
+      (error: HttpErrorResponse) => {
+        this.snackService.creationError();
       });
       
+    },
+    (error: HttpErrorResponse) => {
+      this.snackService.creationError();
     });
-    
-
-   
     
   }
 

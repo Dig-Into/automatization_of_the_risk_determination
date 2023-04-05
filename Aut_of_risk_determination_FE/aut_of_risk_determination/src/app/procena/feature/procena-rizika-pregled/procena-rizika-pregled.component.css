@@ -1,9 +1,15 @@
 .page {
     padding-top: 75px;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
+    /* height: 100%; */
+    background: rgb(43, 41, 45);
+    background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
     padding-bottom: 75px;
+ }
+
+ #danger-description {
+    width: 100%;
+    padding: 20px;
  }
 
 .dangerDetailsTable {
@@ -72,9 +78,9 @@
 }
 
 @media screen and (min-height: 1200px) {
-    .page {
-        height: fit-content;
-    }
+    /* .page {
+        height: auto;
+    } */
 }
 
 .generateExcel {
@@ -89,4 +95,163 @@
 
 .generateExcel:hover {
     background-color: #62d72c;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content {
+    background: rgb(53,50,55);
+    background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.flex-div {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.left-content, .right-content  {
+    border-radius: 12px;
+    border: 1px lightgray solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 40%;
+    transition: transform .2s;
+    align-items: center;
+}
+
+.left-content:hover, .right-content:hover {
+    border: 2px white solid;
+    transform: scale(1.07);
+    color: #fff;
+    cursor: pointer;
+}
+
+.left-content:hover h4, .right-content:hover h4 {
+    color: #fff;
+}
+
+
+.left-image, .right-image {
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+}
+
+.image-text {
+    color: lightgray;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.modalButtonsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsDiv {
+    height: 100%;;   
+}
+
+.modal-content select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.modal-content div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content input {
+    box-sizing: border-box;
+    background-color: #1c1c1e;
+    color: #fff;
+    border: none;
+}
+
+.modalSelect {
+    box-sizing: border-box;
+    border: none;
+    background-color: #1c1c1e;
+    color: #fff;
+}
+
+.modal-content input {
+    display: block;
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal-content button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button.add {
+    background-color: #37AC00;
+    color: white;
+}
+
+.modal-content button.cancel {
+    background-color: red;
+    color: white;
+}
+
+.modal-content button.add:hover {
+    background-color: #62d72c;
+    color: white;
+}
+
+.modal-content button.cancel:hover {
+    background-color: rgb(252, 52, 52);
+}
+
+input:focus {
+  outline: 1px ridge #37AC00;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    outline: 1px ridge #37AC00;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #1c1c1e inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

@@ -87,7 +87,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	    config.addExposedHeader("Authorization");
 	    config.addExposedHeader("Set-Cookie");
 	    config.setAllowCredentials(true);
-	    config.setAllowedOrigins(List.of("http://localhost:4200"));
+	    config.setAllowedOrigins(List.of("http://localhost:4200", "https://aord-hse.netlify.app/"));
 	    config.addAllowedMethod("*");
 	    config.addAllowedHeader("*");
 

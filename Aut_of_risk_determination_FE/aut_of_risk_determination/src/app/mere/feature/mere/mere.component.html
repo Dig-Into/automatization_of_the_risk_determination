@@ -24,16 +24,19 @@
                         <label class="sifra" for="sifra">Odaberite šifru</label>
                         <div class="odaberi-sifru">
                             <select id="sifra-dropdown">
+                                <option value="" selected disabled>Izaberite</option>
                                 <option id="odabrana-sifra" *ngFor="let item of dangers" [value]="item.dangerName.dangerNumber">{{item.dangerName.dangerNumber}}</option>
                             </select>
                         </div>
                     </div>
                     <div class="right">
+                        
                         <label class="rok" for="rok">Odaberite rok za sprovođenje mera</label>
                         <div class="odaberi-rok">
                             <select id="rok-dropdown">
-                                <option id="odabrani-rok" *ngFor="let item of rokovi" [value]="item.description">{{item.description}}</option>
-                              </select>
+                                <option value="" selected disabled>Izaberite</option>
+                                <option id="odabrani-rok" *ngFor="let item of rokovi" [value]="item.description">{{item.description}}</option>  
+                            </select>
                         </div>
                     </div>
                 </div>

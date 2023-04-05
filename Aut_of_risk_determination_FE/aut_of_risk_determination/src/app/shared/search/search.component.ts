@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
     }, 1000);
   
 
-    this.search = document.getElementById('mysearch');;
+    this.search = document.getElementById('mysearch');
   }
 
   public openSearch() {
@@ -30,8 +30,7 @@ export class SearchComponent implements OnInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value.toLowerCase();
-    // this.displayed.filter = filterValue.trim().toLowerCase();
-     // filter the displayed array by checking if the dangerName property includes the filter value
+    
     const filtered = this.displayed.filter((item: any) => {
       return item.dangerName.description.toLowerCase().includes(filterValue) ||
              item.dangerName.dangerNumber.toString().includes(filterValue);

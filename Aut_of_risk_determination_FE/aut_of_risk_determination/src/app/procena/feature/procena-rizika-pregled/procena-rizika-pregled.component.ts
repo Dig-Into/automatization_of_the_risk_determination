@@ -38,6 +38,7 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
   showData: boolean = false;
   result: string = "";
   results: string[] = [];
+  workplace: string = "";
  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('cellRef', {static: false}) cellRef: ElementRef;
@@ -112,6 +113,26 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
     this.viewTable = true;
   }
 
+  openModal() {
+    document.getElementById('my-modal').style.display = 'block';
+  }
+
+  openRadnoMestoModal() {
+    document.getElementById('my-radno-mesto-modal').style.display = 'block';
+  }
+  
+  closeModal() {
+    document.getElementById('my-modal').style.display = 'none';
+  }
+
+  closeRadnoMestoModal() {
+    document.getElementById('my-radno-mesto-modal').style.display = 'none';
+  }
+
+  addItem() {
+    console.log("Teeeesterica")
+  }
+
   generateExcel() {
     let element = document.getElementById("procenaRizikaTable") as HTMLTableElement;
 
@@ -146,6 +167,45 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
     XLSX.utils.book_append_sheet(wb, ws, 'ProcenaRizikaSheet');
 
     XLSX.writeFile(wb, 'ProcenaRizika.xlsx');
+
+  }
+
+  generateExcel2() {
+    let element = document.getElementById("procenaRizikaTable") as HTMLTableElement;
+    let workplace = document.getElementById("danger-description")["value"];
+    console.log(workplace)
+
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    // Add header row style
+    ws["!cols"] = [
+      { width: 8 },
+      { width: 35 },
+      { width: 13 },
+      { width: 11 },
+      { width: 12 },
+      { width: 10 }
+    ];
+
+    // Modify each row to extract numerical values from columns C, D, and E
+    for (let i = 2; i <= element.rows.length; i++) {
+      const row = element.rows[i - 1];
+      const cValue = row.cells[2].innerText.split(" ")[0]; // Extract numerical value from column C
+      const dValue = row.cells[3].innerText.split(" ")[0]; // Extract numerical value from column D
+      const eValue = row.cells[4].innerText.split(" ")[0]; // Extract numerical value from column E
+      ws[`C${i}`] = { v: Number(cValue) }; // Assign numerical value to column C cell
+      ws[`D${i}`] = { v: Number(dValue) }; // Assign numerical value to column D cell
+      ws[`E${i}`] = { v: Number(eValue) }; // Assign numerical value to column E cell
+        
+    }
+
+    ws['A1'] = {v: "Rb. / šifra"};
+    ws['B1'] = {v: "Grupa, vrsta i opis opasnosti i štetnosti"}
+
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'ProcenaRizikaSheet');
+
+    XLSX.writeFile(wb, workplace + '_ProcenaRizika.xlsx');
 
   }
   

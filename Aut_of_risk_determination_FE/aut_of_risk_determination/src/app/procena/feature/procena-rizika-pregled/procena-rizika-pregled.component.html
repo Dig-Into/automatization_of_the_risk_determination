@@ -4,12 +4,39 @@
         <div class="dangerDetailsHeader">
             <h2 class="dangerHeader"> Procena rizika grupisanih opasnosti i štetnosti na radnom mestu </h2>
             <div>
-                <button class="generateExcel" (click)="generateExcel()" style="margin-right: 15px;">Eksportuj u Excel</button>
+                <button class="generateExcel" (click)="openModal()" style="margin-right: 15px;">Eksportuj u Excel</button>
                 <a id="forward" href="/mere"><i class="fa-sharp fa-solid fa-arrow-right" style="float: right; margin-right: 30px; margin-top: 10px;"></i></a> 
             </div>
             
         </div>
-
+        
+        <div id="my-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="flex-div">
+                    <div (click)="generateExcel()" class="left-content">
+                        <img class="left-image" src="../../../../assets/icons/excel-light-gray.png" alt="excel-light-gray">
+                        <h4 class="image-text">Eksportuj</h4>
+                    </div>
+                    <div (click)="openRadnoMestoModal()" class="right-content">
+                        <img class="right-image" src="../../../../assets/icons/excel-add.png" alt="excel-light-gray">
+                        <h4 class="image-text">Dodaj ime radnog mesta</h4>
+                    </div>
+                </div>
+                <div class="buttonsDiv">
+                    <button class="cancel" (click)="closeModal()">Zatvori</button>
+                </div>
+            </div>
+        </div>
+        <div id="my-radno-mesto-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <h2>Unesite naziv radnog mesta</h2>              
+              <input id="danger-description" min="0" type="text" [value]="workplace" placeholder="Naziv radnog mesta" />
+              <div class="modalButtonsDiv">
+                <button class="cancel" (click)="closeRadnoMestoModal()">Zatvori</button>
+                <button class="add" (click)="generateExcel2()">Dodaj</button>
+              </div>
+            </div>
+        </div>
         <div class="tableContainer">
             <table id="procenaRizikaTable" mat-table [dataSource]="dataSource">
 

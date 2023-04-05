@@ -5,8 +5,8 @@ body {
 }
 
 .background {
-  background: rgb(53,50,55);
-  background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
+  background: rgb(43, 41, 45);
+  background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -16,8 +16,8 @@ body {
 }
 
 .login-container {
-  background: rgb(53,50,55);
-  background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
+  background: rgb(43, 41, 45);
+  background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -77,8 +77,8 @@ input[type="password"] {
   margin: 10px auto 20px auto; 
   padding: 10px;
   width: 100%;
-  background: rgb(53,50,55);
-  background: linear-gradient(90deg, rgba(53,50,55,1) 0%, rgba(20,19,19,1) 100%);
+  background: rgb(43, 41, 45);
+  background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
   color: #fff;
 }
 

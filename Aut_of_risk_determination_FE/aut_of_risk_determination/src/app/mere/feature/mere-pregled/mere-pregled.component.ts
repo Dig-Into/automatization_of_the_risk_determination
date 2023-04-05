@@ -38,6 +38,7 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
   showData: boolean = false;
   result: string = "";
   results: string[] = [];
+  workplace: string = "";
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('cellRef', {static: false}) cellRef: ElementRef;
@@ -112,6 +113,22 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
     this.viewTable = true;
   }
 
+  openModal() {
+    document.getElementById('my-modal').style.display = 'block';
+  }
+  
+  closeModal() {
+    document.getElementById('my-modal').style.display = 'none';
+  }
+
+  openRadnoMestoModal() {
+    document.getElementById('my-radno-mesto-modal').style.display = 'block';
+  }
+
+  closeRadnoMestoModal() {
+    document.getElementById('my-radno-mesto-modal').style.display = 'none';
+  }
+
   generateExcel() {
     let element = document.getElementById("mereTable") as HTMLTableElement;
 
@@ -133,6 +150,29 @@ export class MerePregledComponent implements OnInit, AfterViewInit {
     XLSX.writeFile(wb, 'MereZaSprečavanjeRizika.xlsx');
 
     
+  }
+
+  generateExcel2() {
+    let element = document.getElementById("mereTable") as HTMLTableElement;
+    let workplace = document.getElementById("danger-description")["value"];
+
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+   // Add header row style
+   ws["!cols"] = [
+    { width: 8 },
+    { width: 10 },
+    { width: 50 },
+    { width: 20 }
+  ];
+
+  ws['A1'] = {v: "Rb. / šifra"};
+
+  const wb: XLSX.WorkBook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'MereZaSprečavanjeRizikaSheet');
+
+    XLSX.writeFile(wb, workplace + '_MereZaSprečavanjeRizikaSheet.xlsx');
+
   }
 
 }
