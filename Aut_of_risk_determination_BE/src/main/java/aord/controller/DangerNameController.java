@@ -43,6 +43,12 @@ public class DangerNameController {
         return new ResponseEntity<>(codes, HttpStatus.OK);
     }
 
+    @GetMapping("/getByDangerNumber")
+    public ResponseEntity<DangerNameDTO> getDangerNameByDangerNumber(@RequestParam Integer dangerNumber) {
+        DangerNameDTO dangerName = toDTO.convert(service.findDangerNameByDangerNumber(dangerNumber));
+        return new ResponseEntity<>(dangerName, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Object> create(@RequestBody DangerNameDTO dangerName) {
         service.save(toEntity.convert(dangerName));

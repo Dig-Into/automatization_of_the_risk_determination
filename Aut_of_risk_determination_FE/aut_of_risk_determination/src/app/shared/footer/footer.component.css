@@ -1,0 +1,38 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    background: rgb(43, 41, 45);
+    background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-top: 20px;
+}
+
+a {
+    color: #1095c6
+}
+
+.footer-text {
+    color: #8b8484;
+}
+
+.appName {
+    color: #37AC00;
+}

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EffectRepository extends JpaRepository<Effect, Long> {
-
+    Effect findEffectByCode(Double code);
 }

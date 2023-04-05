@@ -10,5 +10,7 @@ import java.util.List;
 public interface FrequencyService {
     List<Frequency> getAll();
     Frequency getById(Long id);
+    Frequency findFrequencyByCode(Double code);
+
 
 }

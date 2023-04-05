@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'auth_of_risk_determination';
+  isLoading: boolean;
+
+  constructor() {}
+
+  
+
+
 }

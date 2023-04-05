@@ -37,4 +37,10 @@ public class ProbabilityController {
         return new ResponseEntity<>(probability, HttpStatus.OK);
     }
 
+    @GetMapping("/findByCode")
+    public ResponseEntity<ProbabilityDTO> getByCode(@RequestParam Double code) {
+        ProbabilityDTO probability = toDTO.convert(service.findProbabilityByCode(code));
+        return new ResponseEntity<>(probability, HttpStatus.OK);
+    }
+
 }

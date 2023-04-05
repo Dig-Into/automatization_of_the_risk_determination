@@ -1,0 +1,40 @@
+.page {
+    margin: 0;
+    padding-bottom: 200px;
+    width: 100%;
+    background: rgb(43, 41, 45);
+    background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
+}
+
+.naslov {
+    margin: 0;
+    color: white;
+    padding-top: 3rem;
+}
+
+.tekst {
+    color: white;
+    padding-top: 2rem;
+}
+
+.kinney {
+    color: #37AC00;
+}
+
+table {
+    width: 100%;
+    
+}
+
+mat-table {
+    background: #3b3939;
+}
+
+mat-header-cell, mat-cell {
+    color: #fff;
+}
+
+mat-header-row {
+    /* padding-left: 40%; */
+    text-align: center;
+}

@@ -12,4 +12,7 @@ public interface DangerNameRepository extends JpaRepository<DangerName, Long> {
 
     @Query("SELECT dn.dangerNumber FROM DangerName dn")
     List<Integer> getAllDangerNameCodes();
+
+    DangerName findDangerNameByDangerNumber(Integer dangerNumber);
+
 }

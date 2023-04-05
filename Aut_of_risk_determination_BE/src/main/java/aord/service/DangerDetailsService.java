@@ -10,6 +10,7 @@ import java.util.List;
 public interface DangerDetailsService {
     List<DangerDetails> getAll();
     DangerDetails getById(Long id);
+    DangerDetails findDangerDetailsByCode(Integer code);
     void save(DangerDetails convert);
     void update(DangerDetailsDTO mechanicalDangerDetails);
     void delete(Long id);

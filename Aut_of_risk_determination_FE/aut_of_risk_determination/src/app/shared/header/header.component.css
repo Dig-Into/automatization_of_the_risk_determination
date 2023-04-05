@@ -1,0 +1,109 @@
+.logo {
+  padding: 0.3rem;
+  height: 5rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-text {
+  font-family: 'Montserrat';
+  font-size: 22px;
+  color: #fff;
+}
+
+.navbar {
+  overflow: hidden;
+  background: rgb(43, 41, 45);
+  background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  overflow: hidden;
+  align-self: center;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 25px;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.dropdown .dropbtn:hover {
+  color: #37AC00;
+}
+
+.dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropbtn:hover {
+  color: #b23b3b;
+  cursor: pointer;
+  
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #312E2E;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #312E2E;
+  color: #37AC00;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logoutDiv {
+  align-self: center;
+}
+
+a {
+cursor: pointer;
+}
