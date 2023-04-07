@@ -1,3 +1,8 @@
+-- character encoding
+
+SET NAMES 'utf8mb4';
+SET CHARACTER SET utf8mb4;
+
 -- user role
 INSERT INTO aord.user_role (name) VALUES ('ROLE_ADMIN');
 INSERT INTO aord.user_role (name) VALUES ('ROLE_USER');

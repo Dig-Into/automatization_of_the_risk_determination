@@ -3,7 +3,6 @@ package aord.controller;
 import aord.converter.ToDangerDetailsConverter;
 import aord.converter.ToDangerDetailsDTOConverter;
 import aord.dto.DangerDetailsDTO;
-import aord.model.DangerDetails;
 import aord.service.DangerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
