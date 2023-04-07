@@ -70,7 +70,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	        .antMatchers(
 	            HttpMethod.POST,
 	            "/user/login");
-//	        .antMatchers(HttpMethod.GET, "**");
+		//	.antMatchers(HttpMethod.GET, "**");
 	    /*
 	    .antMatchers(HttpMethod.POST, "**")
 	    .antMatchers(HttpMethod.PATCH, "**")

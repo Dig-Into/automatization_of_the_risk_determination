@@ -1,10 +1,11 @@
 .page {
     padding-top: 75px;
     width: 100%;
-    /* height: 100%; */
     background: rgb(43, 41, 45);
     background: linear-gradient(90deg, rgb(39, 37, 41) 0%, rgba(20,19,19,1) 100%);
     padding-bottom: 75px;
+    height: 100vh;
+    overflow: auto;
  }
 
  #danger-description {
@@ -17,8 +18,13 @@
     margin: 10px auto 0;
     background-color: rgba(32,31,31,1);
     width: 85%;
-    height: auto;
 }
+
+mat-paginator {
+    background: rgba(29,28,28, 1);
+    color: #fff;
+}
+
 
 
 .dangerDetailsHeader {
@@ -77,11 +83,17 @@
     color: white;
 }
 
-@media screen and (min-height: 1200px) {
-    /* .page {
-        height: auto;
-    } */
+@media screen and (max-height: 300px) {
+    .page {
+        height: 100%;
+    }
 }
+
+/* @media screen and (min-height: 800px) {
+    .page {
+        height: fit-content;
+    }
+} */
 
 .generateExcel {
     background: #37AC00;
