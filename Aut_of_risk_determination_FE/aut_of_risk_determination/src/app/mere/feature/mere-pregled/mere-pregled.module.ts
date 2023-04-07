@@ -5,6 +5,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MerePregledComponent } from "./mere-pregled.component";
 import { MerePregledRoutingModule } from "./mere-pregled-routing.module";
 import { SharedModule } from "src/app/shared/shared.module";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { SharedModule } from "src/app/shared/shared.module";
         FormsModule,
         MerePregledRoutingModule,
         MatTableModule,
-        SharedModule
+        SharedModule,
+        MatPaginatorModule
     ],
     declarations: [MerePregledComponent]
 })
