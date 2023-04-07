@@ -79,8 +79,6 @@ a
 1src/main/java/aord/service/DangerTypeService.java,b\1\b128d26f5892244c49132ef26f33e1070a9ebf44
 j
 :src/main/java/aord/service/impl/DangerTypeServiceImpl.java,a\2\a23b10213ac79f10887341068916c5b8d7da6d2c
-g
-7src/main/java/aord/controller/DangerTypeController.java,8\7\87a0edbe9c4dc17a15a088a870e14be36b083bd5
 c
 3src/main/java/aord/repository/EffectRepository.java,6\3\63c4a94a75883ad513aa40f427d22bfc207f24d3
 `
@@ -115,12 +113,6 @@ g
 7src/main/java/aord/repository/DangerNameRepository.java,e\5\e56150cfabfabbee1c5ed12719b318415d8ab94c
 j
 :src/main/java/aord/service/impl/DangerNameServiceImpl.java,3\1\313d320f2f64b2c458887c2fe19bd617c1ef4b14
-g
-7src/main/java/aord/controller/DangerNameController.java,a\4\a460ba7a72a6da52a6b58679b42c2badf75da7fe
-d
-4src/main/java/aord/model/RiskRemovalMeasurement.java,6\7\670195af3bf7007b517a62c8ec94d871db801e86
-j
-:src/main/java/aord/controller/DangerDetailsController.java,e\b\eb8e55e373a8c84fc80ebbfe88300b472dbbc695
 s
 Csrc/main/java/aord/controller/RiskRemovalMeasurementController.java,d\f\df32ef6721f971e72da17ba3ec17f742df2f2f55
 j
@@ -129,5 +121,13 @@ d
 4src/main/java/aord/service/DangerDetailsService.java,1\f\1fa5e8c249d142f5231ae9d7bb0435badcb92b38
 m
 =src/main/java/aord/service/impl/DangerDetailsServiceImpl.java,8\a\8af8139e54f33283f214aa1285dde952d56482b2
+j
+:src/main/java/aord/controller/DangerDetailsController.java,e\b\eb8e55e373a8c84fc80ebbfe88300b472dbbc695
+g
+7src/main/java/aord/controller/DangerNameController.java,a\4\a460ba7a72a6da52a6b58679b42c2badf75da7fe
+d
+4src/main/java/aord/model/RiskRemovalMeasurement.java,6\7\670195af3bf7007b517a62c8ec94d871db801e86
+g
+7src/main/java/aord/controller/DangerTypeController.java,8\7\87a0edbe9c4dc17a15a088a870e14be36b083bd5
 [
 +src/main/java/aord/model/DangerDetails.java,8\a\8ad25f8d4bc5e7c069aa6de140b282dbb9637a02
