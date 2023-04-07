@@ -37,4 +37,10 @@ public class EffectController {
         return new ResponseEntity<>(effect, HttpStatus.OK);
     }
 
+    @GetMapping("/findByCode")
+    public ResponseEntity<EffectDTO> getByCode(@RequestParam Double code) {
+        EffectDTO effect = toDTO.convert(service.findEffectByCode(code));
+        return new ResponseEntity<>(effect, HttpStatus.OK);
+    }
+
 }

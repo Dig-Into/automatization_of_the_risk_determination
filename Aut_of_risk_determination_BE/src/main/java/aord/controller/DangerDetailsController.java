@@ -37,6 +37,12 @@ public class DangerDetailsController {
         return new ResponseEntity<>(dangerDetail, HttpStatus.OK);
     }
 
+    @GetMapping("getByCode")
+    public ResponseEntity<DangerDetailsDTO> getByCode(@RequestParam Integer code) {
+        DangerDetailsDTO dangerDetails = toDTO.convert(service.findDangerDetailsByCode(code));
+        return new ResponseEntity<>(dangerDetails, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Object> create(@RequestBody DangerDetailsDTO dangerDetails) {
         service.save(toEntity.convert(dangerDetails));

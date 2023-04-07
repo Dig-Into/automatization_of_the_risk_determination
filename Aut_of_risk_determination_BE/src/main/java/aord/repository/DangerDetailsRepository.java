@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DangerDetailsRepository extends JpaRepository<DangerDetails, Long> {
+    DangerDetails findDangerDetailsByCode(Integer code);
 }

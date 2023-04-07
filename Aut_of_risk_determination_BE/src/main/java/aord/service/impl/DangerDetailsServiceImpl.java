@@ -26,6 +26,12 @@ public class DangerDetailsServiceImpl implements DangerDetailsService {
     }
 
     @Override
+    public DangerDetails findDangerDetailsByCode(Integer code) {
+        return repo.findDangerDetailsByCode(code);
+    }
+
+
+    @Override
     public void save(DangerDetails convert) {
         repo.save(convert);
     }

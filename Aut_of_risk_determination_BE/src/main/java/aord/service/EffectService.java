@@ -11,5 +11,6 @@ public interface EffectService {
 
     List<Effect> getAll();
     Effect getById(Long id);
+    Effect findEffectByCode(Double code);
 
 }

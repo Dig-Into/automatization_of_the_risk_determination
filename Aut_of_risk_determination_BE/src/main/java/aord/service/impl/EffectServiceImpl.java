@@ -24,4 +24,9 @@ public class EffectServiceImpl implements EffectService {
         return repo.findById(id).get();
     }
 
+    @Override
+    public Effect findEffectByCode(Double code) {
+        return repo.findEffectByCode(code);
+    }
+
 }

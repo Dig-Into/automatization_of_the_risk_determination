@@ -1,3 +1,8 @@
+-- character encoding
+
+SET NAMES 'utf8mb4';
+SET CHARACTER SET utf8mb4;
+
 -- user role
 INSERT INTO aord.user_role (name) VALUES ('ROLE_ADMIN');
 INSERT INTO aord.user_role (name) VALUES ('ROLE_USER');
@@ -87,7 +92,6 @@ INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (5, 30, "Napori ili telesna naprezanja (ručno prenošenje tereta, guranje ili vučenje tereta, razne dugotrajne povećane telesne aktivnosti)");
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (5, 31, "Nefiziološki položaj tela (dugotrajno stajanje, sedenje, čučanje, klečanje)");
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (5, 32, "Napori pri obavljanju određenih poslova koji prouzrokuju psihološka opterećenja (stres, monotonija)");
-INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (5, 33, "Odgovornost u primanju i prenošenju informacija, korišćenje odgovarajućeg znanja i sposobnosti, odgovornost u pravilima ponašanja, odgovornost za brze izmene radnih procedura, intenzitet u radu, prostorna uslovljenost radnog mesta, konfliktne situacije, rad sa strankama i novcem, nedovoljna motivacija za rad, odgovornost u rukovođenju, i sl.");
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (5, 34, "Štetnosti vezane za organizaciju rada (rad duži od punog radnog vremena-prekovremeni rad, rad u smenama, skraćeno radno vreme, rad noću, pripravnost za slučaj intervencija, i sl.)");
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (6, 35, "Štetnosti koje prouzrokuju druga lica (nasilje prema licima koja rade na šalterima, lica na obezbeđenju, i sl.)");
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (6, 36, "Rad sa životinjama");
@@ -96,6 +100,7 @@ INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES
 INSERT INTO aord.danger_name (danger_type_id, danger_number, description) VALUES (6, 39, "Ostale opasnosti odnosno štetnosti");
 
 COMMIT;
+
 
 ---- danger_details
 --INSERT INTO aord.danger_details (code, danger_name_id, descriptions, probability_id, effect_id, frequency_id, value) VALUES (1, 1, "Rad sa trimerom, kosilicom, motorna testera", 5, 3, 4, 54);

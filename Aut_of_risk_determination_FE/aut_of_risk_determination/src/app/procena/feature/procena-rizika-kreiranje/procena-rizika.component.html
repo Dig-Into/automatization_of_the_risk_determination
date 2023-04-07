@@ -1,0 +1,93 @@
+<div class="page">
+  <app-container-big>
+    <div style="padding: 20px;">
+      <div style="margin-bottom: 10px;">
+        <label for="opasnost-dropdown" class="labelText">Izaberi opasnost:</label>
+        <div style="display: flex; align-items: center;">
+          <select id="opasnost-dropdown">
+            <option value="opasnost" *ngFor="let item of dangerNames" [value]="item.id">{{item.dangerNumber}} - {{item.description}}</option>
+          </select>
+          <button (click)="openModal()" class="addNew" style="margin-left: 10px;"><i class="fa fa-plus"></i></button>
+
+          <div id="my-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <h2>Dodaj novu opasnost/štetnost</h2>
+              <select id="tip-opasnosti-dropdown" class="modalSelect">
+                <option selected disabled value="">Izaberi vrstu</option>
+                <option value="tip-opasnosti" *ngFor="let item of dangerTypes" [value]="item.id">{{item.name}}</option>
+              </select>
+              <div>
+                <input id="danger-number" min="0" type="number" style="width: 75px;" placeholder="Šifra" />
+                <div class="example-spacer"></div>
+                <input id="danger-description" type="text" style="width: 80%;" placeholder="Opis opasnosti" autocomplete="off"/>
+              </div>
+              <div class="modalButtonsDiv">
+                <button class="cancel" (click)="closeModal()">Zatvori</button>
+                <button class="add" (click)="addItem()">Dodaj</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="detalji-opasnosti" class="labelText">Detalji opasnosti:</label>
+        <div *ngFor="let input of inputs; let i = index">
+          <input id="detalji-opasnosti-{{i}}" class="details" style="margin-right: 10px;" autocomplete="off">
+          <button class="removeInput" (click)="removeInput(i)"><i class="fa fa-minus"></i></button>
+        </div>
+        <div class="addNewButonDiv" style="width: 400px; display: flex; justify-content: center; align-items: center;">
+          <button class="addNew" (click)="addInput()"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+
+      <div class="flexDiv">
+        <div class="left">
+          <div style="display: flex;">
+            <label for="p-dropdown" class="labelText">V</label>
+            <select id="p-dropdown" [(ngModel)]="field1" (change)="onSelect1($event.target)">
+              <option value="" disabled selected hidden></option>
+              <option value="p-item" *ngFor="let item of probabilities" [value]="item.code">{{item.code}}</option>
+            </select>
+            <div *ngIf="selectedItem1">
+              <p class="descriptionText">{{ selectedItem1.description }}</p>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <label for="e-dropdown" class="labelText">P</label>
+            <select id="e-dropdown" [(ngModel)]="field2" (change)="onSelect2($event.target)">
+              <option value="" disabled selected hidden></option>
+              <option value="e-item" *ngFor="let item of effects" [value]="item.code">{{item.code}}</option>
+            </select>
+            <div *ngIf="selectedItem2">
+              <p class="descriptionText">{{ selectedItem2.description }}</p>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <label for="f-dropdown" class="labelText">U</label> 
+            <select id="f-dropdown" [(ngModel)]="field3" (change)="onSelect3($event.target)">
+              <option value="" disabled selected hidden></option>
+              <option value="f-item" *ngFor="let item of frequencies" [value]="item.code">{{item.code}}</option>
+            </select>
+            <div *ngIf="selectedItem3">
+              <p class="descriptionText">{{ selectedItem3.description }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div>
+            <div [@fadeInFromRight]="fadeState" [ngClass]="getResultClass()">
+              <app-kinney-index *ngIf="showAnotherComponent" [result]="getResult()"></app-kinney-index>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttonsDiv">
+        <div class="helper">
+          <button [disabled]="!selectedItem1 || !selectedItem2 || !selectedItem3" (click)="showAnotherComponent = true; fadeState = 'fadeIn'" class="izracunajButton">Izračunaj</button>
+          <button [disabled]="" (click)="create()" class="kreirajButton">Kreiraj</button>
+        </div>
+      </div>
+    </div>
+  </app-container-big>
+</div>

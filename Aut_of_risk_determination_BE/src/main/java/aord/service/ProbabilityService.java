@@ -10,5 +10,6 @@ import java.util.List;
 public interface ProbabilityService {
     List<Probability> getAll();
     Probability getById(Long id);
+    Probability findProbabilityByCode(Double code);
 
 }

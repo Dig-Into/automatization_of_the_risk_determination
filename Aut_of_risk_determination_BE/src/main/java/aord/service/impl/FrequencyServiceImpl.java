@@ -24,4 +24,10 @@ public class FrequencyServiceImpl implements FrequencyService {
         return repo.findById(id).get();
     }
 
+    @Override
+    public Frequency findFrequencyByCode(Double code) {
+        return repo.findFrequencyByCode(code);
+    }
+
+
 }
