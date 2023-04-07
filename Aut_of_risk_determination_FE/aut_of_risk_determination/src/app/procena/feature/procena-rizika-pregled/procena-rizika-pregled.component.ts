@@ -129,9 +129,7 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
     document.getElementById('my-radno-mesto-modal').style.display = 'none';
   }
 
-  addItem() {
-    console.log("Teeeesterica")
-  }
+
 
   generateExcel() {
     let element = document.getElementById("procenaRizikaTable") as HTMLTableElement;
@@ -173,7 +171,6 @@ export class ProcenaRizikaPregledComponent implements OnInit, AfterViewInit {
   generateExcel2() {
     let element = document.getElementById("procenaRizikaTable") as HTMLTableElement;
     let workplace = document.getElementById("danger-description")["value"];
-    console.log(workplace)
 
     const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
 
