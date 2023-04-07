@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: srbija
+    ports:
+      - "8080:1312"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/aord?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: rootroot
+  db:
+    image: arm64v8/mysql
+    platform: linux/arm64
+    environment:
+      MYSQL_DATABASE: aord
+      MYSQL_ROOT_PASSWORD: rootroot
+    ports:
+      - "3307:3306"
+  rabbit-mq:
+    build: ./RabbitMQTT/
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "1883:1883"
+      - "8883:8883"
