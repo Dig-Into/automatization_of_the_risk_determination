@@ -2,13 +2,14 @@ version: '3.4'
 
 services:
   db:
+    platform: linux/x86_64
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_DATABASE: 'aord'
-      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'rootroot'
     ports:
-      - '3306:3306'
+      - '3307:3306'
     volumes:
       - mysql-db:/var/lib/mysql
 
