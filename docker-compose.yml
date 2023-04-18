@@ -6,9 +6,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: 'aord'
-      MYSQL_ROOT_PASSWORD: 'rootroot'
+      MYSQL_ROOT_PASSWORD: 'root'
     ports:
-      - '3307:3306'
+      - '3306:3306'
     volumes:
       - mysql-db:/var/lib/mysql
 
