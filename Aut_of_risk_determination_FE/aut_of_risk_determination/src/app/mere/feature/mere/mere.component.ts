@@ -77,7 +77,6 @@ export class MereComponent implements OnInit {
         
           
           this.mereService.createMere(riskRemovalMeasurement).subscribe(response => {
-            console.log(response);
             
             setTimeout(() => {
               this.router.navigate(['/mere-pregled']);
