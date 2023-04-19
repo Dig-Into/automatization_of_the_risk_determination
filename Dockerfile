@@ -10,12 +10,10 @@ ENV PATH "$PATH:/opt/apache-maven-3.6.3/bin"
 ENV DB_ADDRESS host.docker.internal
 ENV PORT 8080
 
-COPY . /aord-backend
+COPY ./Aut_of_risk_determination_BE /aord-backend
 
 EXPOSE $PORT
 
 WORKDIR /aord-backend
 
-RUN cd ..
-
-CMD docker-compose up
+CMD mvn spring-boot:run
