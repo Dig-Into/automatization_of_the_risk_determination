@@ -8,13 +8,12 @@ RUN cd /opt && curl -sSl http://mirror.vorboss.net/apache/maven/maven-3/3.6.3/bi
 
 ENV PATH "$PATH:/opt/apache-maven-3.6.3/bin"
 ENV DB_ADDRESS host.docker.internal
-ENV MQTT_ADDRESS host.docker.internal
 ENV PORT 8080
 
 COPY . /aord-backend
 
 EXPOSE $PORT
 
-WORKDIR /aord-backend
+WORKDIR ..
 
-CMD mvn spring-boot:run
+CMD docker-compose up
