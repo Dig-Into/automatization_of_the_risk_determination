@@ -10,10 +10,8 @@ ENV PATH "$PATH:/opt/apache-maven-3.6.3/bin"
 ENV DB_ADDRESS host.docker.internal
 ENV PORT 8080
 
-COPY . /aord-backend
-
 EXPOSE $PORT
 
-WORKDIR ..
+RUN cd ..
 
 CMD docker-compose up
