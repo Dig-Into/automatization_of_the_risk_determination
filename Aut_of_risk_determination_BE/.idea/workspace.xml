@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5664b01-a321-4f8a-a7c3-f8b3d21eac29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01fd753b9df79fa597ba910861376e9a5ca0d91c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/0242f889d11a2ef4366c8ad29de335b2264c7204" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03781ff2b6464b35c27d050d8ab447f0537018b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/0435647900efd16c47805323aebb3f8fe8c79b0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04b70bdecd967424a51f12a210cf11b735caeea9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0704a601743373c118ff71d7e1effb4c43bcda59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bfff6dfec73f00d14f41703298806f195ba33eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c55155ec884e4d858c50cbf22cceab5e27de9e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d2e8ac976181f0e6a7a5659228be34fad4096ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/137d3ec055bcb8574fd0cd3cb92921a6293760da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1fa5e8c249d142f5231ae9d7bb0435badcb92b38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21cf09f12332ea43458307e9579ce1774725bf3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26b2957228a4058d8d22f734f5db312e72c0c0da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/275318b0aac4f52b055ef57fcecfa822fbb71193" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bd6632b841890972de69c43285e4443ef40d351" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30054917321f4c37fceaeac2c5460d4c844d84ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/313d320f2f64b2c458887c2fe19bd617c1ef4b14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32d40eac86d56530e759f24aa71aa589f612cb40" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3db4f53839817bcf897d87acef90db1478ef456f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40b4b93a28e7332533f14eadd7a016272b550fe0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40d823b4518e2e45dda88889a43f530d00493d0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442fd19b3a8d2051b034f5b814655f42d8c4c339" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/470b341522d5214656e22acfda0ff3863af2a07d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/492d2c394d4a88efd2124cda5f8a8f497135b818" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4e51e6ac542ef75443408f95ddd2b0509ba33ae2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59bc72ad777e8b514437d20ad738917bb090cacb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fef9b33f74be01d16a16dac0e47c9683de32db6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63c4a94a75883ad513aa40f427d22bfc207f24d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64e505f6ba7f16ca2fd926d92a0ea55d3191828d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/6542ada8688229b2aaa896baac7078608713869a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/670195af3bf7007b517a62c8ec94d871db801e86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/721290263b205d02af6859170286661a87f78f74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/743b064881cf8c66f87fa6817dfefd70afe12f6d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bdba327de061c16134be70f116158919901a38b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82adc1a972eaae091a7968d2bd1cf5084e7a73ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86a6ebf5721dfb6d2c3b6cf02634832b9d2e403d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87a0edbe9c4dc17a15a088a870e14be36b083bd5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8ad25f8d4bc5e7c069aa6de140b282dbb9637a02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8af8139e54f33283f214aa1285dde952d56482b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9237617388ec84563d2f0c7cf0696f33b1a23e30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/954c30e196bc13e26d93cd014615e3fa51417696" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/964b243ee9650f3f5d8e948c1f5ec8574a60c99b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98cd14cd6d1ee846923042c29613bb80adf7e3e2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a96a6484e41735451148656883a09ab04f27815" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a00331f3b71c9028262deeb54ddd360879ecb495" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a23b10213ac79f10887341068916c5b8d7da6d2c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/4/a460ba7a72a6da52a6b58679b42c2badf75da7fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a86925e95ddea2f42d38ef0698cac45cf0d62778" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aadb3b6837ac5b2337e18d54b395e5e3bfd1b3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b128d26f5892244c49132ef26f33e1070a9ebf44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1791cc58134da0bfb21a8824e75589cd045d1a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1920fe18f1ddae0b2f75cf689c64a8aa51a3bfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c2ba117b5a11ddba007e1f31da957919d7f7fa73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4ebac2792ac6fc3b2287edaa530c8d2107d5ff3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd7bf524ed460cbb581c7aff401d5f5413fe3d77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d08f83caa1da0cd61b1fad48ceedef5f86e6227b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4a6e0ddecf191c6671afcb9bfc1b295e70084e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61945171678e08babe8a8bb340478bbcabfe98c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd3892f3256460d0851642084981749d3b60cf0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df32ef6721f971e72da17ba3ec17f742df2f2f55" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e239f30f76b732f79b06173885b99500c1bc7e88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4a1187f855e0068580cebea48005d34bba8c4e7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e56150cfabfabbee1c5ed12719b318415d8ab94c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e57e3af8dd6674a82958e42ca24e0ec58f9f13e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8c2379274054918955d34a5fa1ed08d1ba48c93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb8e55e373a8c84fc80ebbfe88300b472dbbc695" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed9d93323de11dce18ca43d588c852f7abc7290f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f544f82c9d8b41085226893b0aea659422e32b24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f933c40064c70dc348a8cf57a766ada702db4fed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/data/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/data/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/home/feature/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/auth.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/login.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/login.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/data-access/login.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/login/feature/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/data-service/mere.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/data-service/mere.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/data-service/mere.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/data-service/mere.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere-pregled/mere-pregled.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/mere/feature/mere/mere.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerDetails.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerName.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerName.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/DangerType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Effect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Effect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Frequency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Frequency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Mera.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Mera.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Probability.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/model/Probability.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-details/danger-details.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-details/danger-details.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-details/danger-details.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-details/danger-details.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-name/danger-name.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-name/danger-name.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-name/danger-name.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-name/danger-name.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-type/danger-type.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-type/danger-type.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-type/danger-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/danger-type/danger-type.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/effect/effect.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/effect/effect.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/effect/effect.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/effect/effect.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/frequency/frequency.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/frequency/frequency.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/frequency/frequency.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/frequency/frequency.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/probability/probability.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/probability/probability.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/probability/probability.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/data-access/probability/probability.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-rizika.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-kreiranje/procena.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/procena/feature/procena-rizika-pregled/procena-rizika-pregled.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/data-access/kinney-index.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/data-access/kinney-index.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/kinney-index/kinney-index.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/loading-screen/loading-screen.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/search/search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/wrapper/wrapper-big.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/wrapper/wrapper-big.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/shared/wrapper/wrapper.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/guards/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/guards/auth.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/services/snack.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/app/utils/services/snack.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/aut_of_risk_determination/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Aut_of_risk_determination_FE/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/certs/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/certs/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/certs/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/init.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQTT/rabbitmq.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Report - backup code.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OmP1BsBjyboplwuDQYpFdQZtNT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AordApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aord.AordApplication" />
+      <module name="AutomatizationOfTheRiskDetermination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aord.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AordApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5664b01-a321-4f8a-a7c3-f8b3d21eac29" name="Changes" comment="" />
+      <created>1682162572895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682162572895</updated>
+    </task>
+    <servers />
+  </component>
+</project>

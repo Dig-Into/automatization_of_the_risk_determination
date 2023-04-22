@@ -111,7 +111,11 @@ export class ProcenaRizikaComponent implements OnInit {
   }
 
   addInput() {
-    this.inputs.push('');
+    if (this.inputs.length <= 4) {
+      this.inputs.push('');
+    } else {
+      this.snackService.lengthError();
+    }
   }
 
   removeInput(index) {

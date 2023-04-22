@@ -37,7 +37,7 @@ export class MereComponent implements OnInit {
     },
     {
       id: '2',
-      description: 'Periodično'
+      description: 'Periodicno'
     },
     {
       id: '3',
@@ -55,31 +55,37 @@ export class MereComponent implements OnInit {
     var dangerNumber = document.getElementById("sifra-dropdown")["value"]
     var measurementImplFreq = document.getElementById("rok-dropdown")["value"];
     var description = document.getElementById("opis")["value"];
-
-    this.dangerNameService.getDangerNameByDangerNumber(dangerNumber).subscribe(response => {
-      var dangerCode = response["id"];
-      
-      
-      this.dangerDetailsService.getDangerDetailsByCode(dangerCode).subscribe(response => {
-        var riskRemovalMeasurement = {
-          id: 0,
-          riskFactorValue: response["value"],
-          description: description,
-          measurementImplFreq: measurementImplFreq,
-          dangerDetails: {
-            id: response["id"]
-        }
-      };
-      
-      if (!dangerNumber || !measurementImplFreq || !description) {
-        this.snackService.creationError();
-      }
-      
+    
+    if (!dangerNumber || !measurementImplFreq || !description) {
+      this.snackService.creationError();
+    } else {
+      this.dangerNameService.getDangerNameByDangerNumber(dangerNumber).subscribe(response => {
+        var dangerCode = response["id"];
         
-        this.mereService.createMere(riskRemovalMeasurement).subscribe(response => {
-          setTimeout(() => {
-            this.router.navigate(['/mere-pregled']);
-          }, 250);
+        
+        this.dangerDetailsService.getDangerDetailsByCode(dangerCode).subscribe(response => {
+          var riskRemovalMeasurement = {
+            id: 0,
+            riskFactorValue: response["value"],
+            description: description,
+            measurementImplFreq: measurementImplFreq,
+            dangerDetails: {
+              id: response["id"]
+          }
+        };
+        
+        
+          
+          this.mereService.createMere(riskRemovalMeasurement).subscribe(response => {
+            
+            setTimeout(() => {
+              this.router.navigate(['/mere-pregled']);
+            }, 250);
+            
+          },
+          (error: HttpErrorResponse) => {
+            this.snackService.creationError();
+          });
           
         },
         (error: HttpErrorResponse) => {
@@ -88,13 +94,10 @@ export class MereComponent implements OnInit {
         
       },
       (error: HttpErrorResponse) => {
-        this.snackService.creationError();
+        this.snackService.noDangerName();
       });
-      
-    },
-    (error: HttpErrorResponse) => {
-      this.snackService.creationError();
-    });
+    }
+    
     
   }
 

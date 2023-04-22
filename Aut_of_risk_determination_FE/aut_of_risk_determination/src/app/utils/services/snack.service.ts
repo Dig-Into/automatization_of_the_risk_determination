@@ -33,4 +33,22 @@ export class SnackService {
     return this.snackBar._openedSnackBarRef
     ?.onAction().subscribe();
   }
+
+  lengthError() {
+    this.snackBar.open('Maksimalan broj polja je dodat', 'OK', {
+      duration: 5000
+    });
+
+    return this.snackBar._openedSnackBarRef
+    ?.onAction().subscribe();
+  }
+
+  noDangerName() {
+    this.snackBar.open('Ne postoji mera sa ovom šifrom', 'OK', {
+      duration: 5000
+    });
+
+    return this.snackBar._openedSnackBarRef
+    ?.onAction().subscribe();
+  }
 }
