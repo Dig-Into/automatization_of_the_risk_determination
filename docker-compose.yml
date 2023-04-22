@@ -21,6 +21,13 @@ services:
     depends_on:
       - db
 
+  aord-frontend:
+    build: ./Aut_of_risk_determination_FE/aut_of_risk_determination
+    ports:
+      - "4200:80"
+    depends_on:
+      - aord-backend
+
   mysql-workbench:
     image: lscr.io/linuxserver/mysql-workbench:latest
     container_name: aord-mysql-workbench
