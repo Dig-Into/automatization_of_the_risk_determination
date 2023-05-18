@@ -1,47 +1,28 @@
-version: '3.4'
-
+version: '3'
 services:
-  db:
-    image: mysql:5.7
-    restart: always
+  mysql:
+    image: 'mysql:latest'
     environment:
-      MYSQL_DATABASE: 'aord'
-      MYSQL_ROOT_PASSWORD: 'root'
-    ports:
-      - '3306:3306'
-    volumes:
-      - mysql-db:/var/lib/mysql
+      - MYSQL_DATABASE=aord
+      - MYSQL_ROOT_PASSWORD=root
 
-  aord-backend:
-    build: ./Aut_of_risk_determination_BE
+  backend:
+    restart: always
+    build:
+      context: ./Aut_of_risk_determination_BE
+      dockerfile: Dockerfile.dev
     environment:
-      spring.datasource.url: jdbc:mysql://db:3306/aord?allowPublicKeyRetrieval=true&useSSL=false
+      spring.datasource.url: jdbc:mysql://mysql:3306/aord?allowPublicKeyRetrieval=true&useSSL=false
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      - mysql
 
-  aord-frontend:
-    build: ./Aut_of_risk_determination_FE/aut_of_risk_determination
+  frontend:
+    build: 
+      context: ./Aut_of_risk_determination_FE/aut_of_risk_determination
+      dockerfile: Dockerfile.dev
     ports:
       - "4200:80"
     depends_on:
-      - aord-backend
-
-  mysql-workbench:
-    image: lscr.io/linuxserver/mysql-workbench:latest
-    container_name: aord-mysql-workbench
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-    volumes:
-      - /path/to/config:/config
-    ports:
-      - 3000:3000
-    cap_add:
-      - IPC_LOCK
-    restart: unless-stopped
-
-volumes:
-  mysql-db:
+      - backend
